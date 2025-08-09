@@ -1,0 +1,822 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~ HTML, body ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+* {box-sizing: border-box;}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Cooper Black";
+    margin: 0;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+h2 {
+    font-family: "Cooper Black";
+    font-size: 1.5rem; 
+    z-index: 2;
+
+}
+p, li {font-size: 1.2rem; z-index: 2;}
+a {color: inherit;}
+
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2rem;}
+    h3{
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    p, li {font-size: 1.4rem;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* Mobile, portrait orientation */
+
+#logo {
+    display: inline;
+    width: max-content;
+    height: max-content;
+    margin: 1vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#logo img {
+    width: 65px;
+    height: auto;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~  Main  ~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* Main: Mobile, portrait orientation */
+
+main {margin: 0;}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 6vh 0 1vh 0;
+}
+
+.sectionWrapper {
+    position: relative;
+    padding: 0 5vw;
+}
+
+.subheader {text-align: center;}
+
+
+/* Main: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    section {padding: 3vh 1vw 5vh 13vw;}
+    .sectionWrapper {
+        padding: 0 1vw;
+    }
+}
+
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    section {padding: 0;}    
+    .sectionWrapper {
+        padding: 15px 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    .sectionWrapper {width: 400px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    .sectionWrapper {width: 550px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
+    .sectionWrapper {width: 700px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    .sectionWrapper {width: 960px;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~  Home/Welcome section  ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#Home {padding-top: 18vh;}
+#Home p {text-align: center;}
+#Home hgroup {margin-bottom: 3rem;}
+
+/* Home/Welcome: Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #Home {
+        padding-top: 11vh;
+        padding-left: 18vw;
+    }
+    #Home hgroup {margin-bottom: 1rem;}
+}
+
+
+/* Home/Welcome: Desktop */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    #Home hgroup {margin-bottom: 1rem;}
+}
+
+@media screen and (any-hover: hover) {
+    #Home {padding-top: 20vh;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.folioItemsWrapper, .effectsItemsWrapper {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+article {
+    width: 90vw;
+    min-width: 300px;
+    margin: 5vh auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.articleText {padding: 0 5%;}
+.articleText h3 {margin-top: 0.5em;}
+
+.effectsItemsWrapper article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.folioItemsWrapper img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}   
+
+.effectsItemsWrapper iframe {
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    position: relative;
+    bottom: 0;
+}   
+
+.int::after {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    white-space: pre;
+    position: absolute;
+    bottom: -20px;
+    right: -10px;    
+    transform: rotate(350deg);
+    transform-origin: left;
+    border-radius: 50px;
+    padding: 1% 3%;
+    font-size: 1rem;
+}
+
+.interactiveMouse::after {
+    content: "Interactive! \A Move your mouse or \A tilt your device";
+}
+
+.interactiveClick::after {
+    content: "Interactive! \A Click to see more";
+}
+
+
+/* Mobile, in landscape */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    article {
+        width: 80vw;
+        margin: 10vh auto;
+    }
+    .folioItemsWrapper img {
+        width: 80vw;
+        height: auto;
+    }
+    .effectsItemsWrapper iframe {
+        aspect-ratio: unset;
+        height: 70vh;
+        width: 80vw;
+    }
+}
+
+
+/* Desktop, any screen width */
+
+@media screen and (any-hover: hover) {
+    article {margin: 0;}
+    .folioItemsWrapper, .effectsItemsWrapper {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
+}
+
+
+    /* Desktop, screen widths below 1000px */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    article {width: 390px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    article {width: 590px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
+    article {width: 650px;}
+}
+
+
+    /* Above 1000px, switch from one column to two */
+
+@media screen and (any-hover: hover) and (max-width: 1023px) {
+    .folioItemsWrapper, .effectsItemsWrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4rem;
+    }
+}
+
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    .folioItemsWrapper, .effectsItemsWrapper {
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+}
+
+
+    /* Desktop, screen width 1000px and above */
+
+@media screen and (any-hover: hover) and (min-width: 1024px) and (max-width: 1199px) {
+    article {width: 450px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1200px) {
+    article {width: 550px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1366px) {
+    article {width: 600px;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* #About ul {margin-bottom: 5vh;} */
+
+#About h3 {
+}
+
+@media screen and (hover) {
+    #About h3 {
+        margin-top: 3rem;
+    }
+}
+
+#aboutParagraphs {display: grid;}
+
+#aboutParagraphs > div {
+    border-style: solid;
+    border-width: 1px;
+}
+
+@media screen and (any-hover: none) and (orientation: portrait) {
+    #aboutParagraphs {
+        grid-template-rows: repeat(3, fit-content);
+        align-items: center;
+    }
+    #aboutParagraphs > div {
+        padding: 0 1rem;
+        margin: 1rem 0;
+        width: 75vw;
+    }
+    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
+    #aboutParagraphs > div {
+        padding: 0 1vw;
+        margin: 1vw;
+    }
+    #aboutOffer, #aboutMoreSpecs {
+        width: 60vw;
+        margin-left: 10vw;
+    }
+}
+
+@media screen and (hover) {
+    #About > div.sectionWrapper:last-child {
+        display: grid;
+    }
+    #aboutParagraphs {
+        gap: 1rem;
+    }
+    #aboutParagraphs > div {
+        padding: 0 2rem;
+    }
+    #aboutMoreSpecsLinks {
+        display: flex;
+        gap: 1rem;
+    }
+    p.p-outline {
+        margin: 0;
+    }
+}
+
+@media screen and (hover) and (max-width: 599px) {
+}
+
+@media screen and (hover) and (max-width: 785px) {
+    #aboutMoreSpecsLinks {
+        flex-direction: column;
+    }
+}
+
+@media screen and (hover) and (min-width: 600px) and (max-width: 1023px) {
+    #aboutParagraphs {
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+    }
+    #aboutParagraphs > div {
+        width: 75%;
+    }
+    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
+}
+
+@media screen and (hover) and (min-width: 1024px) {
+    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
+    #aboutParagraphs > div {
+        padding: 0 1rem;
+        margin: 1rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 1200px) {
+    #About > div.sectionWrapper:last-child {
+        column-gap: 5rem;
+        grid-template-columns: 45% 55%;
+        grid-template-rows: repeat(3, fit-content);
+    }
+    #aboutParagraphs {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #aboutOffer {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #aboutMoreSpecs {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    #aboutMoreSpecsLinks {
+        flex-direction: column;
+    }
+}
+
+#About ul {
+    padding-left: 1.4rem;
+}
+
+/* #about-li-github {
+    list-style-type: "\F09B";
+}
+#about-li-codepen {
+    list-style-type: ;
+} */
+
+.p-outline {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+}
+
+#aboutMoreSpecs a {
+    text-decoration: none;
+}
+
+span.linky {
+    text-decoration: underline;
+}
+
+#About li {
+    /* list-style-type: "\21AA"; curved arrow*/
+    /* list-style-type: "\21E8"; open arrow */
+    /* list-style-type: "\2724"; four-pointed teardrop asterisk */
+    /* list-style-type: "\274B"; eight-pointed teardrop astersk */
+    /* list-style-type: "\2767"; ornamental leaf */
+    /* list-style-type: "\233E"; concentric circles */
+    /* padding-left: 0.2rem; */
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  The Plan section    ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#Plan div.grid-5-items {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: repeat(5, fit-content);
+}
+
+#Plan p {
+    padding: 1rem;
+    margin: 0;
+    border-style: solid;
+    border-width: 1px;
+    z-index: inherit;
+}
+
+@media screen and (hover) {
+    #Plan div.grid-5-items {
+        gap: 2rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 600px) and (max-width: 1023px), 
+       screen and (any-hover: none) {
+    #Plan div.grid-5-items {
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+    #Plan div.grid-5-items > p {
+        width: 75%;
+    }
+    #Plan div.grid-5-items > p:nth-child(even) {justify-self: right;}
+}
+
+
+
+@media screen and (hover) and (min-width: 1024px) {
+    #Plan div.grid-5-items {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, fit-content);
+    }
+    #Plan div.grid-5-items > p {
+        grid-column: span 2;
+    }
+    #Plan div.grid-5-items > p.offset {
+        grid-column: 2 / span 2;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.phone-email {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.contact p {margin: 0;}
+.contact h3 {margin-bottom: 0.2rem;}
+.asterisk {color: red;}
+
+#messageSent {
+    opacity: 0.9;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#messageSent span {
+    font-size: 3rem;
+    line-height: 1.5rem;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    cursor: pointer;
+}
+
+#messageSent p {
+    color: var(--blueDk);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.inputText, .labelText {
+    display: block;
+    width: 100%;
+}
+
+.inputText {padding: 0.3rem 0.5rem;}
+
+#buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+    margin: 3vw 0;
+}
+
+#buttonsWrapper button {
+    width: 35vw;
+    padding: 0.2rem 0;
+}
+
+#disclaimer {
+    font-size: 0.8em;
+    font-style: italic;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Mobile, in landscape */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    .phone-email {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        }    
+    #buttonsWrapper button {
+        width: 25vw;
+        padding: 0.2rem 0;
+    }
+}
+
+
+/* Desktop */
+
+    /* Desktop, any width */
+
+@media screen and (any-hover: hover) {
+    .inputText, .labelText {margin: 0 auto;}
+    #buttonsWrapper {
+        margin: 10px 0; 
+        justify-content: center; 
+    }
+}
+    
+    /* Desktop, screen width up to 600px */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    form, fieldset, #buttonsWrapper {width: 400px;}
+    .inputText, .labelText {width: 390px;}    
+    #buttonsWrapper button {
+        width: 195px; 
+        margin: 10px 5px;
+    }    
+}
+
+    /* Desktop, screen width 600px to 786px */
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    form, fieldset, #buttonsWrapper {width: 550px;}
+    .inputText, .labelText {width: 520px;}    
+    #buttonsWrapper button {
+        width: 260px; 
+        margin: 10px 15px;
+    }    
+}
+
+    /* Desktop, screen width 786px and above */
+
+    @media screen and (any-hover: hover) and (min-width: 786px){
+        .phone-email {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+                }    
+        #nameAndEmail {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            gap: 10%;
+        }
+    }
+        
+    /* Desktop, screen width 786px to 1000px */
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
+    form, fieldset, #buttonsWrapper {width: 700px;}
+    .inputText, .labelText {width: 650px;}    
+    #nameAndEmail {
+        width: 650px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+    }
+    #nameAndEmail label, #nameAndEmail input {width: 320px;}
+    #buttonsWrapper {gap: 10px;}
+    #buttonsWrapper button {
+        width: 325px; 
+        margin: 10px 0;
+    }    
+    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
+    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
+}
+
+    /* Desktop, screen width 1000px and above */
+
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    form, fieldset, #buttonsWrapper, #nameAndEmail {width: 800px;}
+    .inputText, .labelText {width: 730px;}    
+    #buttonsWrapper button {
+        width: 365px;
+        margin: 10px 35px;
+    }    
+    form, fieldset, #buttonsWrapper {width: 800px;}
+    .inputText, .labelText {width: 730px;}    
+    #nameAndEmail {
+        width: 730px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+    }
+    #nameAndEmail label, #nameAndEmail input {width: 355px;}
+    #buttonsWrapper {gap: 20px;}
+    #buttonsWrapper button {
+        width: 355px; 
+        margin: 10px 0;
+    }    
+    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
+    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~  Footer ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {margin: 10vh 0;}
+
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.3em 0;
+}    
+.greengeeks img {
+    height: 60px;
+    width: auto;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+}    
+
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    .greengeeks img {
+        width: 90px;
+        height: auto;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }    
+    .greengeeks a {
+        display: block;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~  Mode buttons  ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#modes {
+    position: fixed;
+    bottom: 0;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 5;
+}
+
+.modeButton {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin: 0 0.75rem 0.75rem 0;
+    border-radius: 20%;
+    position: relative;
+}
+
+.modeButton svg {
+    width: 2rem;   
+    height: 2rem;
+    margin: 0.2rem;
+}
+
+#mystery, #neon, #yellowsub, #mineral {display: none;}
+
+.modeButton .hoverText {
+    visibility: hidden;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    z-index: 6;
+    text-wrap: nowrap;
+}
+
+
+/* Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #modes {align-items: center;    
+    }
+    .modeButton {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin: 0 0.75rem 0.75rem 0;
+    }
+        .modeButton svg {
+        width: 1.4rem;   
+        height: 1.4rem;
+        margin: 0.2rem;
+    }
+}
+
+
+/* Desktop */
+
+@media screen and (any-hover: hover) {
+    #modes {
+        flex-direction: column-reverse;
+        align-items: center;    
+    }
+
+    .modeButton {
+        height: 2.4rem;
+        width: 2.4rem;
+        margin: 0 0.75rem 0.75rem 0;
+    }
+    .modeButton svg {
+        width: 2rem;   
+        height: 2rem;
+        margin: 0.2rem;
+    }
+    .modeButton:hover .hoverText {visibility: visible;}
+}
