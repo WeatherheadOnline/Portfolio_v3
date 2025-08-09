@@ -189,12 +189,12 @@ article {
     position: relative;
 }   
 
-.effectsItemsWrapper iframe {
+/* .effectsItemsWrapper iframe {
     width: 100%;
     aspect-ratio: 1.5/1;
     position: relative;
     bottom: 0;
-}   
+}    */
 
 .int::after {
     font-family: Arial, Helvetica, sans-serif;
@@ -231,11 +231,11 @@ article {
         width: 80vw;
         height: auto;
     }
-    .effectsItemsWrapper iframe {
+    /* .effectsItemsWrapper iframe {
         aspect-ratio: unset;
         height: 70vh;
         width: 80vw;
-    }
+    } */
 }
 
 
@@ -298,6 +298,118 @@ article {
 @media screen and (any-hover: hover) and (min-width: 1366px) {
     article {width: 600px;}
 }
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  NEW Special Effects section  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div.SFX_thumbnail > svg {
+}
+
+#SFX_contents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#SFX_iframe {
+    height: 90vw;
+    max-width: 50vh;
+    width: 70vw;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 2px;
+    position: relative;
+}
+
+#SFX_iframe iframe {
+    height: 100%;
+    width: 100%;
+}
+
+#SFX_iframe div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    background-color: #00000055;
+}
+
+#SFX_iframe p {
+    margin: 0;
+}
+
+#SFX_iframe span {
+    font-weight: bold;
+}
+
+.thumbnails {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.arrowsWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (any-hover: none) and (orientation: landscape),
+       screen and (hover) and (min-width: 1024px) {
+    #SFX_contents {
+        flex-direction: row;
+        align-items: center;
+    }
+    .thumbnails {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #SFX_iframe {
+        height: 50vh;
+        width: 50vw;
+        max-width: unset;
+    }
+}
+
+@media screen and (hover) {
+    #SFX_iframe {
+        height: 50vh;
+        width: 70vw;
+        max-width: unset;
+    }
+}
+
+@media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
+    #SFX_iframe {
+    }
+    #SFX_panel {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .arrowsWrapper, .thumbnails {
+    }
+    .thumbnails {
+        margin: unset;
+    } 
+}
+
+@media screen and (hover) and (min-width: 1024px) {
+    #SFX_iframe {
+        width: 80vw;
+    }
+}
+
+
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
