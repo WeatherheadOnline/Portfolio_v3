@@ -38,62 +38,67 @@ const SFX_iframe = document.getElementById("SFX_iframe");
 const leftArrow = document.getElementById("SFX_leftArrow");
 const rightArrow = document.getElementById("SFX_rightArrow");
 
-const mineralButton = document.getElementById("SFX_mineral");
-const cascadeButton = document.getElementById("SFX_cascade");
-const shimmerTextAutoButton = document.getElementById("SFX_shimmerTextAuto");
-const shimmerTextManualButton = document.getElementById("SFX_shimmerTextManual");
-const oceanBubblesButton = document.getElementById("SFX_oceanBubbles");
-const ripplesButton = document.getElementById("SFX_ripples");
-
 let currentSample = 0;
 
+switchIFrame(0); // on page load
+
+leftArrow.addEventListener("click", SFXmoveLeft);
+rightArrow.addEventListener("click", SFXmoveRight);
+document.addEventListener("keydown", handleKeydown);
+
+function handleKeydown(event) {
+    switch(event.keyCode){
+        case 37: SFXmoveLeft(); break;  // "left" arrow
+        case 39: SFXmoveRight(); break;  // "right" arow
+    }
+};
+
+function SFXmoveLeft() {
+    removeSFXclasses(currentSample);
+    if(currentSample > 0) {
+        currentSample--;
+    } else {
+        currentSample = samples.length - 1;
+    };
+    addSFXclasses(currentSample);
+    SFX_iframe.children[0].src = samples[currentSample].source;
+}
+
+function SFXmoveRight() {
+    removeSFXclasses(currentSample);
+    if(currentSample < samples.length - 1) {
+        currentSample++;
+    } else {
+        currentSample = 0;
+    };
+    addSFXclasses(currentSample);
+    SFX_iframe.children[0].src = samples[currentSample].source;
+}
+
 const buttons = Array.from(document.getElementsByClassName("SFX_thumbnail"));
-buttons.forEach((button) => {
+buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
-        switchIFrame(button.id);
+        switchIFrame(index);
     });
 });
 
-leftArrow.addEventListener("click", function() {
-    if(currentSample > 0) {
-        if(samples[currentSample].int){
-            SFX_iframe.classList.remove("int");
-            SFX_iframe.classList.remove(samples[currentSample].intType);
-        };
-        currentSample--;
-        if(samples[currentSample].int){
-            SFX_iframe.classList.add("int");
-            SFX_iframe.classList.add(samples[currentSample].intType);        
-        };
-        SFX_iframe.children[0].src = samples[currentSample].source;
-    };
-});
-
-rightArrow.addEventListener("click", function() {
-    if(currentSample < samples.length - 1) {
-        if(samples[currentSample].int){
-            SFX_iframe.classList.remove("int");
-            SFX_iframe.classList.remove(samples[currentSample].intType);
-        };
-        currentSample++;
-        if(samples[currentSample].int){
-            SFX_iframe.classList.add("int");
-            SFX_iframe.classList.add(samples[currentSample].intType);        
-        };
-        SFX_iframe.children[0].src = samples[currentSample].source;
-    };
-});
-
-function switchIFrame(SFX_name) {
-    if(samples[currentSample].int){
-            SFX_iframe.classList.remove("int");
-            SFX_iframe.classList.remove(samples[currentSample].intType);
-    };
-    const myObject = samples.find((element) => element.name === SFX_name);
-    currentSample = samples.indexOf(myObject);
-    SFX_iframe.children[0].src = myObject.source;
-        if(samples[currentSample].int){
-            SFX_iframe.classList.add("int");
-            SFX_iframe.classList.add(samples[currentSample].intType);        
-        };
+function switchIFrame(index) {
+    removeSFXclasses(currentSample);    // at this point, "currentSample" refers to the previous sample
+    currentSample = index;
+    SFX_iframe.children[0].src = samples[index].source;
+    addSFXclasses(index);
 };
+
+function removeSFXclasses(index) {
+    if(samples[index].int){
+        SFX_iframe.classList.remove("int");
+        SFX_iframe.classList.remove(samples[index].intType);
+    };
+}
+
+function addSFXclasses(index) {
+    if(samples[index].int){
+        SFX_iframe.classList.add("int");
+        SFX_iframe.classList.add(samples[index].intType);        
+    };
+}
