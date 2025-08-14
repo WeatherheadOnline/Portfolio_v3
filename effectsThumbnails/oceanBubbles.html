@@ -37,15 +37,16 @@
 
     function bubbles() {
         const divBubble = document.createElement("div");
-        const scaler = Math.floor(15 - (Math.random() * 10)) / 10;
-        divBubble.classList.add("divBubble");
+        const scaler = Math.floor(18 - (Math.random() * 15)) / 10;  // number between 0.3 and 1.8
+        divBubble.className = "divBubble";
         divBubble.style.transform = `scale(${scaler}, ${scaler})`;
-        divBubble.style.bottom = "-60px";  
+        // divBubble.style.bottom = "-60px";  
+        divBubble.style.bottom = `${scaler * -40}px`;  
         divBubble.style.left = `${Math.floor(Math.random() * 100)}vw`;
         main.appendChild(divBubble);
         
-        setTimeout(moveDiv, 500, divBubble, scaler);
-        setTimeout(deleteBubble, 15000, divBubble);
+        setTimeout(moveDiv, 500, divBubble, scaler);  // use a timeout to make sure the bubble has had time to be created
+        setTimeout(deleteBubble, 30000, divBubble);
     };
 
     function moveDiv(bubble, scaler) {

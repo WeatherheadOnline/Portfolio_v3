@@ -1,0 +1,15 @@
+Behavior needed:
+
+When arrow button is clicked:
+- increment/decrement the currentSample number
+- find the object with that index
+- update the src attribute on the iframe
+- highlight the thumbnail with the matching ID
+- check for classes to add
+
+When thumbnail is clicked:
+- this automatically fetches the button's id, ie samples[index].name
+- Array.find the object with the matching name
+- update the src attribute on the iframe
+- highlight the thumbnail with the matching ID
+- check for classes to add
