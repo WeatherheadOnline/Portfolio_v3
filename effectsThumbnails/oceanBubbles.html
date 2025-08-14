@@ -7,23 +7,23 @@
             width: 100vw;
             margin: 0;
             padding: 0;
-            position: relative;
             overflow: hidden;
-            }
+        }
         #main-content {
+            position: relative;
             height: 100%;
-            width:100%;
-            background-color: #61e9e9A1;
-            background-size: cover;
+            width: 100%;
+            background: linear-gradient(
+                #6aececa1,
+                #3fc2d3a1
+            );
         }        
-        .divBubble {
+        .bubbleDiv {
             position: absolute;
             height: 40px;
             width: 40px;
-            background-image: url("../img/bubble.svg");
-            background-size: contain;
             opacity: 0.5;
-            transition: all 15s linear;
+            transition: all 30s linear;
         }
     </style>
 </head>
@@ -33,24 +33,43 @@
 
 <script>
     const main = document.getElementById("main-content");
+
+    for(let times = 1; times <= 6; times++) {  // Populate the page with bubbles when it first loads
+        bubbles(true);
+    }
+
     let s = setInterval(bubbles, 1000);  
 
-    function bubbles() {
-        const divBubble = document.createElement("div");
-        const scaler = Math.floor(18 - (Math.random() * 15)) / 10;  // number between 0.3 and 1.8
-        divBubble.className = "divBubble";
-        divBubble.style.transform = `scale(${scaler}, ${scaler})`;
-        // divBubble.style.bottom = "-60px";  
-        divBubble.style.bottom = `${scaler * -40}px`;  
-        divBubble.style.left = `${Math.floor(Math.random() * 100)}vw`;
-        main.appendChild(divBubble);
+    function bubbles(pageHasFirstLoaded) {
+        const scaler = Math.floor(25 - (Math.random() * 15)) / 10;  // number between 1 and 2.5
+        const bubbleDiv = document.createElement("div");
+        bubbleDiv.className = "bubbleDiv";
+        if(pageHasFirstLoaded) {
+            bubbleDiv.style.top = `${Math.floor(Math.random() * 90)}vh`;
+        } else {
+            bubbleDiv.style.bottom = `${scaler * -40}px`;  
+        }
+        bubbleDiv.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        main.appendChild(bubbleDiv);
         
-        setTimeout(moveDiv, 500, divBubble, scaler);  // use a timeout to make sure the bubble has had time to be created
-        setTimeout(deleteBubble, 30000, divBubble);
+        bubbleSVG(bubbleDiv, scaler);
+
+        setTimeout(moveDiv, 100, bubbleDiv, scaler);  // use a timeout to make sure the bubble has had time to be created
+        setTimeout(deleteBubble, 30000, bubbleDiv);
     };
 
+    function bubbleSVG(bubbleDiv, scaler) {
+        const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svgElement.setAttribute("width", "10.5mm");
+        svgElement.setAttribute("height", "10.5mm");
+        svgElement.setAttribute("viewBox", "0 0 10.5 10.5");
+        svgElement.innerHTML = '<path style="fill:#ffffff;fill-opacity:0.6;stroke:#ffffff;stroke-width:1;stroke-linecap:round" d="m 3.98,2.9 c 0,0 1.15,-0.51 2.41,0.17 1.26,0.68 1.51,1.88 1.51,1.88 M 9.98,5.24 A 4.74,4.74 0 0 1 5.24,9.98 4.74,4.74 0 0 1 0.5,5.24 4.74,4.74 0 0 1 5.24,0.5 4.74,4.74 0 0 1 9.98,5.24 Z" />'
+        svgElement.style.transform = `scale(${scaler})`;
+        bubbleDiv.appendChild(svgElement);
+    }
+
     function moveDiv(bubble, scaler) {
-        let riseHeight = 100 * scaler + 15;  
+        let riseHeight = 200 * scaler;  
                     // determines how far each particle moves. 
                     // since animation time is constant, a higher distance causes faster movement
         bubble.style.transform = `translate(0, -${riseHeight}vh)`;
