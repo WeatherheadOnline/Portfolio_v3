@@ -4,19 +4,20 @@
     <title>Interactive background shimmer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        svg {position: absolute;}
         body {
             position: relative;
             background-color: #FFFFFFA1;
             overflow: hidden;
         }
+        svg {position: absolute;}
         #outerClipped {
             position: absolute;
-            height: 500px;
+            height: 100vh;
             top: 0;
             left: 0;
             mask-image: url(../img/wm-2-horizontal.svg);
             mask-repeat: no-repeat;
+            mask-size: 99%;
         }
         #innerMovingBkgd {
             position: absolute;
@@ -59,7 +60,6 @@
     
     outerClipped.style.width = `${self.innerWidth}px`;
     movingBkgd.style.width = `${self.innerWidth * 3}px`;
-    outerClipped.style.maskSize = "99%";
 
     if ("ontouchstart" in window) {
         mobileListener();

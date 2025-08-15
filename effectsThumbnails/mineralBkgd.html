@@ -14,8 +14,6 @@
             overflow: hidden;
         }
         #bkgdContainer, .layerDiv {
-            width: 200vw;
-            height: 200vh;
             position: absolute;
             top: 0;
             left: 0;
@@ -55,9 +53,9 @@
         });
     </script>
     
-    <script>    // Glitter background
-        const ww = window.innerWidth;
-        const wh = window.innerHeight;
+    <script>    // Mineral background
+        const ww = window.innerWidth;  // in pixels
+        const wh = window.innerHeight;  // in pixels
         const bkgdContainer = document.getElementById("bkgdContainer");
         const numberOfLayers = 15;
         const density = 6;
@@ -87,8 +85,8 @@
         function makeSparkle(color, div) {
             const newDiv = document.createElement("div");
             newDiv.className = "sparkleDiv";
-            newDiv.style.top = `${Math.floor(Math.random() * wh)}px`;
-            newDiv.style.left = `${Math.floor(Math.random() * ww)}px`;
+            newDiv.style.top = `${Math.floor(Math.random() * 100)}vh`;
+            newDiv.style.left = `${Math.floor(Math.random() * 100)}vw`;
             newDiv.style.transform = `rotate(${Math.floor(Math.random()*360)}deg) scale(${(Math.floor(15 - (Math.random() * 10))) / 5}, ${(Math.floor(15 - (Math.random() * 10))) / 5})`;  // If using 15, 10, and 10: scale by a number between 0.5 and 1.5 in 0.1 increments
 
             const newSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -104,12 +102,12 @@
             newSvg.appendChild(newPoly);
             newDiv.appendChild(newSvg);
             div.appendChild(newDiv);
-            };
+        };
 
         //  ~~~~~  Add event listeners  ~~~~~  //
 
         const thresholdDesktop = 30;  // a higher threshold number results in each sparkle being visible for longer before disappearing again
-        const thresholdMobile = 5;
+        const thresholdMobile = 10;
         const layers = document.getElementsByClassName("layerDiv");
 
         if ("ontouchstart" in window) { 
@@ -143,6 +141,8 @@
             };
         }
 
+
+        
     </script>
 </body>
 </html>
