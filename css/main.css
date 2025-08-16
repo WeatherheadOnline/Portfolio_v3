@@ -305,9 +305,6 @@ article {
 /* ~~~~~~~~~~~~  NEW Special Effects section  ~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-div.SFX_thumbnail > svg {
-}
-
 #SFX_contents {
     display: flex;
     flex-direction: column;
@@ -345,6 +342,14 @@ div.SFX_thumbnail > svg {
     font-weight: bold;
 }
 
+#SFX_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .thumbnails {
     display: grid;
     gap: 0.5rem;
@@ -369,12 +374,23 @@ div.SFX_thumbnail > svg {
 
 .active svg {
     outline: 3px solid;
-    
 }
 
 .arrowsWrapper {
     display: flex;
-    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.arrow {
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.arrow svg {
+    stroke: black;
+    border: 5px solid;
+    border-radius: 10%;
+
 }
 
 @media screen and (any-hover: none) and (orientation: landscape),
@@ -388,6 +404,7 @@ div.SFX_thumbnail > svg {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 
 @media screen and (any-hover: none) and (orientation: landscape) {
     #SFX_iframe {
@@ -409,11 +426,8 @@ div.SFX_thumbnail > svg {
     #SFX_iframe {
     }
     #SFX_panel {
-        display: flex;
         justify-content: space-evenly;
         align-items: center;
-    }
-    .arrowsWrapper, .thumbnails {
     }
     .thumbnails {
         margin: unset;
