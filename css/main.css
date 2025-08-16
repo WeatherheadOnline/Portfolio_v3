@@ -354,6 +354,24 @@ div.SFX_thumbnail > svg {
     margin: 0 auto;
 }
 
+.SFX_thumbnail {
+    height: 3rem;
+    width: 3rem;
+}
+
+.SFX_thumbnail svg {
+    height: 100%;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10%;
+    stroke: black;
+}
+
+.active svg {
+    outline: 3px solid;
+    
+}
+
 .arrowsWrapper {
     display: flex;
     justify-content: space-evenly;
