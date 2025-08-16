@@ -119,13 +119,17 @@ nav p {
 .folioItemsWrapper img,
 .effectsItemsWrapper article,
 .effectsItemsWrapper iframe {
-    border: 1px solid #000000;
+    border: 1px solid #00291d;
 }
 
 .int::after {
     background-color: #0a5900;
     color: white;
     outline: 3px solid white;
+}
+
+.SFX_thumbnail svg, .arrow svg {
+    stroke: #00291d;
 }
 
 
@@ -140,7 +144,7 @@ input, textarea {
 
 #messageSent {
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid #00291d;
 }
 
 button {

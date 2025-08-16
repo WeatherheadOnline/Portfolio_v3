@@ -172,6 +172,9 @@ nav p {
     outline: 5px solid #e41b13ff;
 }
 
+.SFX_thumbnail svg, .arrow svg {
+    stroke: #ffd301;
+}
 
 /* ************************* */
 /*     "Contact" section     */

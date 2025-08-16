@@ -369,7 +369,6 @@ article {
     width: 100%;
     border: 1px solid;
     border-radius: 10%;
-    stroke: black;
 }
 
 .active svg {
@@ -387,10 +386,8 @@ article {
 }
 
 .arrow svg {
-    stroke: black;
     border: 5px solid;
     border-radius: 10%;
-
 }
 
 @media screen and (any-hover: none) and (orientation: landscape),

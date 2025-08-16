@@ -86,59 +86,30 @@
             <div class="sectionWrapper">
                 <hgroup class="subheader">
                     <h2>Special Effects</h2>
-                    <p>My wheelhouse and passion is making special effects for websites. Here are some examples of available special effects. We can also build custom effects to match your brand and website. The images used here are for demonstration and can be changed to different images or styles.</p>
+                    <p>My speciality is making special effects for websites. Here are some examples of available special effects; I can also build custom effects to match your brand and website.</p>
                 </hgroup>
             </div>
-            <div class="effectsItemsWrapper sectionWrapper">
-                <article id="mineralBkgd" class="int interactiveMouse">
-                    <div class="articleText">
-                        <h3>Sparkly mineral background</h3>
-                        <p>Designed to mimic the glittery appearance of a mineral being turned in the light. </p>
-                        <p>See it in action at <a href="http://www.weatherheaddesigns.com" target="_blank">WeatherheadDesigns.com</a></p>
-                    </div>
-                    <iframe loading="lazy" src="effectsThumbnails/mineralBkgd.html" title="Demonstration of sparkly background"></iframe>
-                </article>
-                
-                <article id="particlesAcrossTop">
-                    <div class="articleText">
-                        <h3>Glitter rains down</h3>
-                        <p>A cascade of glitter drifts down when the page loads, or when your visitor clicks on items.</p>
-                    </div>
-                    <iframe loading="lazy" src="effectsThumbnails/particlesAcrossTop.html" title="Demonstration of a glitter effect"></iframe>
-                </article>
 
-                <article id="shimmerTextAuto">
-                    <div class="articleText">
-                        <h3>Shimmering background</h3>
-                        <p>This mesmerizing background effect is available for the background of your website.</p>
+            <div class="sectionWrapper" id="SFX_contents">
+                <div id="SFX_iframe">                    
+                    <iframe loading="lazy" src="" title="Demonstration of sparkly background"></iframe>
+                </div>
+                <div id="SFX_panel">
+                    <div class="thumbnails" id="SFX_all_thumbnails"></div>
+                    <div class="arrowsWrapper">
+                        <div class="arrow leftArrow" id="SFX_leftArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                            </svg>
+                        </div>
+                        <div class="arrow rightArrow" id="SFX_rightArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                            </svg>
+                        </div>
                     </div>
-                    <iframe loading="lazy" src="effectsThumbnails/shimmerTextAuto.html" title="Automatic himmering background effect"></iframe>
-                </article>
-
-                <article id="shimmerTextManual" class="int interactiveMouse">
-                    <div class="articleText">
-                        <h3>Interactive shimmering background</h3>
-                        <p>A mesmerizing background effect. It moves with your visitor's mouse / device movement.</p>
-                    </div>
-                    <iframe loading="lazy" id="iframeShimmerInteractive" src="effectsThumbnails/shimmerTextManual.html" title="Interactive himmering background effect"></iframe>
-                </article>
-
-                <article id="oceanBubbles">
-                    <div class="articleText">
-                        <h3>Water bubbles</h3>
-                        <p>Calming bubbles drift upwards in the background.</p>
-                    </div>
-                    <iframe loading="eager" src="effectsThumbnails/oceanBubbles.html" title="Water bubbles"></iframe>
-                </article>     
-                
-                <article id="ripples" class="int interactiveClick">
-                    <div class="articleText">
-                        <h3>Ripples</h3>
-                        <p>Realistic ripples get smaller in the distance.</p>
-                    </div>
-                    <iframe loading="eager" src="effectsThumbnails/ripples.html" title="Ripples"></iframe>
-                </article>
-            </div> <!-- close "#effectsItemsWrapper" -->
+                </div>
+            </div>
         </section>
 
         <section id="Portfolio"> 
@@ -487,5 +458,6 @@
     <script src="js/background-glimmer.js"></script>
     <script src="js/clearForm.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/effectsSection.js"></script>
 </body>
 </html>
