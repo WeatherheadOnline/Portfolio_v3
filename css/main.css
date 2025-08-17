@@ -1,31 +1,128 @@
+@media screen and (hover) and (max-width: 599px) {
+}
+
+@media screen and (hover) and (min-width: 786px) {
+}
+
+@media screen and (hover) and (min-width: 1023px) {
+}
+
+@media screen and (hover) and (min-width: 1200px) {
+}
+
+@media screen and (hover) and (min-width: 1366px) {
+}
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~ HTML, body ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ Site-wide settings ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-* {box-sizing: border-box;}
 
-html, body {
+:root {
+    --gap-section-top: 4rem;
+    --gap-section-bottom: 3rem;
+    --hud-padding-mobile: 1vh;
+    --hud-padding-desktop: 1rem;
+    --section-padding-desktop: 15px;
+    --greengeeks-height: 2rem;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    position: relative;
-    top: 0;
-    overflow-x: hidden;
 }
 
-h1 {
-    font-family: "Cooper Black";
-    margin: 0;
-    font-size: 2rem;
-    z-index: 2;
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
 }
+
+body {
+    background-color: var(--bkgd-1);
+}
+
+/* Mobile, portrait orientation */
+
+section {
+    min-height: 100vh;
+    margin: 0 auto;
+    /* padding: 6vh 0 1vh 0; */
+    padding: 6vh 5vw 1vh 5vw;
+    position: relative;
+}
+
+/* .sectionWrapper {
+    position: relative;
+    padding: 0 5vw;
+} */
+
+.subheader {text-align: center;}
+
+
+/* Mobile, landscape orientation */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    /* section {padding: 3vh 1vw 5vh 13vw;} */
+    section {padding: 3vh 2vw 5vh 14vw;}
+    /* .sectionWrapper {
+        padding: 0 1vw;
+    } */
+}
+
+/* Desktop */
+
+@media screen and (hover) {
+    /* section {padding: 0;}     */
+    section:not(#Home) {
+        padding: 0 var(--section-padding-desktop);
+    }
+    /* .sectionWrapper {
+        padding: 15px 0;
+        margin: 0 auto;
+    } */
+}
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    /* .sectionWrapper {width: 400px;} */
+    section:not(#Home) {width: 400px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    /* .sectionWrapper {width: 550px;} */
+    section:not(#Home) {width: 550px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
+    /* .sectionWrapper {width: 700px;} */
+    section:not(#Home) {width: 700px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    /* .sectionWrapper {width: 960px;} */
+    section:not(#Home) {width: 960px;}
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
 
 h2 {
     font-family: "Cooper Black";
     font-size: 1.5rem; 
-    z-index: 2;
-
 }
-p, li {font-size: 1.2rem; z-index: 2;}
+p, li {
+    font-size: 1.2rem; 
+    z-index: 2;
+}
 a {color: inherit;}
 
 
@@ -38,9 +135,11 @@ a {color: inherit;}
         font-size: 1.6rem;
         font-weight: bold;
     }
-    p, li {font-size: 1.4rem;}
+    section:not(#Home) p, li {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
 }
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
@@ -53,7 +152,7 @@ a {color: inherit;}
     display: inline;
     width: max-content;
     height: max-content;
-    margin: 1vh;
+    margin: var(--hud-padding-mobile);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -63,96 +162,141 @@ a {color: inherit;}
     height: auto;
 }
 
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~  Main  ~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
-/* Main: Mobile, portrait orientation */
-
-main {margin: 0;}
-
-section {
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 6vh 0 1vh 0;
+h1.screen-reader-only {
+    clip: rect(0,0,0,0);
+    border: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.sectionWrapper {
-    position: relative;
-    padding: 0 5vw;
+
+/* For if the greengeeks logo needs to be a direct child of <main>:
+
+#greenGeeks_landing {
+    position: absolute;
+    min-width: calc(100vw - var(--hud-padding-mobile));
+    height: var(--greengeeks-height);
+    top: calc(100vh - var(--greengeeks-height) - 2 * var(--hud-padding-mobile));
+    left: 0;
+    text-align: right;
 }
 
-.subheader {text-align: center;}
+#greenGeeks_landing img {
+    height: var(--greengeeks-height);
+    width: auto;
+    margin-right: var(--hud-padding-mobile);
+}
 
+@media screen and (hover) {
+    #greenGeeks_landing {
+        min-width: calc(100vw - var(--hud-padding-desktop));
+        height: var(--greengeeks-height);
+        top: calc(100vh - var(--greengeeks-height) - var(--hud-padding-desktop));
+    }
+    #greenGeeks_landing img {
+        margin-right: var(--hud-padding-desktop);
+    }
+} */
 
-/* Main: Mobile, landscape orientation */
+#greenGeeks_landing {
+    position: absolute;
+    right: var(--hud-padding-mobile);
+    bottom: var(--hud-padding-mobile);
+    margin-right: var(--hud-padding-mobile);
+}
 
-@media screen and (any-hover: none) and (orientation: landscape) {
-    section {padding: 3vh 1vw 5vh 13vw;}
-    .sectionWrapper {
-        padding: 0 1vw;
+#greenGeeks_landing img {
+    height: var(--greengeeks-height);
+    width: auto;
+}
+
+@media screen and (hover) {
+    #greenGeeks_landing {
+        right: var(--hud-padding-desktop);
+        bottom: var(--hud-padding-desktop);
     }
 }
 
+#Home {
+    font-family: "Courier Prime";
+}
 
-/* Desktop */
+#hero-text-primary {
+}
+#hero-text-primary p:first-child {      /* "Make a"  */
+    margin-top: 20vw;     /* whatever height is needed to avoid bumping into the logo */
+    font-size: 13vw;
+}
 
-@media screen and (any-hover: hover) {
-    section {padding: 0;}    
-    .sectionWrapper {
-        padding: 15px 0;
+#hero-text-primary p:last-child {      /* "Splash"  */
+    text-transform: uppercase;
+    font-family: "Cooper Black";
+    font-size: 21.2vw;
+}
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text-primary p:last-child {      /* "Splash"  */
+        font-size: 17vw;
+    }
+}
+@media screen and (hover) {
+    #hero-text-primary {
+        max-width: 1024px;
         margin: 0 auto;
     }
-}
-
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    .sectionWrapper {width: 400px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    .sectionWrapper {width: 550px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    .sectionWrapper {width: 700px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 1024px) {
-    .sectionWrapper {width: 960px;}
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~  Home/Welcome section  ~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-#Home {padding-top: 18vh;}
-#Home p {text-align: center;}
-#Home hgroup {margin-bottom: 3rem;}
-
-/* Home/Welcome: Mobile, landscape orientation */
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-    #Home {
-        padding-top: 11vh;
-        padding-left: 18vw;
+    #hero-text-primary p:first-child {      /* "Make a"  */
+        margin-top: 5rem;     /* whatever height is needed to avoid bumping into the logo */
+        font-size: clamp(2.5rem, 9vw, 6rem);
     }
-    #Home hgroup {margin-bottom: 1rem;}
+    #hero-text-primary p:last-child {      /* "Splash"  */
+        font-size: clamp(5rem, 18vw, 12rem);
+        text-align: center;
+    }
 }
 
 
-/* Home/Welcome: Desktop */
+/* Ripple effect */
 
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    #Home hgroup {margin-bottom: 1rem;}
+#ripples {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
-
-@media screen and (any-hover: hover) {
-    #Home {padding-top: 20vh;}
+.ripple {
+    position: absolute;
+    text-align: center;
+    transform-origin: 50%;
+}
+#ripples svg {
+    fill: none;
+    transition: all 3s linear;
+    animation: fadeInterval 3s linear 1;
+    transform-origin: 50%;
+}
+.rippleClick svg {
+    stroke: #61f399;
+}
+.rippleInt svg {
+    stroke: #2867d4;
+}
+@keyframes fadeInterval {
+    from {
+        opacity: 0.5;
+        transform: scale(0.01);
+    }
+    to {
+        opacity: 0;
+        transform: scale(3);
+    }
 }
 
 
@@ -890,36 +1034,42 @@ footer p {
 #modes {
     position: fixed;
     bottom: 0;
-    margin-left: 10px;
+    margin: var(--hud-padding-desktop);
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
     align-items: center;
     z-index: 5;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #444444;
+    outline: 2px solid #888888;
+
 }
 
-.modeButton {
-    height: 2.4rem;
-    width: 2.4rem;
-    margin: 0 0.75rem 0.75rem 0;
-    border-radius: 20%;
-    position: relative;
+.mode-button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
 }
+
+.mode-button:nth-child(1) {background-color: red;}
+.mode-button:nth-child(2) {background-color: blue;}
+.mode-button:nth-child(3) {background-color: green;}
+
+.mode-button.active {
+    border: 1px solid #444444;
+    outline: 3px solid #888888;
+}
+
 
 .modeButton svg {
-    width: 2rem;   
-    height: 2rem;
-    margin: 0.2rem;
 }
-
-#mystery, #neon, #yellowsub, #mineral {display: none;}
 
 .modeButton .hoverText {
     visibility: hidden;
-    text-align: center;
-    padding: 5px;
-    position: absolute;
-    z-index: 6;
-    text-wrap: nowrap;
 }
 
 
@@ -929,14 +1079,8 @@ footer p {
     #modes {align-items: center;    
     }
     .modeButton {
-        height: 1.8rem;
-        width: 1.8rem;
-        margin: 0 0.75rem 0.75rem 0;
     }
-        .modeButton svg {
-        width: 1.4rem;   
-        height: 1.4rem;
-        margin: 0.2rem;
+    .modeButton svg {
     }
 }
 
@@ -945,19 +1089,12 @@ footer p {
 
 @media screen and (any-hover: hover) {
     #modes {
-        flex-direction: column-reverse;
         align-items: center;    
     }
 
     .modeButton {
-        height: 2.4rem;
-        width: 2.4rem;
-        margin: 0 0.75rem 0.75rem 0;
     }
     .modeButton svg {
-        width: 2rem;   
-        height: 2rem;
-        margin: 0.2rem;
     }
     .modeButton:hover .hoverText {visibility: visible;}
 }

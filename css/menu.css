@@ -11,8 +11,6 @@ header {
     z-index: 2;
 }
 
-nav {display: none;}
-
 #hamburger img {
     width: 5wv;
     height: auto;
@@ -64,26 +62,7 @@ nav {display: none;}
         align-items: center;
         padding-top: 1vh;
     }
-    nav {
-        padding: 0.7vh 1vh;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: min-content;
-        justify-content: space-between;
-        gap: 1vh;
-    }
-    nav p {
-        text-align: center;
-        padding: 0.2rem 0.4rem;
-        margin: 1vh;
-        font-size: 1.2rem;
-    }
-    nav a {text-decoration: none;}
-    .hiddenInLandscape {display: none;}
-    #hamburger {display: none;}
 }
-
 
 /* Header: Desktop */
 
@@ -105,28 +84,7 @@ nav {display: none;}
     }
 }
 
-
 @media screen and (any-hover: hover) and (min-width: 600px) {
     header {width: 100%;}
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        height: min-content;
-        padding: 0.5rem;
-        justify-content: flex-end;
-        gap: 0.5rem max(0.5rem, 3vw);
-    }
-    
-    nav p {
-        text-align: center;
-        margin: 0;
-        /* margin-left: calc(2vw - 5px); */
-        padding: 0.2rem 0.5rem;
-        font-size: 1.1rem;
-    }
-    
-    nav a {text-decoration: none;}
-    #hamburger {display: none;}
-    #menu {display: none;}
+   /* #menu {display: none;} */
 }

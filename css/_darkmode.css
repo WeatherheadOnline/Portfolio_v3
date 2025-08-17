@@ -1,18 +1,38 @@
+/* .roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+
+:root {
+    --gap-section-top: 4rem;
+    --gap-section-bottom: 3rem;
+    --bkgd-1: #000423;
+    --text-1: #e1fafa;
+}
+
 body {
-    background-color: #000000;
-    font-family: "EB Garamond";
-    color: #dff7d9;
-    text-shadow: 0 0 4px #dff7d9;
-    border-color: #dff7d9;
+    background-color: var(--bkgd-1);
+    color: var(--text-1);
+    /* text-shadow: 0 0 4px var(--text-1); */
+    border-color: var(--text-1);
 }
 
 section:nth-child(even) {
-    background-color: #04003a;
-    color: inherit;
-}
-
-section {
-    box-shadow: none;   /* to clear box shadow after neon.css */
+    /* background-color: #04003a; */
+    /* color: inherit; */
 }
 
 h1 {
@@ -22,11 +42,9 @@ h1 {
 }
 
 h2 {
-    /* font-family: "Cooper Black"; */
 }
 
 #Home h2 {
-    font-family: "EB Garamond";
 }
 
 #logo {
@@ -45,15 +63,8 @@ h2 {
 /*       Navbar / menu       */
 /* ************************* */
 
-nav p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: inherit;
-    outline: 2px solid black;
-    border-radius: 0;
-    background-color: #002e20;
-}
 #hamburger svg {
-    stroke: #dff7d9;
+    stroke:var(--text-1);
 }
 #menu {
     background-color: black;
@@ -153,12 +164,11 @@ button {
 
 .modeButton .hoverText {
     background-color: #002017AA;
-    color: white;
+    color: var(--text-1);
 }
 
 .modeButton {
     background-color: #00291dDD;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .modeButton svg {
@@ -166,5 +176,5 @@ button {
 }
 
 div #dark {
-    outline: 2px solid #dff7d9;
+    outline: 2px solid var(--text-1);
 }

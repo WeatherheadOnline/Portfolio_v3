@@ -172,8 +172,12 @@ nav p {
     outline: 5px solid #e41b13ff;
 }
 
+.SFX_thumbnail, .arrow {
+    background-color: #ffd301;
+}
+
 .SFX_thumbnail svg, .arrow svg {
-    stroke: #ffd301;
+    stroke: #000000;
 }
 
 /* ************************* */
