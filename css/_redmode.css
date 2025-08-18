@@ -1,0 +1,13 @@
+:root {
+    --gap-section-top: 4rem;
+    --gap-section-bottom: 3rem;
+    --bkgd-1: #440000;
+    --text-1: #FF8888;
+}
+
+body {
+    background-color: var(--bkgd-1);
+    color: var(--text-1);
+    /* text-shadow: 0 0 4px var(--text-1); */
+    border-color: var(--text-1);
+}

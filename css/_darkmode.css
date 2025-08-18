@@ -162,6 +162,15 @@ button {
 /*      "Mode" buttons       */
 /* ************************* */
 
+#modes {
+    background-color: #44444488;
+    outline: 2px solid #888888;
+}
+
+.mode-button.active {
+    outline: 6px solid #888888;
+}
+
 .modeButton .hoverText {
     background-color: #002017AA;
     color: var(--text-1);

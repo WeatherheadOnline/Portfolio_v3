@@ -228,6 +228,10 @@ h1.screen-reader-only {
     font-family: "Courier Prime";
 }
 
+/* #Home > div:not(#ripples) {
+    z-index: 1;
+} */
+
 #hero-text-primary {
 }
 #hero-text-primary p:first-child {      /* "Make a"  */
@@ -1032,36 +1036,66 @@ footer p {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #modes {
+    z-index: 5;
     position: fixed;
     bottom: 0;
     margin: var(--hud-padding-desktop);
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
     padding: 5px;
-    align-items: center;
-    z-index: 5;
-    width: 100px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #444444;
-    outline: 2px solid #888888;
-
+    border-radius: 20px;
+    box-shadow: 0 0 3px 1px #000000 inset;
 }
 
 .mode-button {
-    height: 12px;
-    width: 12px;
+    height: 17px;
+    width: 17px;
     border-radius: 50%;
+    background-color: blue;
+}
+#modes {
+    background-color: #44444488;
+    outline: 2px solid #88888888;
 }
 
-.mode-button:nth-child(1) {background-color: red;}
-.mode-button:nth-child(2) {background-color: blue;}
-.mode-button:nth-child(3) {background-color: green;}
-
 .mode-button.active {
-    border: 1px solid #444444;
-    outline: 3px solid #888888;
+    outline: 6px solid #888888;
+}
+
+
+
+#modes #lightmode {
+    background-color: #F8FFAA;
+    border: 1px solid #F8FFAA;
+    background-image: url(../img/shining-sun-svgrepo-com.svg);
+    background-size: contain;
+}
+#modes #darkmode {
+    background-color: #000000;
+    border: 1px solid #000000;
+    background-image: url(../img/basic-moon-svgrepo-com.svg);
+    background-size: contain;
+}
+.mode-button.active {
+    box-shadow: 0 0 3px 7px black;
+}
+#modes #mysterymode {
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    background-image: url(../img/question-mark-svgrepo-com.svg);
+    background-size: contain;
+    display: none;
+}
+#modes #redmode {
+    background-color: #FF0000;
+}
+#modes #greenmode {
+    background-color: #00FF00;
+}
+#modes #bluemode {
+    background-color: #0000FF;
 }
 
 

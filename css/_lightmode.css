@@ -1,8 +1,19 @@
+:root {
+    --gap-section-top: 4rem;
+    --gap-section-bottom: 3rem;
+    --bkgd-1: #e1fafa;
+    --text-1: #000423;
+
+}
+
+
+
+
 body {
-    background-color: #FFFFFF;
-    font-family: "EB Garamond";
-    color: #00291d;
-    border-color: #00291d;
+    background-color: var(--bkgd-1);
+    color: var(--text-1);
+    /* text-shadow: 0 0 4px var(--text-1); */
+    border-color: var(--text-1);
 }
 
 section:nth-child(even) {
@@ -57,15 +68,15 @@ nav p {
 }
 
 #hamburger svg {
-    stroke: #00376e;
+    stroke:var(--text-1);
 }
 
 #menu {
     background-color: #dff7d9;
     outline: 2px solid #094e00;
     box-shadow: 0 4px 10px 5px #00000022;
-}    
-#menu h4:hover, #menu span:hover {  
+}
+#menu h4:hover, #menu span:hover {
     background-color: white;
     box-shadow: 0 2px 8px #00000022;
 }
@@ -86,7 +97,7 @@ nav p {
 
 #binaryDiv {
     background: linear-gradient(
-        110deg, 
+        110deg,
         #dff7d9 0%,
         #dff7d9 23%,
         #f7ff6bff 24%,
@@ -107,7 +118,7 @@ nav p {
     );
     background-clip: text;
     -webkit-background-clip: text;
-    background-size: 500vw 28rem;   
+    background-size: 500vw 28rem;
 }
 
 
@@ -140,7 +151,7 @@ nav p {
 input, textarea {
     /* color: #dff7d9;
     background-color: black; */
-} 
+}
 
 #messageSent {
     background-color: white;
@@ -156,6 +167,15 @@ button {
 /* ************************* */
 /*      "Mode" buttons       */
 /* ************************* */
+
+#modes {
+    background-color: #88888888;
+    outline: 2px solid #444444;
+}
+
+.mode-button.active {
+    outline: 6px solid #444444;
+}
 
 .modeButton .hoverText {
     background-color: #7ec5ffAA;
