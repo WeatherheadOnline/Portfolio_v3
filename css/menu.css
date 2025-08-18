@@ -10,7 +10,9 @@ header {
     flex-wrap: nowrap;
     z-index: 2;
 }
-
+#hamburger {
+    cursor: pointer;
+}
 #hamburger img {
     width: 5wv;
     height: auto;

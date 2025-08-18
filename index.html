@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
 </head>
 <body>
-
     <header>
         <div id="logo">
             <a class="navlink" id="homeLink" href="#Home"><img style="opacity:0" src="img/logo_navy.svg" alt="Weatherhead Online logo, linking to top of webpage"></a>
@@ -39,20 +38,26 @@
     </header>
 
     <main>
+
         <section id="Home">
-            <!-- <div class="sectionWrapper"> -->
+
             <div id="ripples"></div>
+            <div id="home-bkgd">
+                <div></div><div></div>
+            </div>
+
             <h1 class="screen-reader-only">Make a splash with modern animated websites by Weatherhead Online.</h1>
-            <div>
-                <div id="hero-text-primary">
-                    <p>Make a</p>
-                    <p>splash</p>
-                </div>
+            <div id="hero-text">
+                <p>Make a</p>
+                <p id="splash-moving-bkgd">splash</p>
                 <div id="hero-text-secondary">
-                    <p>with modern animated websites by</p>
+                    <p><span>with modern animated</span><span>websites by</span></p>
+                    <div id="logo-landing">
+                        <img src="img/logo_landing.svg" alt="Weatherhead Online logo">
+                    </div>
                 </div>
             </div>
-            <!-- </div>  (sectionwrapper)-->
+
             <div id="greenGeeks_landing">
                 <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://static.greengeeks.com/ggseal/Green_3.png' border='0' alt='GreenGeeks eco-friendly web hosting'></a>            
             </div>
@@ -323,17 +328,14 @@
         <div class="mode-button" id="lightmode"></div>
         <div class="mode-button active" id="darkmode"></div>
         <div class="mode-button" id="mysterymode"></div>
-        <!-- <div class="mode-button" id="greenmode"></div>
-        <div class="mode-button" id="bluemode"></div>
-        <div class="mode-button" id="redmode"></div> -->
-    </div>  <!-- close container for mode buttons -->
+    </div> 
 
     
-    <!-- <script src="js/modes-basic.js"></script> -->
     <script src="js/modes.js"></script>
     <script src="js/clearForm.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/effectsSection.js"></script>
     <script src="js/ripples.js"></script>
+    <script src="js/splash-text-bkgd.js"></script>
 </body>
 </html>

@@ -49,15 +49,9 @@ body {
 section {
     min-height: 100vh;
     margin: 0 auto;
-    /* padding: 6vh 0 1vh 0; */
     padding: 6vh 5vw 1vh 5vw;
     position: relative;
 }
-
-/* .sectionWrapper {
-    position: relative;
-    padding: 0 5vw;
-} */
 
 .subheader {text-align: center;}
 
@@ -65,43 +59,26 @@ section {
 /* Mobile, landscape orientation */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    /* section {padding: 3vh 1vw 5vh 13vw;} */
     section {padding: 3vh 2vw 5vh 14vw;}
-    /* .sectionWrapper {
-        padding: 0 1vw;
-    } */
 }
 
 /* Desktop */
 
 @media screen and (hover) {
-    /* section {padding: 0;}     */
     section:not(#Home) {
         padding: 0 var(--section-padding-desktop);
     }
-    /* .sectionWrapper {
-        padding: 15px 0;
-        margin: 0 auto;
-    } */
 }
-
 @media screen and (any-hover: hover) and (max-width: 599px) {
-    /* .sectionWrapper {width: 400px;} */
     section:not(#Home) {width: 400px;}
 }
-
 @media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    /* .sectionWrapper {width: 550px;} */
     section:not(#Home) {width: 550px;}
 }
-
 @media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    /* .sectionWrapper {width: 700px;} */
     section:not(#Home) {width: 700px;}
 }
-
 @media screen and (any-hover: hover) and (min-width: 1024px) {
-    /* .sectionWrapper {width: 960px;} */
     section:not(#Home) {width: 960px;}
 }
 
@@ -110,10 +87,7 @@ section {
 /* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-body {
-    font-family: "Roboto Mono", monospace;
-}
-
+body {font-family: "Roboto Mono", monospace;}
 
 h2 {
     font-family: "Cooper Black";
@@ -124,7 +98,6 @@ p, li {
     z-index: 2;
 }
 a {color: inherit;}
-
 
 /* Desktop */
 
@@ -148,7 +121,10 @@ a {color: inherit;}
 
 /* Mobile, portrait orientation */
 
+
 #logo {
+    position: relative;
+    z-index: 3;
     display: inline;
     width: max-content;
     height: max-content;
@@ -176,35 +152,6 @@ h1.screen-reader-only {
     white-space: nowrap;
 }
 
-
-/* For if the greengeeks logo needs to be a direct child of <main>:
-
-#greenGeeks_landing {
-    position: absolute;
-    min-width: calc(100vw - var(--hud-padding-mobile));
-    height: var(--greengeeks-height);
-    top: calc(100vh - var(--greengeeks-height) - 2 * var(--hud-padding-mobile));
-    left: 0;
-    text-align: right;
-}
-
-#greenGeeks_landing img {
-    height: var(--greengeeks-height);
-    width: auto;
-    margin-right: var(--hud-padding-mobile);
-}
-
-@media screen and (hover) {
-    #greenGeeks_landing {
-        min-width: calc(100vw - var(--hud-padding-desktop));
-        height: var(--greengeeks-height);
-        top: calc(100vh - var(--greengeeks-height) - var(--hud-padding-desktop));
-    }
-    #greenGeeks_landing img {
-        margin-right: var(--hud-padding-desktop);
-    }
-} */
-
 #greenGeeks_landing {
     position: absolute;
     right: var(--hud-padding-mobile);
@@ -228,42 +175,75 @@ h1.screen-reader-only {
     font-family: "Courier Prime";
 }
 
-/* #Home > div:not(#ripples) {
-    z-index: 1;
-} */
-
-#hero-text-primary {
+#Home > div:not(#ripples) {
+    z-index: 2;
 }
-#hero-text-primary p:first-child {      /* "Make a"  */
+
+
+#hero-text {
     margin-top: 20vw;     /* whatever height is needed to avoid bumping into the logo */
+    z-index: 2;
+}
+#hero-text > p:first-child {      /* "Make a"  */
     font-size: 13vw;
+    z-index: 2;
 }
 
-#hero-text-primary p:last-child {      /* "Splash"  */
+#hero-text p:nth-child(2) {      /* "Splash"  */
     text-transform: uppercase;
     font-family: "Cooper Black";
     font-size: 21.2vw;
+    z-index: 2;
 }
 @media screen and (any-hover: none) and (orientation: landscape) {
-    #hero-text-primary p:last-child {      /* "Splash"  */
+    #hero-text p:nth-child(2) {      /* "Splash"  */
         font-size: 17vw;
     }
 }
 @media screen and (hover) {
-    #hero-text-primary {
+    #hero-text {
         max-width: 1024px;
         margin: 0 auto;
+        margin-top: 8rem;     
     }
-    #hero-text-primary p:first-child {      /* "Make a"  */
-        margin-top: 5rem;     /* whatever height is needed to avoid bumping into the logo */
+    #hero-text > p:first-child {      /* "Make a"  */
         font-size: clamp(2.5rem, 9vw, 6rem);
+        line-height: 2rem;
     }
-    #hero-text-primary p:last-child {      /* "Splash"  */
+    #hero-text p:nth-child(2) {      /* "Splash"  */
         font-size: clamp(5rem, 18vw, 12rem);
         text-align: center;
     }
 }
 
+#hero-text-secondary {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    top: 10vh;
+}
+#hero-text-secondary span {
+    font-size: 2rem;
+    display: block;
+    text-align: right;
+    min-width: max-content;
+}
+
+/* "SPLASH" moving background effect */
+
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    background: url(../img/hero-bkgd-lighter.svg), url(../img/hero-bkgd-darker.svg), white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position-y: 100%, 100%;
+    background-position-x: center, center;
+    background-size: 10%, 10%;
+    background-repeat: repeat-x, repeat-x;
+
+
+}
 
 /* Ripple effect */
 
@@ -279,6 +259,7 @@ h1.screen-reader-only {
     position: absolute;
     text-align: center;
     transform-origin: 50%;
+    z-index: 0;
 }
 #ripples svg {
     fill: none;
@@ -302,6 +283,31 @@ h1.screen-reader-only {
         transform: scale(3);
     }
 }
+
+/* Home section background effects */
+
+#home-bkgd {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-bkgd div {
+    width: 120%;
+    background: radial-gradient(
+        #0bffe419,
+        #0bffe400 80%
+    );
+}
+
+#home-bkgd div:first-child {height: 60%;}
+#home-bkgd div:last-child {height: 40%;}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
