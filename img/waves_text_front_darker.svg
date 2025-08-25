@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.999998mm"
+   height="32.999863mm"
+   viewBox="0 0 21.999998 32.999863"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       xlink:href="#linearGradient14"
+       id="linearGradient4"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3859.7294,-93.46344)"
+       x1="4000.0459"
+       y1="95.744637"
+       x2="4000.3274"
+       y2="112.95679" />
+    <linearGradient
+       id="linearGradient14">
+      <stop
+         style="stop-color:#54cdf3;stop-opacity:1;"
+         offset="0"
+         id="stop14" />
+      <stop
+         style="stop-color:#96e3ed;stop-opacity:1;"
+         offset="1"
+         id="stop15" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1">
+    <path
+       style="display:inline;fill:url(#linearGradient4);fill-opacity:1;stroke:none;stroke-width:1.21904"
+       d="M 5.4999,0 A 5.4999823,5.4999823 0 0 0 0,5.49993 v 11.0871 2.63587 13.776963 H 22 V 19.22289 16.58703 5.49992 A 5.4999823,5.4999823 0 0 1 16.5001,10.99985 5.4999823,5.4999823 0 0 1 10.9997,5.49992 5.4999823,5.4999823 0 0 0 5.4999,0 Z"
+       id="path31" />
+  </g>
+</svg>

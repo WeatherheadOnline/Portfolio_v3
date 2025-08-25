@@ -39,19 +39,16 @@ h2 {
     font-family: "EB Garamond";
 }
 
-#logo {
+/* #logo {
     background-color: #FFFFFF88;
     background-image: url("../img/logo_navy.svg");
-}
+} */
 
-@media (any-hover: hover) {
+/* @media (any-hover: hover) {
     #logo:hover, nav p:hover {
         outline: 2px solid #094e00;
     }
-    nav p:active {
-        background-color: #FFFFFF;
-    }
-}
+} */
 
 
 /* ************************* */

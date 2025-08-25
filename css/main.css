@@ -1,3 +1,6 @@
+@media screen and (any-hover: none) and (orientation: landscape){
+}
+
 @media screen and (hover) and (max-width: 599px) {
 }
 
@@ -14,6 +17,7 @@
 }
 
 
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~ Site-wide settings ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -26,6 +30,21 @@
     --hud-padding-desktop: 1rem;
     --section-padding-desktop: 15px;
     --greengeeks-height: 2rem;
+    /* --logo-color-accent:#004c8a;
+    --logo-color-main:#00a2f0;
+
+    --blue-lightest: #beecfb;
+    --blue-light: #96e3ed;
+    --blue-mid: #54cdf3;
+    --blue-bright: #00a2f0;
+    --navy-lightest: #091b3e;
+    --navy-dark: #020421;
+    --navy-darkest: #000315;
+    --light-rays-start: #0bffe436;
+    --light-rays-end: #0bffe400; 
+    --green-light: #67d467;
+    --green-bright: #32b032;
+    --purple-deep: #1c01a4; */
 }
 
 * {
@@ -37,7 +56,7 @@
 html, body {
     position: relative;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100dvw;
 }
 
 body {
@@ -49,24 +68,26 @@ body {
 section {
     min-height: 100vh;
     margin: 0 auto;
-    padding: 6vh 5vw 1vh 5vw;
     position: relative;
 }
+#About, #Contact, #Portfolio, #Plan {
+    display: none;
+}
 
-.subheader {text-align: center;}
-
-
+section:not(#Home) {
+    padding: 9vh 2vw 1vh 2vw;
+}
 /* Mobile, landscape orientation */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    section {padding: 3vh 2vw 5vh 14vw;}
+    section:not(#Home) {padding: 3vh 2vw 5vh 14vw;}
 }
 
 /* Desktop */
 
 @media screen and (hover) {
     section:not(#Home) {
-        padding: 0 var(--section-padding-desktop);
+        padding: 6rem var(--section-padding-desktop) 0 var(--section-padding-desktop);
     }
 }
 @media screen and (any-hover: hover) and (max-width: 599px) {
@@ -89,21 +110,29 @@ section {
 
 body {font-family: "Roboto Mono", monospace;}
 
+.subheading {   /* Class is used on hgroups, not on h2 tags */
+    text-align: center;
+    margin-bottom: 2.5vh;
+}
+
 h2 {
     font-family: "Cooper Black";
-    font-size: 1.5rem; 
+    font-size: 1.8rem; 
+    margin-bottom: 2.5vh;
 }
 p, li {
-    font-size: 1.2rem; 
-    z-index: 2;
+    font-size: 0.9rem; 
+    /* z-index: 2; */
 }
 a {color: inherit;}
 
 /* Desktop */
 
 @media screen and (any-hover: hover) {
-    h1 {font-size: 3rem;}
-    h2 {font-size: 2rem;}
+    .subheading {   /* Class is used on hgroups, not on h2 tags */
+        /* margin-bottom: 2.5vh; */
+    }
+    h2 {font-size: 3rem;}
     h3{
         font-size: 1.6rem;
         font-weight: bold;
@@ -119,28 +148,39 @@ a {color: inherit;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-/* Mobile, portrait orientation */
+.logo-accent-color {
+  fill: var(--logo-color-accent);
+  stroke: var(--logo-color-accent);
+}
 
+.logo-main-color {
+  fill: var(--logo-color-main);
+}
 
 #logo {
     position: relative;
     z-index: 3;
-    display: inline;
-    width: max-content;
-    height: max-content;
+    width: min(15vw, 15vh);
+    height: auto;
     margin: var(--hud-padding-mobile);
-    background-size: contain;
-    background-repeat: no-repeat;
+    border-radius: 0.3rem;
 }
 
-#logo img {
-    width: 65px;
-    height: auto;
+#logo:hover {
+    outline: 2px solid var(--logo-color-accent);
 }
+
+@media screen and (hover) {
+    #logo {width: 4rem;}
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Home {font-family: "Courier Prime";}
 
 h1.screen-reader-only {
     clip: rect(0,0,0,0);
@@ -158,12 +198,10 @@ h1.screen-reader-only {
     bottom: var(--hud-padding-mobile);
     margin-right: var(--hud-padding-mobile);
 }
-
 #greenGeeks_landing img {
     height: var(--greengeeks-height);
     width: auto;
 }
-
 @media screen and (hover) {
     #greenGeeks_landing {
         right: var(--hud-padding-desktop);
@@ -171,95 +209,207 @@ h1.screen-reader-only {
     }
 }
 
-#Home {
-    font-family: "Courier Prime";
-}
-
-#Home > div:not(#ripples) {
-    z-index: 2;
-}
-
+/* Main elements on landing screen */
 
 #hero-text {
-    margin-top: 20vw;     /* whatever height is needed to avoid bumping into the logo */
-    z-index: 2;
+    margin-top: 23vh;     
+    position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
 }
-#hero-text > p:first-child {      /* "Make a"  */
+#hero-text-primary {
+    position: relative; 
+}
+#hero-text-primary > p:first-child {      /* "Make a"  */
     font-size: 13vw;
-    z-index: 2;
+    text-shadow: 2px 2px 0 #000000;  
 }
-
 #hero-text p:nth-child(2) {      /* "Splash"  */
     text-transform: uppercase;
     font-family: "Cooper Black";
     font-size: 21.2vw;
-    z-index: 2;
+    filter: drop-shadow(2px 2px 0 #000000);
 }
+#hero-text-secondary {
+    position: relative;
+    margin: 18vh auto 0 auto;  
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 2rem;
+    text-shadow: 2px 2px 0 #000000;
+}
+#hero-text-secondary span {
+    display: block;
+    min-width: max-content;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1rem;
+}
+#hero-text-secondary svg {
+    width: 100%; 
+    height: auto;
+    filter: drop-shadow(2px 2px 0 #000000);
+}
+
+@media screen and (any-hover: none) and (orientation: portrait) {
+    #Home {padding: 0 5vw;}
+}
+
 @media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text-secondary {        /* (same as for desktop) */
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1.8rem;
+        margin-top: 5vh;
+    }
+    #hero-text {
+        margin-top: 10vh;
+    }
+    #hero-text-primary > p:first-child {      /* "Make a"  */
+        font-size: 13vh;
+        position: relative;
+        left: 15vw;
+    }    
     #hero-text p:nth-child(2) {      /* "Splash"  */
-        font-size: 17vw;
+        font-size: 26vh;
+        text-align: center;
+    }
+    #hero-text-secondary {
+        margin-top: 15vh; 
+    }
+    #hero-text-secondary span {
+        font-size: 5vh;
+        line-height: 4.5vh;
     }
 }
+
+
 @media screen and (hover) {
     #hero-text {
+        margin: 20vh auto 0 auto;
+        width: max-content;
+    }
+    #hero-text-primary {
         max-width: 1024px;
         margin: 0 auto;
-        margin-top: 8rem;     
     }
-    #hero-text > p:first-child {      /* "Make a"  */
-        font-size: clamp(2.5rem, 9vw, 6rem);
+    #hero-text-primary p:first-child {      /* "Make a"  */
+        font-size: clamp(2.5rem, 9vw, 5rem);
         line-height: 2rem;
     }
     #hero-text p:nth-child(2) {      /* "Splash"  */
         font-size: clamp(5rem, 18vw, 12rem);
         text-align: center;
     }
+    #hero-text-secondary {
+        width: max-content;
+    }
+    #hero-text-secondary span {  /* This is overwritten for screen widths 600px and over */
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    #hero-text-secondary svg {
+        height: 3rem;   /* This is overwritten for screen widths 600px and over */
+        width: auto;
+    }
 }
 
-#hero-text-secondary {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 2rem;
-    position: relative;
-    top: 10vh;
+@media screen and (hover) and (min-width: 600px) {
+    #hero-text-secondary {        /* (same for mobile in landscape orientation) */
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }        
 }
-#hero-text-secondary span {
-    font-size: 2rem;
-    display: block;
-    text-align: right;
-    min-width: max-content;
+
+@media screen and (hover) and (min-width: 600px) and (max-width: 785px) {    
+    #hero-text-primary p:first-child {margin-left: 1rem;}
+    #hero-text-secondary p { 
+        width: 16rem;
+        text-align: right;
+        line-height: 1.1rem;
+    }
+    #hero-text-secondary span { 
+        display: inline;    /* This rule is for getting the secondary hero text onto two lines instead of three */
+        font-size: 1.3rem;
+    }
+    #hero-text-secondary {        
+        margin-top: 10vh;
+        gap: 1.9rem;
+    }    
+    #hero-text-secondary svg {
+        height: 2.1rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 786px) {
+    #hero-text-secondary svg {
+        height: 3.2rem;
+    }
+    #hero-text-secondary {
+        gap: clamp(2rem, 4.8vw, 3.5rem);
+    }
+    #hero-text-secondary span {
+        font-size: 1.4rem;
+        line-height: 1.2rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 1024px) {
+    #hero-text-secondary svg {
+        height: 4rem;
+    }
+    #hero-text-secondary {
+        gap: 3.5rem;
+    }
+    #hero-text-secondary span {
+        font-size: 1.7rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media screen and (hover) and (min-width: 1200px) {
+    #hero-text-secondary svg {
+        height: 4.6rem;
+    }
+    #hero-text-secondary {
+        gap: 4.5rem;
+    }
+    #hero-text-secondary span {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+    }
 }
 
 /* "SPLASH" moving background effect */
 
 #hero-text p:nth-child(2) {      /* "Splash"  */
-    background: url(../img/hero-bkgd-lighter.svg), url(../img/hero-bkgd-darker.svg), white;
+    background: url(../img/waves_text_front_darker.svg), url(../img/waves_text_back_lighter.svg), linear-gradient(var(--blue-light), white 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-position-y: 100%, 100%;
+    background-position-y: 110%, 80%;
     background-position-x: center, center;
     background-size: 10%, 10%;
     background-repeat: repeat-x, repeat-x;
-
-
 }
-
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        background-size: 6%, 6%;
+    }
+}
 /* Ripple effect */
 
 #ripples {
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
 }
 .ripple {
     position: absolute;
-    text-align: center;
     transform-origin: 50%;
-    z-index: 0;
+    text-align: center;
 }
 #ripples svg {
     fill: none;
@@ -286,29 +436,88 @@ h1.screen-reader-only {
 
 /* Home section background effects */
 
-#home-bkgd {
+#home-bkgd-gradients, #home-bkgd-waves {
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
-    z-index: -2;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-
-#home-bkgd div {
+.landing-radial-gradient {
+    position: absolute;
     width: 120%;
+    left: -10%;
     background: radial-gradient(
-        #0bffe419,
-        #0bffe400 80%
+        #0bffe425,
+        #0bffe400 70%
     );
 }
+.landing-radial-gradient:first-child {
+    height: 75%;
+    top: 0;
+}
+.landing-radial-gradient:last-child {
+    height: 35%;
+    bottom: 5%;
+}
 
-#home-bkgd div:first-child {height: 60%;}
-#home-bkgd div:last-child {height: 40%;}
+.landing-waves {
+    position: absolute;
+}
+.landing-waves img {
+    height: 38vh; width: auto;
+}
+.landing-waves:nth-child(1) {  /* aqua */
+    transform: scaleY(-1);
+    right: 28vw;
+    bottom: 5vh;
+}
+.landing-waves:nth-child(3) {  /* green */
+    transform: scaleY(-1);
+    left: 30vw;
+    top: 17vh;
+}
+.landing-waves:nth-child(2) {  /* purple */
+    left: -10vw;
+    top: 2vh;
+}
 
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    .landing-waves img {
+        height: 65vh; width: auto;
+    }
+    .landing-waves:nth-child(1) {  /* aqua */
+        left: -45vw;
+        bottom: 0;
+    }
+    .landing-waves:nth-child(2) {  /* purple */
+        left: 40vw;
+        top: -30vh;
+    }
+    .landing-waves:nth-child(3) {  /* green */
+        left: 55vw;
+        top: 10vh;
+    }
+}
+
+@media screen and (hover) {
+    .landing-waves img {
+        height: 17rem; width: auto;
+    }
+    .landing-waves:nth-child(1) {  /* aqua */
+        right: 55vw;
+        bottom: 0;
+    }
+    .landing-waves:nth-child(2) {  /* purple */
+        left: 27vw;
+        top: 10vh;
+    }
+    .landing-waves:nth-child(3) {  /* green */
+        left: 50vw;
+        top: 25vh;
+    }
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
@@ -462,22 +671,32 @@ article {
 #SFX_contents {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
+    gap: 3vh;
+    width: 90vw;
+    margin: 0 auto;
+    /* position: relative; */
+    /* This element should have position:static, */
+    /* so that the position of the iframe will be relative to the section, */
+    /* not to this element. */
 }
 
 #SFX_iframe {
+    position: relative;
     height: 90vw;
-    max-width: 50vh;
-    width: 70vw;
+    max-height: 50vh;
+    width: 100%;
     margin: 0 auto;
     border-style: solid;
     border-width: 2px;
-    position: relative;
-}
-
-#SFX_iframe iframe {
-    height: 100%;
-    width: 100%;
+    /* border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1; */
 }
 
 #SFX_iframe div {
@@ -486,6 +705,11 @@ article {
     left: 0;
     padding: 0.5rem;
     background-color: #00000055;
+}
+
+#SFX_iframe iframe {
+    height: 100%;
+    width: 100%;
 }
 
 #SFX_iframe p {
@@ -499,23 +723,24 @@ article {
 #SFX_panel {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3vh;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .thumbnails {
     display: grid;
-    gap: 0.5rem;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
-    width: fit-content;
+    gap: 3vw;
     margin: 0 auto;
 }
 
 .SFX_thumbnail {
-    height: 3rem;
-    width: 3rem;
+    height: 2.8rem;
+    width: 2.8rem;
 }
 
 .SFX_thumbnail svg {
@@ -535,8 +760,8 @@ article {
 }
 
 .arrow {
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .arrow svg {
@@ -1042,7 +1267,7 @@ footer p {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #modes {
-    z-index: 5;
+    z-index: 3;
     position: fixed;
     bottom: 0;
     margin: var(--hud-padding-desktop);
@@ -1060,6 +1285,12 @@ footer p {
     width: 17px;
     border-radius: 50%;
     background-color: blue;
+}
+@media (hover) {
+    .mode-button {
+        height: 17px;
+        width: 17px;
+    }
 }
 #modes {
     background-color: #44444488;

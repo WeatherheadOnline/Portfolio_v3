@@ -15,19 +15,41 @@
   font-style: normal;
 } */
 
+:root {
+    --gap-section-top: 4rem;
+    --gap-section-bottom: 3rem;
+    --hud-padding-mobile: 1vh;
+    --hud-padding-desktop: 1rem;
+    --section-padding-desktop: 15px;
+    --greengeeks-height: 2rem;
+    --logo-color-accent:#004c8a;
+    --logo-color-main:#00a2f0;
+
+    --blue-lightest: #beecfb;
+    --blue-light: #96e3ed;
+    --blue-mid: #54cdf3;
+    --blue-bright: #00a2f0;
+    --navy-lightest: #091b3e;
+    --navy-dark: #020421;
+    --navy-darkest: #000315;
+    --light-rays-start: #0bffe436;
+    --light-rays-end: #0bffe400; 
+    --green-light: #67d467;
+    --green-bright: #32b032;
+    --purple-deep: #1c01a4;
+}
+
 
 :root {
     --gap-section-top: 4rem;
     --gap-section-bottom: 3rem;
-    --bkgd-1: #000423;
     --text-1: #e1fafa;
 }
 
 body {
-    background-color: var(--bkgd-1);
-    color: var(--text-1);
-    /* text-shadow: 0 0 4px var(--text-1); */
-    border-color: var(--text-1);
+    background-color: var(--navy-dark);
+    color: var(--blue-lightest);
+    border-color: var(--blue-light);
 }
 
 section:nth-child(even) {
@@ -47,16 +69,6 @@ h2 {
 #Home h2 {
 }
 
-#logo {
-    background-color: #00000088;
-    background-image: url("../img/logo_glowing.svg");
-}
-
-@media (any-hover: hover) {
-    #logo:hover, nav p:hover  {
-        outline: 2px solid #dff7d9;
-    }
-}
 
 
 /* ************************* */
@@ -64,7 +76,7 @@ h2 {
 /* ************************* */
 
 #hamburger svg {
-    stroke:var(--text-1);
+    stroke:var(--blue-light);
 }
 #menu {
     background-color: black;
@@ -173,7 +185,7 @@ button {
 
 .modeButton .hoverText {
     background-color: #002017AA;
-    color: var(--text-1);
+    color: var(--blue-lightest);
 }
 
 .modeButton {
@@ -184,6 +196,6 @@ button {
     fill: #dff7d988;
 }
 
-div #dark {
+/* div #dark {
     outline: 2px solid var(--text-1);
-}
+} */

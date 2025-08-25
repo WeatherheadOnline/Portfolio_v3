@@ -13,7 +13,7 @@ const container = document.getElementById("ripples");
         }
         
         let s = setInterval(ripplesFromInterval, 2000);  
-        container.addEventListener("click", ripplesFromClick);
+        document.getElementById("Home").addEventListener("click", ripplesFromClick);
 
         function ripplesFromInterval() {
             seedX = Math.floor(Math.random() * 100);
