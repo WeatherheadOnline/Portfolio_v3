@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11.872728mm"
+   height="100mm"
+   viewBox="0 0 11.872728 100"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       xlink:href="#linearGradient10"
+       id="linearGradient16"
+       x1="4272.7563"
+       y1="429.68332"
+       x2="4272.7563"
+       y2="230.71666"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-4166.8855,-181.43358)" />
+    <linearGradient
+       id="linearGradient10">
+      <stop
+         style="stop-color:#0bffe4;stop-opacity:0;"
+         offset="0"
+         id="stop11" />
+      <stop
+         style="stop-color:#0bffe4;stop-opacity:0.4;"
+         offset="1"
+         id="stop16" />
+    </linearGradient>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter16-1"
+       x="-0.31550718"
+       y="-0.024072625"
+       width="1.6310144"
+       height="1.0481452">
+      <feGaussianBlur
+         stdDeviation="2 2"
+         result="blur"
+         id="feGaussianBlur16-5" />
+    </filter>
+  </defs>
+  <g
+     id="layer1">
+    <path
+       style="display:inline;fill:url(#linearGradient16);fill-opacity:1;stroke:none;stroke-width:0.678;stroke-opacity:1;filter:url(#filter16-1)"
+       d="m 101.2406,48.72083 -3.8365,199.39662 h 15.2136 L 108.7482,48.72083 Z"
+       id="path7"
+       transform="matrix(0.47847667,0,0,0.47847667,-44.308901,-21.015092)" />
+  </g>
+</svg>

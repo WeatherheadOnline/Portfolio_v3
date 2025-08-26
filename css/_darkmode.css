@@ -52,23 +52,24 @@ body {
     border-color: var(--blue-light);
 }
 
-section:nth-child(even) {
-    /* background-color: #04003a; */
-    /* color: inherit; */
-}
-
-h1 {
-    color: inherit;
-    text-shadow: 0 0 6px #dff7d9BB;
-    /* font-family: "Cooper Black"; */
-}
-
 h2 {
 }
 
-#Home h2 {
+
+/* ************************* */
+/*       Backgrounds         */
+/* ************************* */
+
+#homeBkgdContainer {
+    z-index: -1;
 }
 
+.bkgd-gradient {
+    background: radial-gradient(
+        red, 
+        blue
+    )
+}
 
 
 /* ************************* */
@@ -88,46 +89,6 @@ h2 {
 
 
 
-/* ************************* */
-/*    Background effects     */
-/* ************************* */
-
-#homeBkgdContainer {
-    z-index: -1;
-}
-
-#squaresDiv {
-    background-color: #00291d;
-}
-
-#binaryDiv {
-    background: linear-gradient(
-        110deg, 
-        #00291d 0%,
-        #00291d 23%,
-        #f7ff6b88 24%,
-        #ff6bfb88 25%,
-        #6bfff888 26%,
-        #00291d 27%,
-        #00291d 48%,
-        #f7ff6b88 49%,
-        #ff6bfb88 50%,
-        #6bfff888 51%,
-        #00291d 52%,
-        #00291d 73%,
-        #f7ff6b88 74%,
-        #ff6bfb88 75%,
-        #6bfff888 76%,
-        #00291d 77%,
-        #00291d 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 500vw 28rem;   
-    text-shadow: none;
-}
-
-
 /* ******************************* */
 /*   Portfolio & Special Effects   */
 /* ******************************* */
@@ -139,10 +100,10 @@ h2 {
     border: 1px solid #dff7d9;
 }
 
-.int::after {
-    background-color: #dff7d9;
-    color: black;
-    outline: 3px solid black;
+#SFX_interactive {
+    color: var(--green-light);
+    outline: 3px solid var(--green-bright);
+    background-color: var(--purple-deep);
 }
 
 .SFX_thumbnail svg, .arrow svg {

@@ -46,11 +46,11 @@
             
             <div id="home-bkgd">
 
-                <div id="home-bkgd-gradients">
+                <div id="home-bkgd-gradients" class="bkgd">
                     <div class="landing-radial-gradient"></div><div class="landing-radial-gradient"></div>
                 </div>
 
-                <div id="home-bkgd-waves">
+                <div id="home-bkgd-waves" class="bkgd">
                     <div class="landing-waves">  
                         <img src="img/waves_bkgd_aqua.svg">
                     </div>
@@ -65,7 +65,7 @@
 
             </div>
 
-            <div id="ripples"></div>
+            <div id="ripples" class="bkgd"></div>
 
             <div id="greenGeeks_landing">
                 <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://static.greengeeks.com/ggseal/Green_3.png' alt='GreenGeeks eco-friendly web hosting'></a>            
@@ -92,35 +92,45 @@
             <hgroup class="subheading">
                 <h2>Special Effects</h2>
                 <p>My speciality is making special effects for websites. Here are some examples of available special effects; I can also build custom effects to match your brand and website.</p>
+            <div id="SFX_interactive"></div>  <!-- To edit text, see the object array in effectsSection.js -->
             </hgroup>
             <!-- </div> -->
 
-            <div id="SFX_contents">
-                <div id="SFX_iframe">                    
-                    <iframe loading="lazy" src="" title="Demonstration of sparkly background"></iframe>
-                </div>
-                <div id="SFX_panel">
-                    <div class="thumbnails" id="SFX_all_thumbnails"></div>
-                    <div class="arrowsWrapper">
-                        <div class="arrow leftArrow" id="SFX_leftArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
-                            </svg>
-                        </div>
-                        <div class="arrow rightArrow" id="SFX_rightArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
-                            </svg>
-                        </div>
+            <div id="SFX_iframe">                    
+                <iframe loading="lazy" src="" title="Demonstration of sparkly background"></iframe>
+            </div>
+
+
+            <div id="SFX_panel">
+                <div class="thumbnails" id="SFX_all_thumbnails"></div>
+                <div class="arrowsWrapper">
+                    <div class="arrow leftArrow" id="SFX_leftArrow">
+                        <svg viewBox="0 0 20 20">
+                            <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                        </svg>
+                    </div>
+                    <div class="arrow rightArrow" id="SFX_rightArrow">
+                        <svg viewBox="0 0 20 20">
+                            <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                        </svg>
                     </div>
                 </div>
+            </div>
+            <div id="lightshafts-group" class="bkgd">
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
             </div>
         </section>
 
         <section id="Portfolio"> 
+            <div class="bkgd bkgd-gradient"></div>
             <div class="sectionWrapper">
                 <hgroup class="subheading">
-                    <h2>Examples of my work</h2>
+                    <h2>Portfolio</h2>
                     <p>Every site and project I've made is responsive - meaning it looks great on mobile devices (in portrait and landscape orientation) and on a range of desktop screen sizes. Your clients will see great looking content, no matter how they access your site.</p>
                 </hgroup>
             </div>
@@ -193,6 +203,19 @@
                     </div>
                 </article>
 
+                <article id="portfolio_v2">
+                    <a href="v2/index.html" target="_blank"><img loading="lazy" src="img/folio_portfolio_v2.png"></a>
+                    <div class="articleText">   
+                        <a href="v2/index.html" target="_blank"><h3>Previous version of this website</h3></a>   
+                        <p>This is the previous version of the website.</p>
+                        <p>Features:</p>
+                        <ul>
+                            <li>Visitors can choose dark mode for lower eye strain and reduced battery use.</li>
+                            <li>Responsive design: Visitors see the same well-organized content on different window sizes, devices, and screen orientations.</li>
+                        </ul>
+                    </div>
+                </article>
+                    
                 <article id="this">
                     <a href="#Home" target="_blank"><img loading="lazy" src="img/folio_this.png"></a>   
                     <div class="articleText">                 

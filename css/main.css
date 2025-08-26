@@ -30,7 +30,8 @@
     --hud-padding-desktop: 1rem;
     --section-padding-desktop: 15px;
     --greengeeks-height: 2rem;
-    /* --logo-color-accent:#004c8a;
+
+    --logo-color-accent:#004c8a;
     --logo-color-main:#00a2f0;
 
     --blue-lightest: #beecfb;
@@ -38,13 +39,14 @@
     --blue-mid: #54cdf3;
     --blue-bright: #00a2f0;
     --navy-lightest: #091b3e;
+    --navy-translucent: #020421DD;
     --navy-dark: #020421;
     --navy-darkest: #000315;
     --light-rays-start: #0bffe436;
     --light-rays-end: #0bffe400; 
     --green-light: #67d467;
     --green-bright: #32b032;
-    --purple-deep: #1c01a4; */
+    --purple-deep: #1c01a4;
 }
 
 * {
@@ -69,9 +71,6 @@ section {
     min-height: 100vh;
     margin: 0 auto;
     position: relative;
-}
-#About, #Contact, #Portfolio, #Plan {
-    display: none;
 }
 
 section:not(#Home) {
@@ -103,6 +102,13 @@ section:not(#Home) {
     section:not(#Home) {width: 960px;}
 }
 
+.bkgd {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
@@ -283,7 +289,6 @@ h1.screen-reader-only {
     }
 }
 
-
 @media screen and (hover) {
     #hero-text {
         margin: 20vh auto 0 auto;
@@ -399,13 +404,6 @@ h1.screen-reader-only {
 }
 /* Ripple effect */
 
-#ripples {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
 .ripple {
     position: absolute;
     transform-origin: 50%;
@@ -436,13 +434,6 @@ h1.screen-reader-only {
 
 /* Home section background effects */
 
-#home-bkgd-gradients, #home-bkgd-waves {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
 .landing-radial-gradient {
     position: absolute;
     width: 120%;
@@ -519,197 +510,29 @@ h1.screen-reader-only {
     }
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-.folioItemsWrapper, .effectsItemsWrapper {
-    width: 100%;
-    margin-top: 5vh;
-}
-
-article {
-    width: 90vw;
-    min-width: 300px;
-    margin: 5vh auto;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.articleText {padding: 0 5%;}
-.articleText h3 {margin-top: 0.5em;}
-
-.effectsItemsWrapper article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.folioItemsWrapper img {
-    width: 100%;
-    height: auto;
-    position: relative;
-}   
-
-/* .effectsItemsWrapper iframe {
-    width: 100%;
-    aspect-ratio: 1.5/1;
-    position: relative;
-    bottom: 0;
-}    */
-
-.int::after {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    white-space: pre;
-    position: absolute;
-    bottom: -20px;
-    right: -10px;    
-    transform: rotate(350deg);
-    transform-origin: left;
-    border-radius: 50px;
-    padding: 1% 3%;
-    font-size: 1rem;
-}
-
-.interactiveMouse::after {
-    content: "Interactive! \A Move your mouse or \A tilt your device";
-}
-
-.interactiveClick::after {
-    content: "Interactive! \A Click to see more";
-}
-
-
-/* Mobile, in landscape */
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-    article {
-        width: 80vw;
-        margin: 10vh auto;
-    }
-    .folioItemsWrapper img {
-        width: 80vw;
-        height: auto;
-    }
-    /* .effectsItemsWrapper iframe {
-        aspect-ratio: unset;
-        height: 70vh;
-        width: 80vw;
-    } */
-}
-
-
-/* Desktop, any screen width */
-
-@media screen and (any-hover: hover) {
-    article {margin: 0;}
-    .folioItemsWrapper, .effectsItemsWrapper {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 3rem;
-    }
-}
-
-
-    /* Desktop, screen widths below 1000px */
-
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    article {width: 390px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    article {width: 590px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    article {width: 650px;}
-}
-
-
-    /* Above 1000px, switch from one column to two */
-
-@media screen and (any-hover: hover) and (max-width: 1023px) {
-    .folioItemsWrapper, .effectsItemsWrapper {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 4rem;
-    }
-}
-
-@media screen and (any-hover: hover) and (min-width: 1024px) {
-    .folioItemsWrapper, .effectsItemsWrapper {
-        flex-wrap: wrap;
-        gap: 4rem;
-    }
-}
-
-
-    /* Desktop, screen width 1000px and above */
-
-@media screen and (any-hover: hover) and (min-width: 1024px) and (max-width: 1199px) {
-    article {width: 450px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 1200px) {
-    article {width: 550px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 1366px) {
-    article {width: 600px;}
-}
-
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~  NEW Special Effects section  ~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#SFX_contents {
-    display: flex;
-    flex-direction: column;
-    /* gap: 0.5rem; */
-    gap: 3vh;
-    width: 90vw;
-    margin: 0 auto;
-    /* position: relative; */
-    /* This element should have position:static, */
-    /* so that the position of the iframe will be relative to the section, */
-    /* not to this element. */
+#Effects hgroup, #SFX_panel {
+    position: relative;
+    z-index: 1;
+    background-color: var(--navy-translucent);
+    border-radius: 1rem;
 }
 
 #SFX_iframe {
-    position: relative;
-    height: 90vw;
-    max-height: 50vh;
-    width: 100%;
-    margin: 0 auto;
-    border-style: solid;
-    border-width: 2px;
-    /* border: none;
-    outline: none;
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100vw;
+    right: 0;
     min-height: 100vh;
-    z-index: -1; */
-}
-
-#SFX_iframe div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0.5rem;
-    background-color: #00000055;
 }
 
 #SFX_iframe iframe {
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    border-color: transparent;
 }
 
 #SFX_iframe p {
@@ -726,8 +549,9 @@ article {
     gap: 3vh;
     justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    padding: 1rem;
+    width: fit-content;
+    margin: 30vh auto 0 auto;
 }
 
 .thumbnails {
@@ -770,53 +594,213 @@ article {
 }
 
 @media screen and (any-hover: none) and (orientation: landscape),
-       screen and (hover) and (min-width: 1024px) {
-    #SFX_contents {
-        flex-direction: row;
-        align-items: center;
+       screen and (hover) {
+    #SFX_panel {
+        margin-top: 3rem;
     }
+}
+@media screen and (any-hover: none) and (orientation: landscape),
+       screen and (hover) and (min-width: 1024px) {
     .thumbnails {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-    #SFX_iframe {
-        height: 50vh;
-        width: 50vw;
-        max-width: unset;
-    }
-}
-
-@media screen and (hover) {
-    #SFX_iframe {
-        height: 50vh;
-        width: 70vw;
-        max-width: unset;
-    }
-}
-
 @media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
-    #SFX_iframe {
-    }
-    #SFX_panel {
-        justify-content: space-evenly;
-        align-items: center;
-    }
     .thumbnails {
         margin: unset;
     } 
 }
 
-@media screen and (hover) and (min-width: 1024px) {
-    #SFX_iframe {
+
+/* Light shafts background */
+
+#lightshafts-group {
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: -4;
+}
+.lightshaft {
+    width: 5rem;
+    top: -5rem;   /* to get rid of blur at top of light shafts */
+    left: -30vw;
+    transform-origin: 50% -40%; 
+    background-image: url(../img/lightshaft_darkmode.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    animation-name: lightshafts;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #lightshafts-group {
+        top: 2vh;
+        height: 120%;
+    }
+    .lightshaft {
+        left: 0;
+    }
+}
+@media screen and (hover) {
+    #lightshafts-group {
+        height: 100%;
+    }
+    .lightshaft {
+        width: 5rem;
+        left: max(-15vw, -8rem);
+    }
+}
+.lightshaft:nth-child(1) {
+    transform: rotate(-15deg);
+    animation-duration: 2.3s;
+}
+.lightshaft:nth-child(2) {
+    transform: rotate(-19deg);
+    animation-duration: 3.1s;   
+}
+.lightshaft:nth-child(3) {
+    transform: rotate(-21deg);
+    animation-duration: 1.9s;
+    animation-delay: 1.5s;
+}
+.lightshaft:nth-child(4) {
+    transform: rotate(-24deg);
+    animation-duration: 3.7s;
+}
+.lightshaft:nth-child(5) {
+    transform: rotate(-26deg);
+    animation-duration: 2.9s;
+}
+.lightshaft:nth-child(6) {
+    transform: rotate(-27deg);
+    animation-duration: 1.7s;
+    animation-delay: 1s;
+}
+
+@keyframes lightshafts {
+    from {opacity: 1}
+    to {opacity: 0.4}
+}
+
+#SFX_interactive {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    padding: 2% 5%;
+    transform-origin: right;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+#SFX_interactive p {
+    margin: -0.4rem;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.folioItemsWrapper {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+article {
+    width: 90vw;
+    min-width: 300px;
+    margin: 5vh auto;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.articleText {padding: 0 5%;}
+.articleText h3 {margin-top: 0.5em;}
+
+.folioItemsWrapper img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}   
+
+/* Mobile, in landscape */
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    article {
         width: 80vw;
+        margin: 10vh auto;
+    }
+    .folioItemsWrapper img {
+        width: 80vw;
+        height: auto;
     }
 }
 
 
+/* Desktop, any screen width */
+
+@media screen and (any-hover: hover) {
+    article {margin: 0;}
+    .folioItemsWrapper {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3rem;
+    }
+}
+
+
+    /* Desktop, screen widths below 1024px */
+
+@media screen and (any-hover: hover) and (max-width: 599px) {
+    article {width: 390px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
+    article {width: 590px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
+    article {width: 650px;}
+}
+
+
+    /* Above 1024px, switch from one column to two */
+
+@media screen and (any-hover: hover) and (max-width: 1023px) {
+    .folioItemsWrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4rem;
+    }
+}
+
+@media screen and (any-hover: hover) and (min-width: 1024px) {
+    .folioItemsWrapper {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+
+    /* Desktop, screen width 1000px and above */
+
+@media screen and (any-hover: hover) and (min-width: 1024px) and (max-width: 1199px) {
+    article {width: 402px;}
+}
+
+@media screen and (any-hover: hover) and (min-width: 1200px) {
+    article {width: 448px;}
+}
 
 
 

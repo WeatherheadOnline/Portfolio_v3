@@ -21,12 +21,6 @@
         } 
         body {
             position: relative;
-            background-color: #FFFFFF;
-        }
-        button {
-            position: relative;
-            top: 0;
-            left: 0;
         }
         .layerDiv {visibility: hidden;}
         .sparkleDiv {position: absolute;}
@@ -35,25 +29,8 @@
 <body>
 
     <div id="bkgdContainer"></div>  
-    <button id="button">Set to dark mode</button> 
-
-    <script>    // Light mode / dark mode button
-        let mode = "light";
-        const button = document.getElementById("button");
-        button.addEventListener("click", function(){
-            if (mode=="light") {
-                document.body.style.backgroundColor = "#181825";
-                button.innerText = "Set to light mode";
-                mode = "dark";            
-            } else if (mode=="dark") {
-                document.body.style.backgroundColor = "#FFFFFF";
-                button.innerText = "Set to dark mode";
-                mode = "light";
-            }
-        });
-    </script>
     
-    <script>    // Mineral background
+    <script>    
         const ww = window.innerWidth;  // in pixels
         const wh = window.innerHeight;  // in pixels
         const bkgdContainer = document.getElementById("bkgdContainer");
