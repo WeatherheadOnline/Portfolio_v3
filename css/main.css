@@ -68,38 +68,40 @@ body {
 /* Mobile, portrait orientation */
 
 section {
-    min-height: 100vh;
-    margin: 0 auto;
     position: relative;
+    min-height: 100vh;
+    width: 100vw;
 }
 
-section:not(#Home) {
+.section-text-contents {
+    margin: 0 auto;
     padding: 9vh 2vw 1vh 2vw;
 }
+
 /* Mobile, landscape orientation */
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    section:not(#Home) {padding: 3vh 2vw 5vh 14vw;}
+    .section-text-contents {padding: 3vh 8vw 5vh 10vw;}
 }
 
 /* Desktop */
 
 @media screen and (hover) {
-    section:not(#Home) {
+    .section-text-contents {
         padding: 6rem var(--section-padding-desktop) 0 var(--section-padding-desktop);
     }
 }
 @media screen and (any-hover: hover) and (max-width: 599px) {
-    section:not(#Home) {width: 400px;}
+    .section-text-contents {width: 400px;}
 }
 @media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    section:not(#Home) {width: 550px;}
+    .section-text-contents {width: 550px;}
 }
 @media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    section:not(#Home) {width: 700px;}
+    .section-text-contents {width: 700px;}
 }
 @media screen and (any-hover: hover) and (min-width: 1024px) {
-    section:not(#Home) {width: 960px;}
+    .section-text-contents {width: 960px;}
 }
 
 .bkgd {
@@ -108,6 +110,7 @@ section:not(#Home) {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -126,9 +129,16 @@ h2 {
     font-size: 1.8rem; 
     margin-bottom: 2.5vh;
 }
+h3{
+    font-size: 1.6rem;
+    font-family: "Cooper Black";
+    margin-top: 2rem;
+}
 p, li {
     font-size: 0.9rem; 
-    /* z-index: 2; */
+}
+li {
+    padding: 0.3rem 0;
 }
 a {color: inherit;}
 
@@ -139,15 +149,12 @@ a {color: inherit;}
         /* margin-bottom: 2.5vh; */
     }
     h2 {font-size: 3rem;}
-    h3{
-        font-size: 1.6rem;
-        font-weight: bold;
-    }
-    section:not(#Home) p, li {
-        font-size: 1rem;
+    p, li {
+        font-size: 0.9rem;
         line-height: 1.6rem;
     }
 }
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
@@ -624,7 +631,8 @@ h1.screen-reader-only {
 }
 .lightshaft {
     width: 5rem;
-    top: -5rem;   /* to get rid of blur at top of light shafts */
+    height: 110vh;
+    top: -18vh;   /* to get rid of blur at top of light shafts */
     left: -30vw;
     transform-origin: 50% -40%; 
     background-image: url(../img/lightshaft_darkmode.svg);
@@ -641,6 +649,7 @@ h1.screen-reader-only {
     }
     .lightshaft {
         left: 0;
+        top: -5h;
     }
 }
 @media screen and (hover) {
@@ -649,7 +658,8 @@ h1.screen-reader-only {
     }
     .lightshaft {
         width: 5rem;
-        left: max(-15vw, -8rem);
+        left: calc(10vw - 4rem);
+        top: -6rem;
     }
 }
 .lightshaft:nth-child(1) {
@@ -703,9 +713,9 @@ h1.screen-reader-only {
 
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~  Portfolio & Special Effects sections  ~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
 .folioItemsWrapper {
@@ -811,135 +821,88 @@ article {
 
 /* #About ul {margin-bottom: 5vh;} */
 
-#About h3 {
+.about-quote {
+    border-radius: 5px;
+}    
+    
+.about-quote p:first-of-type {    /* the quote */
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.about-quote p:nth-of-type(2) {    /* the author */
+    font-size: 0.9rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.about-quote a {
+    text-decoration: none;
+}
+
+
+#aboutParagraphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 1rem 0 -4rem 0;
+}
+@media screen and (any-hover: none) and (orientation: landscape){
+    #aboutParagraphs {
+        margin-bottom: 2rem;
+    }
+}
+.about-quote {
+    width: 80vw;
+    padding: 1rem;
 }
 
 @media screen and (hover) {
-    #About h3 {
-        margin-top: 3rem;
-    }
-}
-
-#aboutParagraphs {display: grid;}
-
-#aboutParagraphs > div {
-    border-style: solid;
-    border-width: 1px;
-}
-
-@media screen and (any-hover: none) and (orientation: portrait) {
     #aboutParagraphs {
-        grid-template-rows: repeat(3, fit-content);
-        align-items: center;
+        margin-top: 2rem;
     }
-    #aboutParagraphs > div {
-        padding: 0 1rem;
-        margin: 1rem 0;
-        width: 75vw;
-    }
-    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
-}
-
-@media screen and (any-hover: none) and (orientation: landscape) {
-    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
-    #aboutParagraphs > div {
-        padding: 0 1vw;
-        margin: 1vw;
-    }
-    #aboutOffer, #aboutMoreSpecs {
-        width: 60vw;
-        margin-left: 10vw;
-    }
-}
-
-@media screen and (hover) {
-    #About > div.sectionWrapper:last-child {
-        display: grid;
-    }
-    #aboutParagraphs {
-        gap: 1rem;
-    }
-    #aboutParagraphs > div {
-        padding: 0 2rem;
-    }
-    #aboutMoreSpecsLinks {
+    .about-quote {
+        width: 20rem;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+#About .section-text-contents:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (hover) and (min-width: 786px), screen and (any-hover: none) and (orientation: landscape) {
+    #About .section-text-contents:last-child {
+        flex-direction: row;
         gap: 1rem;
     }
-    p.p-outline {
-        margin: 0;
-    }
-}
-
-@media screen and (hover) and (max-width: 599px) {
-}
-
-@media screen and (hover) and (max-width: 785px) {
-    #aboutMoreSpecsLinks {
+    #aboutMoreSpecs {
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0.3rem     /* to match the li padding next to it, so they align at their lower edges */
     }
-}
 
-@media screen and (hover) and (min-width: 600px) and (max-width: 1023px) {
-    #aboutParagraphs {
-        grid-template-rows: repeat(3, 1fr);
-        align-items: center;
-    }
-    #aboutParagraphs > div {
-        width: 75%;
-    }
-    #aboutParagraphs > div:nth-child(even) {justify-self: right;}
 }
 
 @media screen and (hover) and (min-width: 1024px) {
-    #aboutParagraphs {grid-template-columns: repeat(3, 1fr);}
-    #aboutParagraphs > div {
-        padding: 0 1rem;
-        margin: 1rem;
+    #About .section-text-contents:last-child {
+        flex-direction: row;
+        gap: 2rem;
     }
 }
 
-@media screen and (hover) and (min-width: 1200px) {
-    #About > div.sectionWrapper:last-child {
-        column-gap: 5rem;
-        grid-template-columns: 45% 55%;
-        grid-template-rows: repeat(3, fit-content);
-    }
-    #aboutParagraphs {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    #aboutOffer {
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-    #aboutMoreSpecs {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-    }
-    #aboutMoreSpecsLinks {
-        flex-direction: column;
-    }
-}
+
+
+
 
 #About ul {
     padding-left: 1.4rem;
-}
-
-/* #about-li-github {
-    list-style-type: "\F09B";
-}
-#about-li-codepen {
-    list-style-type: ;
-} */
-
-.p-outline {
-    border-style: solid;
-    border-width: 1px;
-    padding: 1rem;
 }
 
 #aboutMoreSpecs a {
@@ -950,15 +913,6 @@ span.linky {
     text-decoration: underline;
 }
 
-#About li {
-    /* list-style-type: "\21AA"; curved arrow*/
-    /* list-style-type: "\21E8"; open arrow */
-    /* list-style-type: "\2724"; four-pointed teardrop asterisk */
-    /* list-style-type: "\274B"; eight-pointed teardrop astersk */
-    /* list-style-type: "\2767"; ornamental leaf */
-    /* list-style-type: "\233E"; concentric circles */
-    /* padding-left: 0.2rem; */
-}
 
 
 

@@ -32,8 +32,6 @@
     --navy-lightest: #091b3e;
     --navy-dark: #020421;
     --navy-darkest: #000315;
-    --light-rays-start: #0bffe436;
-    --light-rays-end: #0bffe400; 
     --green-light: #67d467;
     --green-bright: #32b032;
     --purple-deep: #1c01a4;
@@ -66,9 +64,11 @@ h2 {
 
 .bkgd-gradient {
     background: radial-gradient(
-        red, 
-        blue
-    )
+        closest-side at 50% 40%,
+        var(--navy-lightest) 7%,
+        var(--navy-dark) 83%,
+        #000214 100%
+    );
 }
 
 
@@ -110,6 +110,13 @@ h2 {
     stroke: #dff7d9;
 }
 
+/* ************************* */
+/*     "About" section     */
+/* ************************* */
+
+.about-quote {
+    background-color: var(--navy-lightest);
+}
 
 /* ************************* */
 /*     "Contact" section     */

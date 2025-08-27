@@ -2,55 +2,49 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="11.872728mm"
-   height="100mm"
-   viewBox="0 0 11.872728 100"
-   version="1.1"
-   id="svg1"
+   width="25.3365mm"
+   height="217.04939mm"
+   viewBox="0 0 25.3365 217.04939"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs1">
     <linearGradient
-       xlink:href="#linearGradient10"
-       id="linearGradient16"
-       x1="4272.7563"
-       y1="429.68332"
-       x2="4272.7563"
-       y2="230.71666"
+       xlink:href="#linearGradient70"
+       id="linearGradient71"
+       x1="491.66904"
+       y1="460.43106"
+       x2="491.66904"
+       y2="253.06081"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-4166.8855,-181.43358)" />
+       gradientTransform="translate(-479.46191,-248.21708)" />
     <linearGradient
-       id="linearGradient10">
+       id="linearGradient70">
       <stop
          style="stop-color:#0bffe4;stop-opacity:0;"
          offset="0"
-         id="stop11" />
+         id="stop70" />
       <stop
-         style="stop-color:#0bffe4;stop-opacity:0.4;"
+         style="stop-color:#0bffe4;stop-opacity:0.40000001;"
          offset="1"
-         id="stop16" />
+         id="stop71" />
     </linearGradient>
     <filter
        style="color-interpolation-filters:sRGB"
-       id="filter16-1"
-       x="-0.31550718"
-       y="-0.024072625"
-       width="1.6310144"
-       height="1.0481452">
+       id="filter71-0"
+       x="-0.30502335"
+       y="-0.023138173"
+       width="1.6100467"
+       height="1.0462763">
       <feGaussianBlur
          stdDeviation="2 2"
          result="blur"
-         id="feGaussianBlur16-5" />
+         id="feGaussianBlur71-0" />
     </filter>
   </defs>
-  <g
-     id="layer1">
     <path
-       style="display:inline;fill:url(#linearGradient16);fill-opacity:1;stroke:none;stroke-width:0.678;stroke-opacity:1;filter:url(#filter16-1)"
-       d="m 101.2406,48.72083 -3.8365,199.39662 h 15.2136 L 108.7482,48.72083 Z"
-       id="path7"
-       transform="matrix(0.47847667,0,0,0.47847667,-44.308901,-21.015092)" />
-  </g>
+       id="path67-7-5"
+       style="display:inline;fill:url(#linearGradient71);fill-opacity:1;stroke:none;stroke-width:0.678;stroke-opacity:1;filter:url(#filter71-0)"
+       d="m 16.5538,4.8000001 -7.7581802,0.0233 -3.89382,198.3382799 a 7.8681688,7.8681688 0 0 0 -0.1018,1.21956 7.8681688,7.8681688 0 0 0 7.8682502,7.86826 7.8681688,7.8681688 0 0 0 7.86825,-7.86826 7.8681688,7.8681688 0 0 0 -0.10283,-1.25574 z" />
 </svg>
