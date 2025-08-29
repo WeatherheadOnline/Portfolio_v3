@@ -1,26 +1,11 @@
 const samples = [
     // Start with the glitter cascade: it doesn't have a text background or an interactive badge.
     {
-        name: "SFX_glitter-cascade",
-        source: "effectsThumbnails/particlesAcrossTop.html",
-        int: false,
-        svgCode: '<svg viewBox="0 0 20 20"><g transform="translate(-65.7,-91.7)"><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 65.9,100.4 c 5.3,0 5.7,0 5.7,-5.7 0,5.6 0,5.6 5.7,5.7 -5.7,0 -5.6,0 -5.7,5.7 0,-5.7 0,-5.8 -5.7,-5.7 z m 2.7,-3 c 1,1 1.7,1.8 2,2.4 0,0 0.2,-0.2 0.3,-0.3 -0.6,-0.3 -1.3,-1 -2.3,-2 z m 6,0 c -1.1,1 -1.8,1.8 -2.4,2 0,0.1 0.2,0.2 0.3,0.3 0.3,-0.6 1,-1.3 2.1,-2.4 z m -4,3.5 c -0.2,0.6 -0.9,1.4 -2,2.5 1.1,-1.1 1.9,-1.9 2.5,-2.1 -0.1,-0.2 -0.2,-0.3 -0.4,-0.4 z m 1.9,0 c -0.1,0 -0.2,0.2 -0.3,0.4 0.6,0.3 1.3,1 2.4,2.1 -1.1,-1.2 -1.8,-1.9 -2.1,-2.5 z" /><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 78.4,96.9 c 3.4,0 3.6,0 3.6,-3.6 0,3.6 0,3.6 3.6,3.7 -3.6,0 -3.6,0 -3.7,3.6 0,-3.6 0,-3.7 -3.6,-3.7 z" /><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 74.1,105.7 c 5.4,0 5.7,0 5.7,-5.8 0,5.7 0,5.7 5.8,5.8 -5.8,0 -5.7,0 -5.8,5.8 0,-5.8 0,-5.8 -5.7,-5.8 z" /></g></svg>',
-        textBkgd: false,
-    },
-    {
         name: "SFX_oceanBubbles",
         source: "effectsThumbnails/oceanBubbles.html",
         int: false,
         svgCode: '<svg viewBox="0 0 20 20"><g transform="translate(-66.1,-51.9)"><path style="fill:none;stroke-linecap:round" d="m 76.5,62 c 0,0 1.3,-0.6 2.8,0.2 1.5,0.8 1.7,2.2 1.7,2.2 m 2.4,0.3 a 5.5,5.5 0 0 1 -5.5,5.5 5.5,5.5 0 0 1 -5.5,-5.5 5.5,5.5 0 0 1 5.5,-5.5 5.5,5.5 0 0 1 5.5,5.5 z" /><path style="fill:none;stroke-linecap:round" d="m 71.5,59.5 c 0,0 1,-0.4 2.1,0.1 1.1,0.6 1.3,1.6 1.3,1.6 m 1.8,0.2 a 4.1,4.1 0 0 1 -4.1,4.1 4.1,4.1 0 0 1 -4.1,-4.1 4.1,4.1 0 0 1 4.1,-4.1 4.1,4.1 0 0 1 4.1,4.1 z" /><path style="fill:none;stroke-linecap:round" d="m 79.6,54.5 c 0,0 0.6,-0.3 1.3,0.1 0.7,0.4 0.8,1.0 0.8,1.0 m 1.2,0.2 a 2.6,2.6 0 0 1 -2.6,2.6 2.6,2.6 0 0 1 -2.6,-2.6 2.6,2.6 0 0 1 2.6,-2.6 2.6,2.6 0 0 1 2.6,2.6 z" /></g></svg>',
         textBkgd: true,
-    },
-    {
-        name: "SFX_mineral",
-        source: "effectsThumbnails/mineralBkgd.html",
-        int: true,  // ie. it's interactive
-        intText: "<p>Interactive!</p><p>Move your mouse or</p><p>tilt your device</p>",
-        svgCode: '<svg viewBox="0 0 20 20" ><g transform="matrix(1,0,0,1,-25.3,-54.4) translate(1,2)"><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.1,70.3 5.9,-3.2" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.1,70.4 0.6,-6.6" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 31,55.3 -4.8,8.2" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 41.9,61.7 -4.7,8.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 33.1,58.1 -4.9,8.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.4,61.3 -4.8,8" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.3 -7.5,1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.5,54.3 -4,1.4" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.4 1.2,4.5" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.3 3.3,7.3" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.7,54.4 -5.5,3.5" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 38.5,54.7 38.1,61.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.1,70.4 37.1,69.9" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.2,70.2 4.4,-0.9" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.1,70.4 28.2,66.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.2,70.3 26.2,63.6" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 31,55.3 3.5,0.5 5.3,3.2 2.2,2.7 -3.6,-0.4 -5.2,-3.2 z" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 26.1,63.6 3.8,0.4 5.2,3.1 2,2.8 -3.5,-0.6 -5.4,-3 -2.1,-2.6" /></g></svg>',
-        textBkgd: false,
     },
     {
         name: "SFX_shimmerTextAuto",
@@ -38,6 +23,21 @@ const samples = [
         textBkgd: true,
     },
     {
+        name: "SFX_glitter-cascade",
+        source: "effectsThumbnails/particlesAcrossTop.html",
+        int: false,
+        svgCode: '<svg viewBox="0 0 20 20"><g transform="translate(-65.7,-91.7)"><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 65.9,100.4 c 5.3,0 5.7,0 5.7,-5.7 0,5.6 0,5.6 5.7,5.7 -5.7,0 -5.6,0 -5.7,5.7 0,-5.7 0,-5.8 -5.7,-5.7 z m 2.7,-3 c 1,1 1.7,1.8 2,2.4 0,0 0.2,-0.2 0.3,-0.3 -0.6,-0.3 -1.3,-1 -2.3,-2 z m 6,0 c -1.1,1 -1.8,1.8 -2.4,2 0,0.1 0.2,0.2 0.3,0.3 0.3,-0.6 1,-1.3 2.1,-2.4 z m -4,3.5 c -0.2,0.6 -0.9,1.4 -2,2.5 1.1,-1.1 1.9,-1.9 2.5,-2.1 -0.1,-0.2 -0.2,-0.3 -0.4,-0.4 z m 1.9,0 c -0.1,0 -0.2,0.2 -0.3,0.4 0.6,0.3 1.3,1 2.4,2.1 -1.1,-1.2 -1.8,-1.9 -2.1,-2.5 z" /><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 78.4,96.9 c 3.4,0 3.6,0 3.6,-3.6 0,3.6 0,3.6 3.6,3.7 -3.6,0 -3.6,0 -3.7,3.6 0,-3.6 0,-3.7 -3.6,-3.7 z" /><path style="display:inline;fill:none;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4" d="m 74.1,105.7 c 5.4,0 5.7,0 5.7,-5.8 0,5.7 0,5.7 5.8,5.8 -5.8,0 -5.7,0 -5.8,5.8 0,-5.8 0,-5.8 -5.7,-5.8 z" /></g></svg>',
+        textBkgd: false,
+    },
+    {
+        name: "SFX_mineral",
+        source: "effectsThumbnails/mineralBkgd.html",
+        int: true,  // ie. it's interactive
+        intText: "<p>Interactive!</p><p>Move your mouse or</p><p>tilt your device</p>",
+        svgCode: '<svg viewBox="0 0 20 20" ><g transform="matrix(1,0,0,1,-25.3,-54.4) translate(1,2)"><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.1,70.3 5.9,-3.2" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.1,70.4 0.6,-6.6" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 31,55.3 -4.8,8.2" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 41.9,61.7 -4.7,8.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 33.1,58.1 -4.9,8.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.4,61.3 -4.8,8" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.3 -7.5,1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.5,54.3 -4,1.4" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.4 1.2,4.5" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.6,54.3 3.3,7.3" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 38.7,54.4 -5.5,3.5" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 38.5,54.7 38.1,61.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.1,70.4 37.1,69.9" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 29.2,70.2 4.4,-0.9" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.1,70.4 28.2,66.1" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="M 29.2,70.3 26.2,63.6" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 31,55.3 3.5,0.5 5.3,3.2 2.2,2.7 -3.6,-0.4 -5.2,-3.2 z" /><path style="fill:none;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round" d="m 26.1,63.6 3.8,0.4 5.2,3.1 2,2.8 -3.5,-0.6 -5.4,-3 -2.1,-2.6" /></g></svg>',
+        textBkgd: false,
+    },
+    {
         name: "SFX_ripples",
         source: "effectsThumbnails/ripples.html",
         int: true,  // ie. it's interactive
@@ -51,7 +51,7 @@ const SFX_iframe = document.getElementById("SFX_iframe");
 const leftArrow = document.getElementById("SFX_leftArrow");
 const rightArrow = document.getElementById("SFX_rightArrow");
 const thumbnails = document.getElementById("SFX_all_thumbnails");
-const hgroup = document.getElementById("Effects").children[0].children[0];
+const hgroup = document.getElementById("Effects").children[2].children[0];
 const SFX_panel = document.getElementById("SFX_panel");
 const int_text = document.getElementById("SFX_interactive");
 
@@ -96,8 +96,7 @@ function SFXmoveLeft() {
     } else {
         currentSample = samples.length - 1;
     };
-    addSFXclasses(currentSample);
-    SFX_iframe.children[0].src = samples[currentSample].source;
+    switchIFrame(currentSample);
 }
 
 function SFXmoveRight() {
@@ -107,8 +106,7 @@ function SFXmoveRight() {
     } else {
         currentSample = 0;
     };
-    addSFXclasses(currentSample);
-    SFX_iframe.children[0].src = samples[currentSample].source;
+    switchIFrame(currentSample);
 }
 
 // ~~~~~~~ Where the actual work happens: ~~~~~~~ //
@@ -118,13 +116,13 @@ function switchIFrame(index) {
     currentSample = index;
     SFX_iframe.children[0].src = samples[index].source;
     addSFXclasses(index);
-    changeBkgd(index);
+    changeBkgd(currentSample);
 };
 
 function changeBkgd(index) {
     if(samples[index].textBkgd) {
-        hgroup.style.backgroundColor = "var(--navy-translucent)";
-        SFX_panel.style.backgroundColor = "var(--navy-translucent)";
+        hgroup.style.backgroundColor = "var(--SFX-bkgd)";
+        SFX_panel.style.backgroundColor = "var(--SFX-bkgd)";
     } else {
         hgroup.style.backgroundColor = "transparent";
         SFX_panel.style.backgroundColor = "transparent";

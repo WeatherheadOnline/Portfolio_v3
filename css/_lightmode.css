@@ -1,193 +1,239 @@
 :root {
-    --gap-section-top: 4rem;
-    --gap-section-bottom: 3rem;
-    --bkgd-1: #e1fafa;
-    --text-1: #000423;
+    --bkgd_lm: #FFFFFF;
+    --menu_lm_edges: #FFFFFFBF;
 
+    --blue_lm_lightest: #0088f0;
+    --blue_lm_light: #0054b2;
+    --blue_lm_dark: #003294;
+    --blue_lm_darkest: #00187a;
+
+    --lm_pastel_blue: #c5eefb;
+    --lm_pastel_green: #b9e4b9;
+    --lm_pastel_purple: #b2a8e0;
+    --SFX-bkgd: #FFFFFFAA; 
+    --lm_ripple_click: #2a992a;
 }
-
-
-
 
 body {
-    background-color: var(--bkgd-1);
-    color: var(--text-1);
-    /* text-shadow: 0 0 4px var(--text-1); */
-    border-color: var(--text-1);
-}
-
-section:nth-child(even) {
-    background-color: #cffcf6;
-    color: inherit;
-}
-
-section {
-    box-shadow: none;      /* to clear box shadow after neon.css */
-}
-
-h1 {
-    color: inherit;
-    text-shadow: none;
-    /* font-family: "Cooper Black"; */
+    background-color: var(--bkgd_lm);
+    color: var(--blue_lm_darkest);
+    /* border-color: var(--lm_pastel_green); */
 }
 
 h2 {
-    /* font-family: "Cooper Black"; */
+    color: var(--blue_lm_lightest);
+}
+h3 {
+    color: var(--blue_lm_light);
 }
 
-#Home h2 {
-    font-family: "EB Garamond";
+/* ************************* */
+/*       Backgrounds         */
+/* ************************* */
+
+.landing-waves {
+    opacity: 0.3;
+}
+.landing-waves-aqua {
+    opacity: 0.6;
 }
 
-/* #logo {
-    background-color: #FFFFFF88;
-    background-image: url("../img/logo_navy.svg");
-} */
+.lightshaft {
+    display: none;
+}
 
-/* @media (any-hover: hover) {
-    #logo:hover, nav p:hover {
-        outline: 2px solid #094e00;
-    }
-} */
-
+.bkgd-gradient-lm-green {
+    background: linear-gradient(
+        var(--bkgd_lm),
+        var(--lm_pastel_green)
+    );
+}
+.bkgd-gradient-lm-purple {
+    background: linear-gradient(
+        var(--bkgd_lm),
+        var(--lm_pastel_purple)
+    );
+}
+.bkgd-gradient-lm-portfolio {
+    background: linear-gradient(
+        to right,
+        var(--lm_pastel_blue),
+        var(--bkgd_lm) 20%,
+        var(--bkgd_lm) 80%,
+        var(--lm_pastel_blue)
+    )
+}
 
 /* ************************* */
-/*       Navbar / menu       */
+/*       Header & Menu       */
 /* ************************* */
 
-nav p {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #dff7d9;
-    color: inherit;
-    outline: 2px solid white;
-    border-radius: 0;
-    filter: drop-shadow(2px 4px 5px #00000022);
+.logo-accent-color {
+  fill: var(--blue_lm_dark);
+  stroke: var(--blue_lm_dark);
+}
+
+.logo-main-color {
+  fill: var(--blue_lm_lightest);
+}
+#logo:hover {
+    outline: 2px solid var(--blue_lm_lightest);
 }
 
 #hamburger svg {
-    stroke:var(--text-1);
+    stroke:var(--blue_lm_lightest);
 }
-
 #menu {
-    background-color: #dff7d9;
-    outline: 2px solid #094e00;
-    box-shadow: 0 4px 10px 5px #00000022;
-}
-#menu h4:hover, #menu span:hover {
-    background-color: white;
-    box-shadow: 0 2px 8px #00000022;
-}
-
-
-/* ************************* */
-/*    Background effects     */
-/* ************************* */
-
-#homeBkgdContainer {
-    z-index: -1;
-    filter: drop-shadow(2px 4px 3px #00000033);
-}
-
-#squaresDiv {
-    background-color: #dff7d9;
-}
-
-#binaryDiv {
     background: linear-gradient(
-        110deg,
-        #dff7d9 0%,
-        #dff7d9 23%,
-        #f7ff6bff 24%,
-        #ff6bfbff 25%,
-        #6bfff8c9 26%,
-        #dff7d9 27%,
-        #dff7d9 48%,
-        #f7ff6bff 49%,
-        #ff6bfbff 50%,
-        #6bfff8c9 51%,
-        #dff7d9 52%,
-        #dff7d9 73%,
-        #f7ff6bff 74%,
-        #ff6bfbff 75%,
-        #6bfff8c9 76%,
-        #dff7d9 77%,
-        #dff7d9 100%
+        to right,
+        var(--menu_lm_edges),
+        var(--bkgd_lm) 20%,
+        var(--bkgd_lm) 80%,
+        var(--menu_lm_edges)
     );
-    background-clip: text;
+    box-shadow: 0 0 10px var(--navy-darkest);
+}    
+
+#menu h4 {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: var(--blue_lm_light);
+    font-family: "Cooper Black";
+}
+
+#menu h4:hover, #menu span:hover {  
+    color: var(--blue_lm_darkest);
+    background-color: var(--lm_pastel_blue);
+}
+
+
+/* ******************************* */
+/*        Landing page             */
+/* ******************************* */
+
+#hero-text-primary > p:first-child {      /* "Make a"  */
+    color: var(--blue_lm_lightest);
+}
+#hero-text-secondary {
+    color: var(--blue_lm_light);
+}
+
+/* "SPLASH" moving background effect */
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    background: 
+        url(../img/waves_text_lightmode_front_darker.svg), 
+        url(../img/waves_text_lightmode_back_lighter.svg), 
+        linear-gradient(
+            var(--blue_lm_light), 
+            var(--blue_lm_lightest));
+    background-repeat: repeat-x, repeat-x;
     -webkit-background-clip: text;
-    background-size: 500vw 28rem;
+    color: transparent;
+    background-position-y: 110%, 80%;
+    background-position-x: center, center;
+    background-size: 10%, 10%;
+}
+
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        background-size: 6%, 6%;
+    }
+}
+@media screen and (hover) and (min-width: 1200px) {
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        background-position-y: 140%, 100%;    
+    }
 }
 
 
-/* ******************************* */
-/*   Portfolio & Special Effects   */
-/* ******************************* */
-
-.folioItemsWrapper article,
-.folioItemsWrapper img,
-.effectsItemsWrapper article,
-.effectsItemsWrapper iframe {
-    border: 1px solid #00291d;
+.rippleClick svg {
+    stroke: var(--lm_ripple_click);
+}
+.rippleInt svg {
+    stroke: var(--blue_lm_light);
 }
 
-.int::after {
-    background-color: #0a5900;
-    color: white;
-    outline: 3px solid white;
+/* ******************************* */
+/*        Special Effects          */
+/* ******************************* */
+
+
+
+#SFX_interactive {
+    /* color: var(--blue_lm_light); */
+    outline: 5px solid var(--blue_lm_lightest);
+    background-color: var(--bkgd_lm);
 }
 
 .SFX_thumbnail svg, .arrow svg {
-    stroke: #00291d;
+    stroke: var(--blue_lm_dark);
+    border: 1px solid var(--blue_lm_darkest);
 }
 
+
+#Effects hgroup, #SFX_panel {
+    background-color: var(--lm_pastel_green_translucent);
+}
+
+.active svg {
+    outline: 3px solid var(--blue_lm_darkest);
+}
+.arrow svg:active {
+    border: 4px solid var(--blue_lm_darkest);
+}
+
+
+
+
+
+/* ************************* */
+/*     "About" section     */
+/* ************************* */
+
+.about-quote {
+    background-color: var(--SFX-bkgd);
+}
 
 /* ************************* */
 /*     "Contact" section     */
 /* ************************* */
 
 input, textarea {
-    /* color: #dff7d9;
-    background-color: black; */
-}
+    /* color: var(--blue-lightest); */
+    background-color: var(--bkgd_lm);
+    opacity: 0.7;
+    border: 1px solid var(--blue_lm_dark);
+} 
 
 #messageSent {
-    background-color: white;
-    border: 2px solid #00291d;
+    background-color: var(--navy-darkest);
+    border: 4px solid var(--navy-lightest);
 }
+
+#messageSent p {
+    color: var(--blue-bright);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 
 button {
-    /* background-color: #002e20;
-    color: #dff7d9; */
+    background-color: var(--blue_lm_light);
+    color: var(--bkgd_lm);
+    border: 2px solid var(--blue_lm_darkest);
+    font-family: inherit;
+    font-size: inherit;
 }
+
+
 
 
 /* ************************* */
-/*      "Mode" buttons       */
+/*      Footer               */
 /* ************************* */
 
-#modes {
-    background-color: #88888888;
-    outline: 2px solid #444444;
+footer {
+    background-color: var(--navy-darkest);
 }
 
-.mode-button.active {
-    outline: 6px solid #444444;
-}
 
-.modeButton .hoverText {
-    background-color: #7ec5ffAA;
-    color: #000000;
-}
-
-.modeButton {
-    background-color: #4badffDD;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.modeButton svg {
-    fill: #094e0088;
-}
-
-div #light {
-    outline: 2px solid #0a5900;
-}

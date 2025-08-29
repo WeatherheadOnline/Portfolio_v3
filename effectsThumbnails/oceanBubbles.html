@@ -18,8 +18,12 @@
             position: absolute;
             height: 40px;
             width: 40px;
-            /* opacity: 0.5; */
             transition: all 30s linear;
+        }
+        .bubbleDiv svg {
+            fill: #3083c0;     /* gets adjusted to 50% opacity in script */
+            stroke: #3083c0;
+            opacity: 0.4;
         }
     </style>
 </head>
@@ -59,7 +63,7 @@
         svgElement.setAttribute("width", "10.5mm");
         svgElement.setAttribute("height", "10.5mm");
         svgElement.setAttribute("viewBox", "0 0 10.5 10.5");
-        svgElement.innerHTML = '<path style="fill:#888888;fill-opacity:0.5;stroke:#888888;stroke-width:1;stroke-linecap:round; stroke-opacity: 1" d="m 3.98,2.9 c 0,0 1.15,-0.51 2.41,0.17 1.26,0.68 1.51,1.88 1.51,1.88 M 9.98,5.24 A 4.74,4.74 0 0 1 5.24,9.98 4.74,4.74 0 0 1 0.5,5.24 4.74,4.74 0 0 1 5.24,0.5 4.74,4.74 0 0 1 9.98,5.24 Z" />'
+        svgElement.innerHTML = '<path style="fill-opacity:0.5;stroke-width:1;stroke-linecap:round; stroke-opacity: 1" d="m 3.98,2.9 c 0,0 1.15,-0.51 2.41,0.17 1.26,0.68 1.51,1.88 1.51,1.88 M 9.98,5.24 A 4.74,4.74 0 0 1 5.24,9.98 4.74,4.74 0 0 1 0.5,5.24 4.74,4.74 0 0 1 5.24,0.5 4.74,4.74 0 0 1 9.98,5.24 Z" />'
         svgElement.style.transform = `scale(${scaler})`;
         bubbleDiv.appendChild(svgElement);
     }

@@ -10,28 +10,28 @@ header {
     flex-wrap: nowrap;
     z-index: 2;
 }
-#hamburger {
-    cursor: pointer;
-}
-#hamburger img {
-    width: 5wv;
-    height: auto;
-}
-
 #menu-wrapper {
     position: fixed;
     top: 3vw;
     right: 3vw;
-    z-index: 7;
+    z-index: 1;
+}    
+
+#hamburger {
+    cursor: pointer;
+}    
+#hamburger img {
+    width: 5wv;
+    height: auto;
 }    
 
 #menu {
     position: fixed;
-    z-index: 8;
+    z-index: 1;
     padding: 20px;
-    right: 0;
-    top: 0;
-    display: none;
+    /* right: 0;
+    top: 0; */
+    /* display: none; */
 }    
 
 #menu span {
@@ -49,7 +49,7 @@ header {
 #menu h4 {
     margin: 0 3rem 0 0;
     padding: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "Cooper Black"; */
     font-size: 1.3rem;
 }
 

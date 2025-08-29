@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/menu.css" type="text/css">
     <link rel="stylesheet" href="css/_darkmode.css" type="text/css" class="modesheet">
+    <!-- <link rel="stylesheet" href="css/_lightmode.css" type="text/css" class="modesheet"> -->
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
+
 </head>
 <body>
     <header>
@@ -30,10 +31,11 @@
             </div>
             <div id="menu">
                 <span id="closeMenu">&times;</span>
+                <a href="#Home" onclick="menuOff()"><h4>Home</h4></a>
                 <a href="#Effects" onclick="menuOff()"><h4>Special Effects</h4></a>
                 <a href="#Portfolio" onclick="menuOff()"><h4>Portfolio</h4></a>
                 <a href="#About" onclick="menuOff()"><h4>About</h4></a>
-                <a href="#Plan" onclick="menuOff()"><h4>What To Expect</h4></a>
+                <!-- <a href="#Plan" onclick="menuOff()"><h4>What To Expect</h4></a> -->
                 <a href="#Contact" onclick="menuOff()"><h4>Contact</h4></a>
             </div>
         </div>
@@ -51,13 +53,13 @@
                 </div>
 
                 <div id="home-bkgd-waves" class="bkgd">
-                    <div class="landing-waves">  
+                    <div class="landing-waves landing-waves-aqua" >  
                         <img src="img/waves_bkgd_aqua.svg">
                     </div>
-                    <div class="landing-waves">  
+                    <div class="landing-waves landing-waves-purple">  
                         <img src="img/waves_bkgd_purple.svg">
                     </div>
-                    <div class="landing-waves">  
+                    <div class="landing-waves landing-waves-green">  
                         <img src="img/waves_bkgd_green.svg">
                     </div>
                 </div>
@@ -88,6 +90,15 @@
         </section>
 
         <section id="Effects">
+            <div class="bkgd bkgd-gradient-linear bkgd-gradient-lm-green"></div>
+            <div id="lightshafts-group" class="bkgd">
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+            </div>
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>Special Effects</h2>
@@ -116,22 +127,14 @@
                 </div>
             </div>
 
-            <div id="lightshafts-group" class="bkgd">
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-            </div>
         </section>
 
         <section id="Portfolio"> 
-            <div class="bkgd bkgd-gradient"></div>
+            <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-portfolio"></div>
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>Portfolio</h2>
-                    <p>Every site and project I've made is responsive - meaning it looks great on mobile devices (in portrait and landscape orientation) and on a range of desktop screen sizes. Your clients will see great looking content, no matter how they access your site.</p>
+                    <p>Every site I make is responsive - meaning it looks great on mobile devices (in portrait and landscape orientation) and on a range of desktop screen sizes. Your clients will see great looking content, no matter how they access your site.</p>
                 </hgroup>
 
     
@@ -234,6 +237,20 @@
         </section>
     
         <section id="About">
+            <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-purple"></div>
+            <div id="home-bkgd-waves" class="bkgd">
+                <div class="landing-waves landing-waves-aqua">  
+                    <img src="img/waves_bkgd_aqua.svg">
+                </div>
+                <div class="landing-waves landing-waves-purple">  
+                    <img src="img/waves_bkgd_purple.svg">
+                </div>
+                <div class="landing-waves landing-waves-green">  
+                    <img src="img/waves_bkgd_green.svg">
+                </div>
+                </div>
+
+
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>About me</h2>
@@ -309,33 +326,29 @@
 
 
         </section>
-        
-        <section id="Plan">
-            <div class="section-text-contents">
-                <hgroup class="subheading">
-                    <h2>The Plan: What to expect</h2>
-                </hgroup>
-                <div class="grid-5-items">
-                    <p>If you'd like to find out more, or to take the next step: <a href="#Contact">drop me a line</a>, by <a href="mailto:eddie@weatherheadonline.com"><email>email</email></a> or <a href="sms:970-305-4682">text message</a> (or by <a href="tel:970-305-4682">phone</a>), and we can have a brief chat about the website you'd like to build.</p>
-                    <p>We'll set up a time to meet and discuss the details of your website, and sketch out a plan for it. We'll also review and sign a client/developer agreement before we kick into gear.</p>
-                    <p>As the work on your site progresses, I'll be in touch regularly with updates. From time to time I'll need your input, to make sure we're headed in the right direction. We'll work together to stay on track and on time.</p>
-                    <p class="offset">At the end, I'll be delighted to show you the finished product. I hope you'll love it as much as I enjoyed making it. We'll sit down together and review it, and get your website live on the internet.</p>
-                    <p>After we're done: if you find the site isn't looking or behaving the way it's supposed to, please let me know so I can fix it for you. Any repairs can be done for free within the first six months.</p>
-                </div>
-            </div>
-        </section>
-        
+                
         <section id="Contact">
+            <div class="bkgd bkgd-gradient-linear bkgd-gradient-lm-green"></div>
+            <div id="lightshafts-group" class="bkgd">
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+            </div>
             <div class="section-text-contents">
                 <hgroup class="subheading">
-                    <h2>I'd love to hear from you!</h2>
+                    <h2>Contact</h2>
+                    <p>I'd love to hear from you!</p>
                 </hgroup>
                 <hgroup class="phone-email">
-                    <p>Email: <a href="mailto:eddie@weatherheadonline.com"><email>eddie@weatherheadonline.com</email></a></p>
-                    <p>Text/call: <a href="tel:970-305-4682" class="bold">970-305-4682</a></p>
+                    <h3>Email:</h3>
+                    <p><a href="mailto:eddie@weatherheadonline.com"><email>eddie@weatherheadonline.com</email></a></p>
+                    <!-- <p>Text/call: <a href="tel:970-305-4682" class="bold">970-305-4682</a></p> -->
                 </hgroup>
-                <hgroup id="contactHGroup">
-                    <h3>Or jot down a message for me here:</h3>
+                <hgroup class="subheading" id="contactHGroup">
+                    <h3>Or send me a message here:</h3>
                     <form method="POST" action="#contactHGroup">
                         <fieldset>
                             <div id="nameAndEmail" class="formUnit">  
@@ -385,18 +398,19 @@
             <p>All design and assets by Weatherhead Online except:</p>
             <p><a href="https://www.svgrepo.com/svg/3432/shining-sun">Light mode</a> and <a href="https://www.svgrepo.com/svg/94562/basic-moon" target="_blank">dark mode</a> icons from <a href="svgrepo.com" target="_blank">svgrepo.com</a>;</p>
             <p>Floral shimmering background design by William Morris (vector reproduction by WeatherheadOnline.com)</p>
-            <p>Yellow Submarine imagery &copy; Subafilms Ltd.</p>
+            <!-- <p>Yellow Submarine imagery &copy; Subafilms Ltd.</p> -->
         </div>
     </footer>
 
     <div id="modes">
         <div class="mode-button" id="lightmode"></div>
         <div class="mode-button active" id="darkmode"></div>
-        <div class="mode-button" id="mysterymode"></div>
+        <!-- <div class="mode-button" id="mysterymode"></div> -->
     </div> 
 
     
-    <script src="js/modes.js"></script>
+    <!-- <script src="js/modes.js"></script> -->
+    <script src="js/modes-basic.js"></script>
     <script src="js/clearForm.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/effectsSection.js"></script>

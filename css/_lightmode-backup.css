@@ -1,0 +1,211 @@
+:root {
+    --menu-edges: #FFFFFFBF;
+    --menu-highlight: #54cdf380;
+
+    --bkgd1: #FFFFFF;
+    --bkgd2: ;
+
+    --blue-lightest: #005e9d;
+    --blue-light: #003c80;
+    --blue-dark: #002266;
+    --blue-darkest: #000938;
+
+    --ripples-click: #32b032;
+    --ripples-auto: #003c80;   /* same as --blue-light */
+}
+
+body {
+    background-color: var(--bkgd1);
+    color: var(--blue-dark);
+}
+
+section {
+    background: 
+}
+
+h2, h3 {
+    color: var(--blue-light);
+}
+
+
+/* ************************* */
+/*       Header & Menu       */
+/* ************************* */
+
+.logo-accent-color {
+  fill: var(--blue-lightest);
+  stroke: var(--blue-lightest);
+}
+
+.logo-main-color {
+  fill: var(--blue-dark);
+}
+#logo:hover {
+    outline: 2px solid var(--blue-lightest);
+}
+
+
+#hamburger svg {
+    stroke:var(--blue-light);
+}
+#menu {
+    background: linear-gradient(
+        to right,
+        var(--menu-edges),
+        var(--bkgd1) 24%,
+        var(--bkgd1) 76%,
+        var(--menu-edges)
+    );
+    box-shadow: 0 0 10px var(--blue-darkest);
+    outline: 2px solid var(--blue-dark);
+}    
+
+#menu h4 {
+    font-family: "Cooper Black";
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--blue-dark);
+}
+
+#menu h4:hover, #menu span:hover {  
+    background-color: var(--menu-highlight);
+}
+
+
+/* ******************************* */
+/*        Landing page             */
+/* ******************************* */
+
+/* "SPLASH" moving background effect */
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    background: 
+        url(../img/waves_text_lightmode_front_darker.svg), 
+        url(../img/waves_text_lightmode_back_lighter.svg), 
+        linear-gradient(var(--blue-light), var(--blue-lightest) 55%);
+    background-repeat: repeat-x, repeat-x;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position-y: 110%, 80%;
+    background-position-x: center, center;
+    background-size: 10%, 10%;
+}
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        background-size: 6%, 6%;
+    }
+}
+@media screen and (hover) and (min-width: 1200px) {
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        background-position-y: 140%, 100%;    
+    }
+}
+
+#hero-text-primary > p:first-child {      /* "Make a"  */
+    color: var(--blue-light);
+}
+#hero-text-secondary {
+    color: var(--blue-dark);
+}
+
+.landing-waves {
+    opacity: 0.3;
+}
+.landing-waves-aqua {
+    opacity: 0.8;
+}
+
+.rippleClick svg {
+    stroke: var(--ripples-click);
+}
+.rippleInt svg {
+    stroke: var(--blue-light);
+}
+
+/* ******************************* */
+/*        Special Effects          */
+/* ******************************* */
+
+
+#SFX_interactive {
+    color: var(--green-light);
+    outline: 3px solid var(--green-bright);
+    background-color: var(--purple-deep);
+}
+
+.SFX_thumbnail svg, .arrow svg {
+    /* stroke: var(--blue-lightest); */
+    stroke: var(--blue-dark);
+}
+
+#Effects hgroup, #SFX_panel {
+    background-color: var(--navy-translucent);
+}
+.SFX_thumbnail svg {
+    border: 1px solid var(--blue-lightest);
+}
+
+.active svg {
+    outline: 3px solid var(--blue-lightest);
+}
+.arrow svg {
+    border: 1px solid var(--blue-lightest);
+}
+.arrow svg:active {
+    border: 4px solid var(--blue-lightest);
+}
+
+
+
+
+
+/* ************************* */
+/*     "About" section     */
+/* ************************* */
+
+.about-quote {
+    background-color: var(--navy-lightest);
+}
+
+/* ************************* */
+/*     "Contact" section     */
+/* ************************* */
+
+input, textarea {
+    color: var(--blue-lightest);
+    background-color: var(--navy-darkest);
+    opacity: 0.7;
+    border: 1px solid var(--green-light);
+} 
+
+#messageSent {
+    background-color: var(--navy-darkest);
+    border: 4px solid var(--navy-lightest);
+}
+
+#messageSent p {
+    color: var(--blue-bright);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+button {
+    background-color: var(--navy-lightest);
+    color: var(--blue-lightest);
+    border: 1px solid var(--green-light);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+
+
+/* ************************* */
+/*      Footer               */
+/* ************************* */
+
+footer {
+    background-color: var(--navy-darkest);
+}
+
+
