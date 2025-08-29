@@ -140,12 +140,28 @@ a {color: inherit;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
+header {
+    z-index: 2;
+    position: fixed;
+    height: max-content;
+    width: 100vw;
+    top: 0;
+    padding: var(--hud-padding-mobile);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+@media screen and (hover) {
+    header {
+        width: calc(100vw - 16px);
+    }
+}
+
 #logo {
-    position: relative;
-    z-index: 3;
     width: min(15vw, 15vh);
     height: auto;
-    margin: var(--hud-padding-mobile);
     border-radius: 0.3rem;
 }
 
@@ -155,31 +171,17 @@ a {color: inherit;}
     #logo {width: 4rem;}
 }
 
-header {
-    height: max-content;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    z-index: 2;
-}
-
-#menu-wrapper {
-    position: fixed;
-    top: 3vw;
-    right: 3vw;
-    z-index: 1;
-}    
 
 #hamburger {
     cursor: pointer;
+    padding: 0.5rem;
 }    
-#hamburger img {
-    width: 5wv;
-    height: auto;
-}    
+@media screen and (hover) {
+    #hamburger svg {
+        width: 2.2rem;
+        height: auto;
+    }    
+}
 
 #menu {
     position: fixed;
@@ -204,23 +206,8 @@ header {
 
 #menu a {text-decoration: none;}
 
-#menu h4 {
-    border-radius: 5px;
-    /* see _lightmode.css and _darkmode.css */
-}
+#menu h4 {border-radius: 5px;}
 
-
-/* Header: Mobile, landscape orientation */
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    header {
-        left: 0;
-        width: min-content;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1vh;
-    }
-}
 
 /* Header: Desktop */
 
@@ -243,9 +230,12 @@ header {
 }
 
 @media screen and (any-hover: hover) and (min-width: 600px) {
-    header {width: 100%;}
+    /* header {width: 100%;} */
    /* #menu {display: none;} */
 }
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
@@ -268,7 +258,10 @@ h1.screen-reader-only {
     position: absolute;
     right: var(--hud-padding-mobile);
     bottom: var(--hud-padding-mobile);
-    margin-right: var(--hud-padding-mobile);
+}
+#greenGeeks_landing a {
+    display: flex;
+    align-items: flex-end;
 }
 #greenGeeks_landing img {
     height: var(--greengeeks-height);
@@ -277,7 +270,7 @@ h1.screen-reader-only {
 @media screen and (hover),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
     #greenGeeks_landing {
-        right: var(--hud-padding-desktop);
+        right: calc(var(--hud-padding-desktop) + 16px);
         bottom: var(--hud-padding-desktop);
     }
 }
@@ -797,6 +790,12 @@ h1.screen-reader-only {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.folio_thumbnail {
+    height: 30px;
+    width: auto;
+}
 
 
 .folioItemsWrapper {

@@ -134,19 +134,32 @@
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>Portfolio</h2>
-                    <p>Every site I make is responsive - meaning it looks great on mobile devices (in portrait and landscape orientation) and on a range of desktop screen sizes. Your clients will see great looking content, no matter how they access your site.</p>
+                    <p>Every site I make is responsive - meaning it looks great on mobile devices (in portrait and landscape orientation) as well as on a range of desktop screen sizes. Your clients will see great looking content, no matter how they access your site.</p>
                 </hgroup>
 
-    
                 <div class="folioItemsWrapper">
-                    <article>
+                    <article id="folioArticle">
+                        <a target="_blank">
+                            <img loading="lazy">
+                        </a>
+                        <div class="articleText" id="articleText">
+                            <a target="_blank">
+                                <h3></h3>
+                            </a>
+                            <div id="articleBody"></div>
+                        </div>
+                    </article>
+                    <div>          <!-- to wrap up the commented-out articles -->
+
+<!-- start commenting out here -->
+
+                    <!-- <article>
                         <a href="/CSSsandbox/" target="_blank"><img loading="lazy" src="img/folio_sandbox.png"></a>
                         <div class="articleText">
                             <a href="/CSSsandbox/" target="_blank"><h3>CSS/Javascript Design Showcase</h3></a>
                             <p>Check out these neat designs and effects I've created. My favorite is one that looks iridescent.</p>
                             <p>Any of these designs and effects are available for use on your website. We can make adjustments to color palettes and other design elements to make something that works seamlessly with your brand.</p>
                             <p>Like my other sites, this design showcase is fully responsive for desktop and mobile devices.</p>
-                            <!-- <p><em>Please note, this site is for testing purposes rather than for general consumption. As such, some sections' appearance or performance may be suboptimal on mobile devices.</em></p> -->
                         </div>
                     </article>
 
@@ -230,9 +243,31 @@
                                 <li>Responsive design: Visitors see the same well-organized content on different window sizes, devices, and screen orientations.</li>
                             </ul>
                         </div>
-                    </article>
-                    
+                    </article> -->
+
+
+<!-- finish commenting out here -->
+
+
+                    </div>
                 </div>  <!-- close folioItemsWrapper  -->
+
+                <div id="portfolio_panel">
+                    <div class="portfolio_thumbnails" id="portfolio_thumbnails"></div>
+                    <div class="arrowsWrapper">
+                        <div class="arrow leftArrow" id="portfolio_leftArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                            </svg>
+                        </div>
+                        <div class="arrow rightArrow" id="portfolio_rightArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     
@@ -416,5 +451,6 @@
     <script src="js/effectsSection.js"></script>
     <script src="js/ripples.js"></script>
     <script src="js/splash-text-bkgd.js"></script>
+    <script src="js/portfolioCarousel.js"></script>
 </body>
 </html>
