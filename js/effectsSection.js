@@ -50,7 +50,7 @@ const samples = [
 const SFX_iframe = document.getElementById("SFX_iframe");
 const leftArrow = document.getElementById("SFX_leftArrow");
 const rightArrow = document.getElementById("SFX_rightArrow");
-const thumbnails = document.getElementById("SFX_all_thumbnails");
+const SFX_thumbnails = document.getElementById("SFX_all_thumbnails");
 const hgroup = document.getElementById("Effects").children[2].children[0];
 const SFX_panel = document.getElementById("SFX_panel");
 const int_text = document.getElementById("SFX_interactive");
@@ -62,11 +62,11 @@ for (let effect = 0; effect <= samples.length - 1; effect++) {
     buttonDiv.className = "SFX_thumbnail";
     buttonDiv.id = samples[effect].name;
     buttonDiv.innerHTML = samples[effect].svgCode;
-    thumbnails.appendChild(buttonDiv);
+    SFX_thumbnails.appendChild(buttonDiv);
 }
 
-const buttons = Array.from(document.getElementsByClassName("SFX_thumbnail"));
-buttons.forEach((button, index) => {
+const SFXbuttons = Array.from(document.getElementsByClassName("SFX_thumbnail"));
+SFXbuttons.forEach((button, index) => {
     button.addEventListener("click", () => {
         switchIFrame(index);
     });
@@ -133,7 +133,7 @@ function removeSFXclasses(index) {
     if(samples[index].int) {
         int_text.style = "display: none";
     }
-    buttons[index].classList.remove("active");    
+    SFXbuttons[index].classList.remove("active");    
 }
 
 function addSFXclasses(index) {
@@ -141,7 +141,7 @@ function addSFXclasses(index) {
         int_text.innerHTML = samples[index].intText;
         int_text.style = "display: visible";
     }
-    buttons[index].classList.add("active");
+    SFXbuttons[index].classList.add("active");
 }
 
 switchIFrame(currentSample);  // when the page initially loads, ensure the "actve" class gets applied, plus any "int" classes

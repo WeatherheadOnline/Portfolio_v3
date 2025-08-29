@@ -613,7 +613,7 @@ h1.screen-reader-only {
     margin: 30vh auto 0 auto;
 }
 
-.thumbnails {
+.SFX_thumbnails {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
@@ -666,21 +666,21 @@ h1.screen-reader-only {
 }
 @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px),
        screen and (hover) and (min-width: 600px) {
-    .thumbnails {
+    .SFX_thumbnails {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
-    .thumbnails {
+    .SFX_thumbnails {
         margin: unset;
     } 
 }
 
 @media screen and (hover) and (min-width: 1024px),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .thumbnails {
+    .SFX_thumbnails {
         gap: 2rem;
     }
 }
@@ -785,6 +785,9 @@ h1.screen-reader-only {
     margin: -0.4rem;
 }
 
+#Effects hgroup.subheading {
+    pointer-events: none;
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
