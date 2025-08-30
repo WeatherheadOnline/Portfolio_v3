@@ -17,31 +17,17 @@
 body {
     background-color: var(--bkgd_lm);
     color: var(--blue_lm_darkest);
-    /* border-color: var(--lm_pastel_green); */
 }
-
-h2 {
-    color: var(--blue_lm_lightest);
-}
-h3 {
-    color: var(--blue_lm_light);
-}
+h2 {color: var(--blue_lm_lightest);}
+h3 {color: var(--blue_lm_light);}
 
 /* ************************* */
 /*       Backgrounds         */
 /* ************************* */
 
-.landing-waves {
-    opacity: 0.3;
-}
-.landing-waves-aqua {
-    opacity: 0.6;
-}
-
-.lightshaft {
-    display: none;
-}
-
+.landing-waves {opacity: 0.3;}
+.landing-waves-aqua {opacity: 0.6;}
+.lightshaft {display: none;}
 .bkgd-gradient-lm-green {
     background: linear-gradient(
         var(--bkgd_lm),
@@ -63,6 +49,8 @@ h3 {
         var(--lm_pastel_blue)
     )
 }
+.rippleClick svg {stroke: var(--lm_ripple_click);}
+.rippleInt svg {stroke: var(--blue_lm_light);}
 
 /* ************************* */
 /*       Header & Menu       */
@@ -72,17 +60,9 @@ h3 {
   fill: var(--blue_lm_dark);
   stroke: var(--blue_lm_dark);
 }
-
-.logo-main-color {
-  fill: var(--blue_lm_lightest);
-}
-#logo:hover {
-    outline: 2px solid var(--blue_lm_lightest);
-}
-
-#hamburger svg {
-    stroke:var(--blue_lm_lightest);
-}
+.logo-main-color {fill: var(--blue_lm_lightest);}
+#logo:hover {outline: 2px solid var(--blue_lm_lightest);}
+#hamburger svg {stroke:var(--blue_lm_lightest);}
 #menu {
     background: linear-gradient(
         to right,
@@ -93,32 +73,26 @@ h3 {
     );
     box-shadow: 0 0 10px var(--navy-darkest);
 }    
-
 #menu h4 {
     padding: 1rem;
     font-size: 1.7rem;
     color: var(--blue_lm_light);
     font-family: "Cooper Black";
 }
-
 #menu h4:hover, #menu span:hover {  
     color: var(--blue_lm_darkest);
     background-color: var(--lm_pastel_blue);
 }
 
-
 /* ******************************* */
 /*        Landing page             */
 /* ******************************* */
 
-#hero-text-primary > p:first-child {      /* "Make a"  */
-    color: var(--blue_lm_lightest);
-}
-#hero-text-secondary {
-    color: var(--blue_lm_light);
-}
+#hero-text-primary > p:first-child {color: var(--blue_lm_lightest);}   /* "Make a"  */
+#hero-text-secondary {color: var(--blue_lm_light);}
 
 /* "SPLASH" moving background effect */
+
 #hero-text p:nth-child(2) {      /* "Splash"  */
     background: 
         url(../img/waves_text_lightmode_front_darker.svg), 
@@ -135,88 +109,53 @@ h3 {
 }
 
 @media screen and (any-hover: none) and (orientation: landscape) {
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        background-size: 6%, 6%;
-    }
+    #hero-text p:nth-child(2) {background-size: 6%, 6%;}    /* "Splash"  */     
 }
 @media screen and (hover) and (min-width: 1200px) {
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        background-position-y: 140%, 100%;    
-    }
-}
-
-
-.rippleClick svg {
-    stroke: var(--lm_ripple_click);
-}
-.rippleInt svg {
-    stroke: var(--blue_lm_light);
+    #hero-text p:nth-child(2) {background-position-y: 140%, 100%;}   /* "Splash"  */       
 }
 
 /* ******************************* */
 /*        Special Effects          */
 /* ******************************* */
 
-
-
 #SFX_interactive {
     /* color: var(--blue_lm_light); */
     outline: 5px solid var(--blue_lm_lightest);
     background-color: var(--bkgd_lm);
 }
-
 .SFX_thumbnail svg, .arrow svg {
     stroke: var(--blue_lm_dark);
     border: 1px solid var(--blue_lm_darkest);
 }
-
-
-#Effects hgroup, #SFX_panel {
-    background-color: var(--lm_pastel_green_translucent);
-}
-
-.active svg {
-    outline: 3px solid var(--blue_lm_darkest);
-}
-.arrow svg:active {
-    border: 4px solid var(--blue_lm_darkest);
-}
-
-
-
-
+#Effects hgroup, #SFX_panel {background-color: var(--lm_pastel_green_translucent);}
+.active svg {outline: 3px solid var(--blue_lm_darkest);}
+.arrow svg:active {border: 4px solid var(--blue_lm_darkest);}
 
 /* ************************* */
 /*     "About" section     */
 /* ************************* */
 
-.about-quote {
-    background-color: var(--SFX-bkgd);
-}
+.about-quote {background-color: var(--SFX-bkgd);}
 
 /* ************************* */
 /*     "Contact" section     */
 /* ************************* */
 
 input, textarea {
-    /* color: var(--blue-lightest); */
     background-color: var(--bkgd_lm);
     opacity: 0.7;
     border: 1px solid var(--blue_lm_dark);
 } 
-
 #messageSent {
     background-color: var(--navy-darkest);
     border: 4px solid var(--navy-lightest);
 }
-
 #messageSent p {
     color: var(--blue-bright);
     font-size: 1.5rem;
     text-align: center;
 }
-
-
 button {
     background-color: var(--blue_lm_light);
     color: var(--bkgd_lm);
@@ -225,15 +164,8 @@ button {
     font-size: inherit;
 }
 
-
-
-
 /* ************************* */
 /*      Footer               */
 /* ************************* */
 
-footer {
-    background-color: var(--navy-darkest);
-}
-
-
+footer {background-color: var(--navy-darkest);}

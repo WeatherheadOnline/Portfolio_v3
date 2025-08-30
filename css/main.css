@@ -1,3 +1,28 @@
+/* ~~~~~  Table of contents ~~~~~ */
+
+/* Line# - Contents */
+
+/*   23 - Definitions of media queries */
+/*   42 - Site-wide settings */
+/*  110 - Site-wide typography */
+/*  147 - Backgrounds */
+/*  150 ---- Background gradient for landing section */
+/*  170 ---- Decorative background waves */
+/*  264 ---- Light shafts  */
+/*  349 - Header */
+/*  429 - Home/landing section */
+/*  432 ---- Miscellaneous elements on landing screen */
+/*  470 ---- Hero text elements */
+/*  624 - Special Effects  */
+/*  848 - About  */
+/*  936 - Contact  */
+/* 1013 - Footer */
+/* 1048 - Light/dark mode buttons */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~ Definitions of main media queries ~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 /* Phones in landscape: */
 @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px){}
 
@@ -13,78 +38,26 @@
 @media screen and (hover) and (min-width: 1200px) {}
 @media screen and (hover) and (min-width: 1366px) {}
 
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~ Site-wide settings ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
 :root {
-    --gap-section-top: 4rem;
-    --gap-section-bottom: 3rem;
     --hud-padding-mobile: 1vh;
     --hud-padding-desktop: 1rem;
     --section-padding-desktop: 15px;
     --greengeeks-height: 2rem;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 html, body {
     position: relative;
     overflow-x: hidden;
-    width: 100dvw;
-}
-
-/* Mobile, portrait orientation */
-
-section {
-    position: relative;
-    min-height: 100vh;
     width: 100vw;
 }
-
-.section-text-contents {
-    margin: 0 auto;
-    padding: 5vh 2vw 5vh 2vw;
-}
-
-/* Mobile, landscape orientation */
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    .section-text-contents {padding: 8vh 8vw 8vh 10vw;}
-}
-
-/* Desktop */
-
-@media screen and (hover)  {
-    .section-text-contents {
-        padding: 4rem var(--section-padding-desktop) 2rem var(--section-padding-desktop);
-    }
-}
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    .section-text-contents {width: 400px;}
-}
-@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    .section-text-contents {width: 550px;}
-}
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    .section-text-contents {width: 700px;}
-}
-@media screen and (any-hover: hover) and (min-width: 1024px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .section-text-contents {width: 960px;}
-}
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .section-text-contents {width: 80vw; }
-}
-
 .bkgd {
     position: absolute;
     height: 100%;
@@ -94,6 +67,44 @@ section {
     z-index: -4;
     overflow: hidden;
 }
+section {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+}
+.section-text-contents {
+    margin: 0 auto;
+    padding: 5vh 2vw 5vh 2vw;
+}
+
+/* Phones, landscape orientation */
+@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    .section-text-contents {padding: 8vh 8vw 8vh 10vw;}
+}
+
+/* Desktop */
+@media screen and (hover)  {
+    .section-text-contents {
+        padding: 4rem var(--section-padding-desktop) 2rem var(--section-padding-desktop);
+    }
+}
+@media screen and (hover) and (max-width: 599px) {
+    .section-text-contents {width: 400px;}
+}
+@media screen and (hover) and (min-width: 600px) and (max-width: 785px) {
+    .section-text-contents {width: 550px;}
+}
+@media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
+    .section-text-contents {width: 700px;}
+}
+@media screen and (hover) and (min-width: 1024px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    .section-text-contents {width: 960px;}
+}
+@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    .section-text-contents {width: 80vw; }
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
@@ -101,11 +112,10 @@ section {
 
 body {font-family: "Roboto Mono", monospace;}
 
-.subheading {   /* Class is used on hgroups, not on h2 tags */
+.subheading {   /* Class is used on hgroups */
     text-align: center;
     padding: 2.5vh;
 }
-
 h2 {
     font-family: "Cooper Black";
     font-size: 1.8rem; 
@@ -125,8 +135,7 @@ li {
 a {color: inherit;}
 
 /* Desktop */
-
-@media screen and (any-hover: hover) {
+@media screen and (hover) {
     h2 {font-size: 3rem;}
     section:not(#Home) p, li {
         font-size: 0.9rem;
@@ -134,333 +143,31 @@ a {color: inherit;}
     }
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~ Backgrounds ~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Background gradient for landing section */
 
-header {
-    z-index: 2;
-    position: fixed;
-    height: max-content;
-    width: 100vw;
+.landing-radial-gradient {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    background: radial-gradient(
+        #0bffe425,
+        #0bffe400 70%
+    );
+}
+.landing-radial-gradient:first-child {
+    height: 75%;
     top: 0;
-    padding: var(--hud-padding-mobile);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+}
+.landing-radial-gradient:last-child {
+    height: 35%;
+    bottom: 5%;
 }
 
-@media screen and (hover) {
-    header {
-        width: calc(100vw - 16px);
-    }
-}
-
-#logo {
-    width: min(15vw, 15vh);
-    height: auto;
-    border-radius: 0.3rem;
-}
-
-@media screen and (hover), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #logo {width: 4rem;}
-}
-
-
-#hamburger {
-    cursor: pointer;
-    padding: 0.5rem;
-}    
-@media screen and (hover) {
-    #hamburger svg {
-        width: 2.2rem;
-        height: auto;
-    }    
-}
-
-#menu {
-    position: fixed;
-    z-index: 1;
-    padding: 20px;
-    top: var(--hud-padding-mobile);
-    right: var(--hud-padding-mobile);
-    display: none;
-    border-radius: 5px;
-}    
-
-#menu span {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 3rem;
-    margin: 3px;
-    padding: 0 10px 5px;
-    line-height: 3rem;
-    border-radius: 5px;
-}
-
-#menu a {text-decoration: none;}
-
-#menu h4 {border-radius: 5px;}
-
-
-/* Header: Desktop */
-
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    #menu {
-        overflow: hidden;
-        padding: 2rem;
-    }
-    #menu span {
-        position: absolute;
-        top: -0.5rem;
-        right: 0px;
-        font-size: 2rem;
-        padding: 0 0.8rem;
-        line-height: 3rem;
-    }
-    #menu h4 {
-        margin-right: 2rem;
-    }
-}
-
-@media screen and (any-hover: hover) and (min-width: 600px) {
-    /* header {width: 100%;} */
-   /* #menu {display: none;} */
-}
-
-
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-#Home {font-family: "Courier Prime";}
-
-h1.screen-reader-only {
-    clip: rect(0,0,0,0);
-    border: 0;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-#greenGeeks_landing {
-    position: absolute;
-    right: var(--hud-padding-mobile);
-    bottom: var(--hud-padding-mobile);
-}
-#greenGeeks_landing a {
-    display: flex;
-    align-items: flex-end;
-}
-#greenGeeks_landing img {
-    height: var(--greengeeks-height);
-    width: auto;
-}
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #greenGeeks_landing {
-        right: calc(var(--hud-padding-desktop) + 16px);
-        bottom: var(--hud-padding-desktop);
-    }
-}
-
-/* Main elements on landing screen */
-
-#hero-text {
-    margin-top: 23vh;     
-    position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
-}
-#hero-text-primary {
-    position: relative; 
-}
-#hero-text-primary > p:first-child {      /* "Make a"  */
-    font-size: 13vw;
-}
-#hero-text p:nth-child(2) {      /* "Splash"  */
-    text-transform: uppercase;
-    font-family: "Cooper Black";
-    font-size: 21.2vw;
-}
-#hero-text-secondary {
-    position: relative;
-    margin: 18vh auto 0 auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    gap: 2rem;
-}
-#hero-text-secondary span {
-    display: block;
-    min-width: max-content;
-    text-align: right;
-    font-size: 1.1rem;
-    line-height: 1rem;
-}
-#hero-text-secondary svg {
-    width: 100%; 
-    height: auto;
-}
-
-@media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
-    #Home {padding: 0 5vw;}
-}
-
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    #hero-text {
-        margin-top: 30vh;   /* this overwrites a rule added above, along with the base "hover" rules */
-    }
-    #hero-text-secondary {
-        margin-top: 9vh; 
-    }
-}
-
-
-@media screen and (hover), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #hero-text {
-        margin: 20vh auto 0 auto;
-        width: max-content;
-    }
-    #hero-text-primary {
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-    #hero-text-primary p:first-child {      /* "Make a"  */
-        font-size: clamp(2.5rem, 9vw, 5rem);
-        line-height: 2rem;
-    }
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        font-size: clamp(5rem, 18vw, 12rem);
-        text-align: center;
-    }
-    #hero-text-secondary {
-        width: max-content;
-    }
-    #hero-text-secondary span {  /* This is overwritten for screen widths 600px and over */
-        font-size: 1.2rem;
-        line-height: 1rem;
-    }
-    #hero-text-secondary svg {
-        height: 3rem;   /* This is overwritten for screen widths 600px and over */
-        width: auto;
-    }
-}
-
-@media screen and (hover) and (min-width: 600px), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px)  {
-    #hero-text-secondary {        /* (same for mobile in landscape orientation) */
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-    }        
-}
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #hero-text-secondary {        /* (same as for desktop) */
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 1.8rem;
-        margin-top: 5vh;
-    }
-    #hero-text {
-        margin-top: 20vh;
-    }
-    #hero-text-primary > p:first-child {      /* "Make a"  */
-        font-size: 13vh;
-        position: relative;
-        left: 15vw;
-    }    
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        font-size: 26vh;
-        text-align: center;
-    }
-    #hero-text-secondary {
-        margin-top: 15vh; 
-    }
-    #hero-text-secondary span {
-        font-size: 5vh;
-        line-height: 4.5vh;
-    }
-}
-
-@media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-    #hero-text-primary p:first-child {margin-left: 1rem;}
-    #hero-text-secondary p { 
-        width: 16rem;
-        text-align: right;
-        line-height: 1.1rem;
-    }
-    #hero-text-secondary span { 
-        display: inline;    /* This rule is for getting the secondary hero text onto two lines instead of three */
-        font-size: 1.3rem;
-    }
-    #hero-text-secondary {        
-        margin-top: 10vh;
-        gap: 1.9rem;
-    }    
-    #hero-text-secondary svg {
-        height: 2.1rem;
-    }
-}
-
-
-
-@media screen and (hover) and (min-width: 786px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
-    #hero-text-secondary svg {
-        height: 3.2rem;
-    }
-    #hero-text-secondary {
-        gap: clamp(2rem, 4.8vw, 3.5rem);
-    }
-    #hero-text-secondary span {
-        font-size: 1.4rem;
-        line-height: 1.2rem;
-    }
-}
-
-@media screen and (hover) and (min-width: 1024px) {
-    #hero-text-secondary svg {
-        height: 4rem;
-    }
-    #hero-text-secondary {
-        gap: 3.5rem;
-    }
-    #hero-text-secondary span {
-        font-size: 1.7rem;
-        line-height: 1.4rem;
-    }
-}
-
-@media screen and (hover) and (min-width: 1200px) {
-    #hero-text-secondary svg {
-        height: 4.6rem;
-    }
-    #hero-text-secondary {
-        gap: 4.5rem;
-    }
-    #hero-text-secondary span {
-        font-size: 1.9rem;
-        line-height: 1.6rem;
-    }
-}
-
-/* Ripple effect */
+/* Ripples for landing section background */
 
 .ripple {
     position: absolute;
@@ -484,208 +191,75 @@ h1.screen-reader-only {
     }
 }
 
-/* Home section background effects */
+/* Decorative background waves */
 
-.landing-radial-gradient {
-    position: absolute;
-    width: 120%;
-    left: -10%;
-    background: radial-gradient(
-        #0bffe425,
-        #0bffe400 70%
-    );
-}
-.landing-radial-gradient:first-child {
-    height: 75%;
-    top: 0;
-}
-.landing-radial-gradient:last-child {
-    height: 35%;
-    bottom: 5%;
-}
-
-.landing-waves {
-    position: absolute;
-}
-.landing-waves img {
-    height: 38vh; width: auto;
-}
-.landing-waves-aqua {  /* aqua */
+.landing-waves {position: absolute;}
+.landing-waves img {height: 38vh; width: auto;}
+.landing-waves-aqua {  
     transform: scaleY(-1);
     right: 28vw;
     bottom: 5%;
 }
-.landing-waves-green {  /* green */
+.landing-waves-green { 
     transform: scaleY(-1);
     left: 30vw;
     top: 17%;
 }
-.landing-waves-purple {  /* purple */
+.landing-waves-purple {  
     left: -10vw;
     top: 2%;
 }
+#About .landing-waves:nth-child(1) {  
+    bottom: unset;
+    top: 70vh;
+}
+#About .landing-waves:nth-child(3) {    
+    top: unset;
+    bottom: 10vh;
+}
 
-
+/* Phones in landscape orientation */
 @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    .landing-waves img {
-        height: 65vh; width: auto;
-    }
-    .landing-waves-aqua {  /* aqua */
+    .landing-waves img {height: 65vh; width: auto;}
+    .landing-waves-aqua {  
         left: -45vw;
         bottom: 0;
     }
-    .landing-waves-purple {  /* purple */
+    .landing-waves-purple { 
         left: 40vw;
         top: -30vh;
     }
-    .landing-waves-green {  /* green */
+    .landing-waves-green {
         left: 55vw;
         top: 10vh;
     }
 }
 
+/* Desktop, and tablets in landscape orientation */
 @media screen and (hover),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .landing-waves img {
-        height: 17rem; width: auto;
-    }
-    .landing-waves-aqua {  /* aqua */
+    .landing-waves img {height: 17rem; width: auto;}
+    .landing-waves-aqua {  
         right: 55vw;
         bottom: 0;
     }
-    .landing-waves-purple {  /* purple */
+    .landing-waves-purple {  
         left: 27vw;
         top: 10vh;
     }
-    #About div.landing-waves-purple {
-        left: 55vw;
-    }
-    .landing-waves-green {  /* green */
+    .landing-waves-green { 
         left: 50vw;
         top: 25vh;
     }
-    #About div.landing-waves-green {
-        left: 60vw;
-    }
+    #About div.landing-waves-purple {left: 55vw;}
+    #About div.landing-waves-green {left: 60vw;}
 }
 
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~  Special Effects section  ~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-#Effects hgroup, #SFX_panel {
-    position: relative;
-    z-index: 1;
-    border-radius: 1rem;
-}
-
-#SFX_iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 100vh;
-}
-
-#SFX_iframe iframe {
-    height: 100vh;
-    width: 100%;
-    border-color: transparent;
-}
-
-#SFX_iframe p {
-    margin: 0;
-}
-
-#SFX_iframe span {
-    font-weight: bold;
-}
-
-#SFX_panel {
-    display: flex;
-    flex-direction: column;
-    gap: 3vh;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
-    width: fit-content;
-    margin: 30vh auto 0 auto;
-}
-
-.SFX_thumbnails {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3vw;
-    margin: 0 auto;
-}
-
-.SFX_thumbnail {
-    height: 2.8rem;
-    width: 2.8rem;
-}
-
-.SFX_thumbnail svg {
-    height: 100%;
-    width: 100%;
-    border-radius: 10%;
-}
-
-.arrowsWrapper {
-    display: flex;
-    gap: 2rem;
-}
-
-.arrow {
-    width: 3.5rem;
-    height: 3.5rem;
-}
-
-.arrow svg {
-    border-radius: 10%;
-}
-
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    .SFX_thumbnail {
-        height: 3.8rem;
-        width: 3.8rem;
-    }
-    .arrow {
-        width: 4.8rem;
-        height: 4.8rem;
-    }
-}
-
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #SFX_panel {
-        margin-top: 3rem;
-    }
-}
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px),
-       screen and (hover) and (min-width: 600px) {
-    .SFX_thumbnails {
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
-    .SFX_thumbnails {
-        margin: unset;
-    } 
-}
-
+/* Desktop width 1024px and above, and tablets in landscape orientation */
 @media screen and (hover) and (min-width: 1024px),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .SFX_thumbnails {
-        gap: 2rem;
-    }
+    #About .landing-waves:nth-child(1) {top: 35vh;}
 }
-
-
 
 /* Light shafts background */
 
@@ -706,35 +280,6 @@ h1.screen-reader-only {
     animation-name: lightshafts;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    
-}
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    .lightshaft {
-        width: 8rem;
-        top: -20rem;
-    }
-}
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #lightshafts-group {
-        top: 2vh;
-        height: 120%;
-    }
-    .lightshaft {
-        left: 0;
-        top: -5h;
-    }
-}
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #lightshafts-group {
-        height: 100%;
-    }
-    .lightshaft {
-        width: 5rem;
-        left: calc(10vw - 4rem);
-        top: -6rem;
-    }
 }
 .lightshaft:nth-child(1) {
     transform: rotate(-15deg);
@@ -762,12 +307,378 @@ h1.screen-reader-only {
     animation-duration: 1.7s;
     animation-delay: 1s;
 }
-
 @keyframes lightshafts {
     from {opacity: 1}
     to {opacity: 0.4}
 }
 
+/* Phones in landscape orientation */
+@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    #lightshafts-group {
+        top: 2vh;
+        height: 120%;
+    }
+    .lightshaft {
+        left: 0;
+        top: -5h;
+    }
+}
+
+/* Tablets in portrait orientation */
+@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    .lightshaft {
+        width: 8rem;
+        top: -20rem;
+    }
+}
+
+/* Desktop */
+@media screen and (hover),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    #lightshafts-group {
+        height: 100%;
+    }
+    .lightshaft {
+        width: 5rem;
+        left: calc(10vw - 4rem);
+        top: -6rem;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+header {
+    z-index: 2;
+    position: fixed;
+    height: max-content;
+    width: 100vw;
+    top: 0;
+    padding: var(--hud-padding-mobile);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+#logo {
+    width: min(15vw, 15vh);
+    height: auto;
+    border-radius: 0.3rem;
+}
+#hamburger {
+    cursor: pointer;
+    padding: 0.5rem;
+}    
+#menu {
+    position: fixed;
+    z-index: 1;
+    padding: 20px;
+    top: var(--hud-padding-mobile);
+    right: var(--hud-padding-mobile);
+    display: none;
+    border-radius: 5px;
+}    
+#menu span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 3rem;
+    margin: 3px;
+    padding: 0 10px 5px;
+    line-height: 3rem;
+    border-radius: 5px;
+}
+#menu a {text-decoration: none;}
+#menu h4 {border-radius: 5px;}
+
+/* Desktop */
+@media screen and (hover) {
+    header {width: calc(100vw - 16px);}
+    #hamburger svg {
+        width: 2.2rem;
+        height: auto;
+    }    
+}
+
+/* Desktop, window widths below 600px */
+@media screen and (hover) and (max-width: 599px) {
+    #menu {
+        overflow: hidden;
+        padding: 2rem;
+    }
+    #menu span {
+        position: absolute;
+        top: -0.5rem;
+        right: 0px;
+        font-size: 2rem;
+        padding: 0 0.8rem;
+        line-height: 3rem;
+    }
+    #menu h4 {margin-right: 2rem;}
+}
+
+/* Desktop, and tablets in either portrait or landscape orientation */
+@media screen and (hover), 
+  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    #logo {width: 4rem;}
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Miscellaneous elements on landing screen */
+
+#Home {font-family: "Courier Prime";}
+h1.screen-reader-only {
+    clip: rect(0,0,0,0);
+    border: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#greenGeeks_landing {
+    position: absolute;
+    right: var(--hud-padding-mobile);
+    bottom: var(--hud-padding-mobile);
+}
+#greenGeeks_landing a {
+    display: flex;
+    align-items: flex-end;
+}
+#greenGeeks_landing img {
+    height: var(--greengeeks-height);
+    width: auto;
+}
+/* Desktop */
+@media screen and (hover),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    #greenGeeks_landing {
+        right: calc(var(--hud-padding-desktop) + 16px);
+        bottom: var(--hud-padding-desktop);
+    }
+}
+/* Phones in portrait orientation */
+@media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
+    #Home {padding: 0 5vw;}
+}
+
+/* Hero text elements */
+
+#hero-text {
+    margin-top: 23vh;     
+    position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
+}
+#hero-text-primary {position: relative; }
+#hero-text-primary > p:first-child {font-size: 13vw;}      /* "Make a"  */
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    text-transform: uppercase;
+    font-family: "Cooper Black";
+    font-size: 21.2vw;
+}
+#hero-text-secondary {
+    position: relative;
+    margin: 18vh auto 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 2rem;
+}
+#hero-text-secondary span {
+    display: block;
+    min-width: max-content;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1rem;
+}
+#hero-text-secondary svg {
+    width: 100%; 
+    height: auto;
+}
+
+/* Phones and tablets in landscape orientation  */
+@media screen and (any-hover: none) and (orientation: landscape) {
+    #hero-text-secondary {        /* (same as for desktop) */
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1.8rem;
+        margin-top: 5vh;
+    }
+    #hero-text {margin-top: 20vh;}
+    #hero-text-primary > p:first-child {      /* "Make a"  */
+        font-size: 13vh;
+        position: relative;
+        left: 15vw;
+    }    
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        font-size: 26vh;
+        text-align: center;
+    }
+    #hero-text-secondary {margin-top: 15vh; }
+    #hero-text-secondary span {
+        font-size: 5vh;
+        line-height: 4.5vh;
+    }
+}
+
+/* Tablets in portrait orientation */
+@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    #hero-text {margin-top: 30vh;}
+    #hero-text-secondary {margin-top: 9vh; }
+}
+
+/* Desktop, and tablets in either portrait or landscape orientation */
+@media screen and (hover), 
+  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    #hero-text {
+        margin: 20vh auto 0 auto;
+        width: max-content;
+    }
+    #hero-text-primary {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    #hero-text-primary p:first-child {      /* "Make a"  */
+        font-size: clamp(2.5rem, 9vw, 5rem);
+        line-height: 2rem;
+    }
+    #hero-text p:nth-child(2) {      /* "Splash"  */
+        font-size: clamp(5rem, 18vw, 12rem);
+        text-align: center;
+    }
+    #hero-text-secondary {width: max-content;}
+    #hero-text-secondary span {  
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    #hero-text-secondary svg {
+        height: 3rem;   
+        width: auto;
+    }
+}
+
+/* Desktop, any width at or over 600px */
+@media screen and (hover) and (min-width: 600px), 
+  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px)  {
+    #hero-text-secondary {        
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }        
+}
+/* Desktop, widths between 600 and 785px */
+@media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    #hero-text-primary p:first-child {margin-left: 1rem;}
+    #hero-text-secondary p { 
+        width: 16rem;
+        text-align: right;
+        line-height: 1.1rem;
+    }
+    #hero-text-secondary span { 
+        display: inline;    /* This rule is for getting the secondary hero text onto two lines instead of three */
+        font-size: 1.3rem;
+    }
+    #hero-text-secondary {        
+        margin-top: 10vh;
+        gap: 1.9rem;
+    }    
+    #hero-text-secondary svg {height: 2.1rem;}
+}
+/* Desktop, widths of 786px or more  */
+@media screen and (hover) and (min-width: 786px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+    #hero-text-secondary svg {height: 3.2rem;}
+    #hero-text-secondary { gap: clamp(2rem, 4.8vw, 3.5rem);}
+    #hero-text-secondary span {
+        font-size: 1.4rem;
+        line-height: 1.2rem;
+    }
+}
+/* Desktop, widths of 1024px or more */
+@media screen and (hover) and (min-width: 1024px) {
+    #hero-text-secondary svg {height: 4rem;}
+    #hero-text-secondary {gap: 3.5rem;}
+    #hero-text-secondary span {
+        font-size: 1.7rem;
+        line-height: 1.4rem;
+    }
+}
+/* Desktop, widths of 1200px or more */
+@media screen and (hover) and (min-width: 1200px) {
+    #hero-text-secondary svg {height: 4.6rem;}
+    #hero-text-secondary {gap: 4.5rem;}
+    #hero-text-secondary span {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~  Special Effects section  ~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#Effects hgroup.subheading {pointer-events: none;}
+#Effects hgroup, #SFX_panel {
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
+}
+#SFX_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+}
+#SFX_iframe iframe {
+    height: 100vh;
+    width: 100%;
+    border-color: transparent;
+}
+#SFX_iframe p {margin: 0;}
+#SFX_iframe span {font-weight: bold;}
+#SFX_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: fit-content;
+    margin: 30vh auto 0 auto;
+}
+.SFX_thumbnails {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: 0 auto;
+}
+.SFX_thumbnail {
+    height: 2.8rem;
+    width: 2.8rem;
+}
+.SFX_thumbnail svg {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+.arrowsWrapper {
+    display: flex;
+    gap: 2rem;
+}
+.arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.arrow svg {border-radius: 10%;}
 #SFX_interactive {
     position: absolute;
     bottom: -1rem;
@@ -775,20 +686,50 @@ h1.screen-reader-only {
     text-align: center;
     font-size: 0.8rem;
     border-radius: 50px;
-    padding: 4% 8%;
+    padding: 3% 6%;
     transform-origin: right;
     transform: rotate(-10deg);
     z-index: 1;
 }
+#SFX_interactive p {margin: -0.4rem;}
 
-#SFX_interactive p {
-    margin: -0.4rem;
+/* Tablets in portrait orientation */
+@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    .SFX_thumbnail {
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+    .arrow {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
 }
 
-#Effects hgroup.subheading {
-    pointer-events: none;
+/* Desktop, and phones or tablets in landscape orientation */
+@media screen and (hover),
+  screen and (any-hover: none) and (orientation: landscape) {
+    #SFX_panel {margin-top: 3rem;}
 }
 
+/* Desktop width of 600px or more, and phones in landscape orientation */
+@media screen and (hover) and (min-width: 600px), 
+  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    .SFX_thumbnails {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Desktop */
+@media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
+    .SFX_thumbnails {margin: unset;} 
+}
+@media screen and (hover) and (min-width: 1024px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    .SFX_thumbnails {
+        gap: 2rem;
+    }
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
@@ -801,23 +742,17 @@ h1.screen-reader-only {
     flex-direction: column;
     gap: 3vh;
 }
-
 #portfolio-img {
     width: 100%;
     max-width: 40vh;
     margin: 0 auto;
 }
-
 #portfolio-img img {
     width: 100%;
     height: auto;
     outline: 2px solid;
 }
-
-#Portfolio h3 {
-    margin-top: 0;
-}
-
+#Portfolio h3 {margin-top: 0;}
 #portfolio-panel {
     position: absolute;
     bottom: 4vh;
@@ -827,7 +762,6 @@ h1.screen-reader-only {
     align-items: center;
     gap: 3vh;
 }
-
 #portfolio_thumbnails {
     display: flex;
     flex-wrap: wrap;
@@ -835,43 +769,18 @@ h1.screen-reader-only {
     justify-content: center;
     gap: 3vw;
 }
-
 .folio_thumbnail {  
     width: 13vw;
     height: auto;
     outline: 1px solid;
 }    
 
-
-@media screen and (hover) {
-    #portfolio-panel {position: static;}    
-    #portfolio_thumbnails {
-        width: unset;
-        gap: 1rem;
-    }
-    #portfolio-img {min-width: 25rem;}
-    #portfolio-sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-}
-@media screen and (hover) and (max-width: 785px) {
-    .folio_thumbnail {width: 3rem;}
-}
-@media screen and (hover) and (min-width: 786px) {
-    .folio_thumbnail {width: 4rem;}
-}
-@media screen and (hover) and (min-width: 1024px) {
-    #portfolio-img {min-width: 30rem;}
-    .folio_thumbnail {width: 5rem;}
+/* Phones that are wider or not as tall, in portrait orientation */
+@media screen and (any-hover: none) and (max-width: 699px) and (min-aspect-ratio: 1/1.8) {
+    #portfolio-intro {display: none;}
 }
 
-
-
-
-
+/* Phones in landscape orientation */
 @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
     #portfolio-intro {display: none;}
     #portfolio-contents {
@@ -909,43 +818,53 @@ h1.screen-reader-only {
     .folio_thumbnail {width: 13vh;}    
 }
 
-@media screen and (any-hover: none) and (max-width: 699px) and (min-aspect-ratio: 1/1.8) {
-    #portfolio-intro {display: none;}
+/* Desktop */
+@media screen and (hover) {
+    #portfolio-panel {position: static;}    
+    #portfolio_thumbnails {
+        width: unset;
+        gap: 1rem;
+    }
+    #portfolio-img {min-width: 25rem;}
+    #portfolio-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
 }
-
+@media screen and (hover) and (max-width: 785px) {
+    .folio_thumbnail {width: 3rem;}
+}
+@media screen and (hover) and (min-width: 786px) {
+    .folio_thumbnail {width: 4rem;}
+}
+@media screen and (hover) and (min-width: 1024px) {
+    #portfolio-img {min-width: 30rem;}
+    .folio_thumbnail {width: 5rem;}
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
 /* #About ul {margin-bottom: 5vh;} */
 
-.about-quote {
-    border-radius: 0.5rem;
-}    
+.about-quote {border-radius: 0.5rem;}    
 .about-quote {
     width: 80vw;
     padding: 1rem;
-}
-
-    
+}   
 .about-quote p:first-of-type {    /* the quote */
     font-size: 1.3rem;
     text-align: center;
 }
-
 .about-quote p:nth-of-type(2) {    /* the author */
     font-size: 0.9rem;
     text-align: right;
     margin-top: 1rem;
 }
-
-.about-quote a {
-    text-decoration: none;
-}
-
-
+.about-quote a {text-decoration: none;}
 #aboutParagraphs {
     display: flex;
     flex-wrap: wrap;
@@ -953,6 +872,20 @@ h1.screen-reader-only {
     justify-content: center;
     margin: -3rem 0 -2rem 0;
 }
+#About ul {padding-left: 1.4rem;}
+#aboutMoreSpecs a {text-decoration: none;}
+span.linky {text-decoration: underline;}
+#About .section-text-contents:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Phones in landscape orientation */
+@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    #aboutParagraphs {margin: 0;}
+}
+
+/* Tablets in portrait orientation */
 @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
     .about-quote {
         width: 20rem;
@@ -960,17 +893,10 @@ h1.screen-reader-only {
         flex-direction: column;
         justify-content: center;
     }
-    #aboutParagraphs {
-        margin-top: -3rem;
-    }
+    #aboutParagraphs {margin-top: -3rem;}
 }
 
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #aboutParagraphs {
-        margin: 0;
-    }
-}
-
+/* Desktop, and tablets in landscape orientation (see below for more tablet rules) */
 @media screen and (hover),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
     .about-quote {
@@ -979,17 +905,10 @@ h1.screen-reader-only {
         flex-direction: column;
         justify-content: center;
     }
-    #aboutParagraphs {
-        margin: -1rem 0;
-    }
+    #aboutParagraphs {margin: -1rem 0;}
 }
 
-
-#About .section-text-contents:last-child {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Desktop widths of at least 786px, and phones in landscape orientation */
 @media screen and (hover) and (min-width: 786px), 
     screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
     #About .section-text-contents:last-child {
@@ -1002,9 +921,9 @@ h1.screen-reader-only {
         justify-content: space-between;
         padding-bottom: 0.3rem     /* to match the li padding next to it, so they align at their lower edges */
     }
-
 }
 
+/* Desktop widths of at least 1024px, and tablets in landscape orientation (see above for more tablet rules) */
 @media screen and (hover) and (min-width: 1024px),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
     #About .section-text-contents:last-child {
@@ -1012,39 +931,6 @@ h1.screen-reader-only {
         gap: 2rem;
     }
 }
-
-
-
-
-#About ul {
-    padding-left: 1.4rem;
-}
-
-#aboutMoreSpecs a {
-    text-decoration: none;
-}
-
-span.linky {
-    text-decoration: underline;
-}
-
-#About .landing-waves:nth-child(1) {    /* aqua */
-    bottom: unset;
-    top: 70vh;
-}
-
-#About .landing-waves:nth-child(3) {    /* green */
-    top: unset;
-    bottom: 10vh;
-}
-
-@media screen and (hover) and (min-width: 1024px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #About .landing-waves:nth-child(1) {    /* aqua */
-        top: 35vh;
-    }
-}
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
@@ -1055,11 +941,7 @@ span.linky {
     position: relative;
     width: 100%;
 }
-
-.contact p {margin: 0;}
-.contact h3 {margin-bottom: 0.2rem;}
 .asterisk {color: rgb(255, 27, 50);}
-
 #messageSent {
     opacity: 0.9;
     box-sizing: border-box;
@@ -1069,7 +951,6 @@ span.linky {
     top: 10%;
     left: 10%;
 }
-
 #messageSent span {
     font-size: 3rem;
     line-height: 1.5rem;
@@ -1078,30 +959,30 @@ span.linky {
     right: 0.1rem;
     cursor: pointer;
 }
-
 #messageSent p {
     font-size: 1.5rem;
     text-align: center;
 }
-
+#disclaimer {
+    font-size: 0.8rem;
+    font-style: italic;
+    width: 90%;
+    margin: auto;
+}
 form {
     width: 100%;
     margin: 0 auto;
 }
-
 fieldset {
     margin-top: 1.5rem;
     padding: 0.5rem 1rem;
     position: relative;
 }
-
 .inputText, .labelText {
     display: block;
     width: 100%;
 }
-
 .inputText {padding: 0.3rem 0.5rem;}
-
 #buttonsWrapper {
     display: flex;
     justify-content: center;
@@ -1109,22 +990,12 @@ fieldset {
     width: 100%;
     margin: 3vw 0;
 }
-
 #buttonsWrapper button {
     width: 35vw;
     padding: 0.2rem 0;
 }
 
-#disclaimer {
-    font-size: 0.8rem;
-    font-style: italic;
-    width: 90%;
-    margin: auto;
-}
-
-
-/* Mobile, in landscape */
-
+/* Phones in landscape orientation */
 @media screen and (any-hover: none) and (orientation: landscape)  and (max-height: 699px){
     #buttonsWrapper button {
         width: 25vw;
@@ -1132,112 +1003,17 @@ fieldset {
     }
 }
 
-
 /* Desktop */
-
-    /* Desktop, any width */
-
-@media screen and (any-hover: hover) {
-    .inputText, .labelText {margin: 0 auto;}
-    #buttonsWrapper {
-        margin: 10px 0; 
-        justify-content: center; 
-    }
+@media screen and (hover) {
+    #contactHGroup {max-width: 890px;}
+    #buttonsWrapper button {width: 100%;}
 }
-    
-    /* Desktop, screen width up to 600px */
-
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    form, fieldset, #buttonsWrapper {width: 400px;}
-    .inputText, .labelText {width: 390px;}    
-    #buttonsWrapper button {
-        width: 195px; 
-        margin: 10px 5px;
-    }    
-}
-
-    /* Desktop, screen width 600px to 786px */
-
-@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    form, fieldset, #buttonsWrapper {width: 550px;}
-    .inputText, .labelText {width: 520px;}    
-    #buttonsWrapper button {
-        width: 260px; 
-        margin: 10px 15px;
-    }    
-}
-
-    /* Desktop, screen width 786px and above */
-
-    @media screen and (any-hover: hover) and (min-width: 786px){
-        #nameAndEmail {
-            display: grid;
-            grid-template-columns: 45% 45%;
-            gap: 10%;
-        }
-    }
-        
-    /* Desktop, screen width 786px to 1000px */
-
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    form, fieldset, #buttonsWrapper {width: 700px;}
-    .inputText, .labelText {width: 650px;}    
-    #nameAndEmail {
-        width: 650px;
-        margin: 0 auto;
-        display: flex;
-        gap: 10px;
-    }
-    #nameAndEmail label, #nameAndEmail input {width: 320px;}
-    #buttonsWrapper {gap: 10px;}
-    #buttonsWrapper button {
-        width: 325px; 
-        margin: 10px 0;
-    }    
-    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
-    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
-}
-
-    /* Desktop, screen width 1000px and above */
-
-@media screen and (any-hover: hover) and (min-width: 1024px) {
-    form, fieldset, #buttonsWrapper, #nameAndEmail {width: 800px;}
-    .inputText, .labelText {width: 730px;}    
-    #buttonsWrapper button {
-        width: 365px;
-        margin: 10px 35px;
-    }    
-    form, fieldset, #buttonsWrapper {width: 800px;}
-    .inputText, .labelText {width: 730px;}    
-    #nameAndEmail {
-        width: 730px;
-        margin: 0 auto;
-        display: flex;
-        gap: 20px;
-    }
-    #nameAndEmail label, #nameAndEmail input {width: 355px;}
-    #buttonsWrapper {gap: 20px;}
-    #buttonsWrapper button {
-        width: 355px; 
-        margin: 10px 0;
-    }    
-    #buttonsWrapper button:nth-child(1) {margin-left: 25px;}
-    #buttonsWrapper button:nth-last-child(1) {margin-right: 25px;}
-}
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~  Footer ~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-footer {
-    padding: 5vh 0;
-}
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    footer {margin: 10vh 0;}
-}
-
+footer {padding: 5vh 0;}
 footer p {
     text-align: center;
     font-size: 0.8rem;
@@ -1249,10 +1025,13 @@ footer p {
     margin: auto;
 }    
 
+/* Phones in landscape orientation */
+@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    footer {margin: 10vh 0;}
+}
 
 /* Desktop */
-
-@media screen and (any-hover: hover) {
+@media screen and (hover) {
     .greengeeks img {
         width: 90px;
         height: auto;
@@ -1265,9 +1044,8 @@ footer p {
     }
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~  Mode buttons  ~~~~~~~~~~~~~~~ */
+/* ~~~~~~ Light/dark mode buttons  ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #modes {
@@ -1300,12 +1078,7 @@ footer p {
     background-color: #44444488;
     outline: 2px solid #88888888;
 }
-
-.mode-button.active {
-    outline: 6px solid #888888;
-}
-
-
+.mode-button.active {outline: 6px solid #888888;}
 #modes #lightmode {
     background-color: #F8FFAA;
     border: 1px solid #F8FFAA;
@@ -1318,14 +1091,4 @@ footer p {
     background-image: url(../img/basic-moon-svgrepo-com.svg);
     background-size: contain;
 }
-.mode-button.active {
-    box-shadow: 0 0 3px 7px black;
-}
-/* #modes #mysterymode {
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    background-image: url(../img/question-mark-svgrepo-com.svg);
-    background-size: contain;
-    display: none;
-} */
-
+.mode-button.active {box-shadow: 0 0 3px 7px black;}
