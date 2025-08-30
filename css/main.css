@@ -794,116 +794,125 @@ h1.screen-reader-only {
 /* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
-.folio_thumbnail {
-    height: 30px;
-    width: auto;
-}
-
-
-.folioItemsWrapper {
-    width: 100%;
-    margin-top: 5vh;
-}
-
-article {
+#portfolio-contents {
     width: 90vw;
-    min-width: 300px;
-    margin: 5vh auto;
-    position: relative;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    margin: -3vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
 }
 
-article:last-child {
-    margin-bottom: 0;
+#portfolio-img {
+    width: 100%;
+    max-width: 40vh;
+    margin: 0 auto;
 }
 
-.articleText {padding: 0 5%;}
-.articleText h3 {margin-top: 0.5em;}
-
-.folioItemsWrapper img {
+#portfolio-img img {
     width: 100%;
     height: auto;
-    position: relative;
-}   
-
-/* Mobile, in landscape */
-
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    article {
-        width: 80vw;
-        margin: 10vh auto;
-    }
-    .folioItemsWrapper img {
-        width: 80vw;
-        height: auto;
-    }
+    outline: 2px solid;
 }
 
+#Portfolio h3 {
+    margin-top: 0;
+}
 
-/* Desktop, any screen width */
+#portfolio-panel {
+    position: absolute;
+    bottom: 4vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
 
-@media screen and (any-hover: hover) {
-    article {margin: 0;}
-    .folioItemsWrapper {
+#portfolio_thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.folio_thumbnail {  
+    width: 13vw;
+    height: auto;
+    outline: 1px solid;
+}    
+
+
+@media screen and (hover) {
+    #portfolio-panel {position: static;}    
+    #portfolio_thumbnails {
+        width: unset;
+        gap: 1rem;
+    }
+    #portfolio-img {min-width: 25rem;}
+    #portfolio-sidebar {
         display: flex;
-        justify-content: center;
-        padding-bottom: 3rem;
-    }
-}
-
-
-    /* Desktop, screen widths below 1024px */
-
-@media screen and (any-hover: hover) and (max-width: 599px) {
-    article {width: 390px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 600px) and (max-width: 785px) {
-    article {width: 590px;}
-}
-
-@media screen and (any-hover: hover) and (min-width: 786px) and (max-width: 1023px) {
-    article {width: 650px;}
-}
-
-
-    /* Above 1024px, switch from one column to two */
-
-@media screen and (any-hover: hover) and (max-width: 1023px) {
-    .folioItemsWrapper {
         flex-direction: column;
-        flex-wrap: nowrap;
         align-items: center;
-        gap: 4rem;
-    }
-}
-
-@media screen and (any-hover: hover) and (min-width: 1024px) {
-    .folioItemsWrapper {
-        flex-wrap: wrap;
         gap: 2rem;
     }
 }
-
-
-    /* Desktop, screen width 1000px and above */
-
-@media screen and (any-hover: hover) and (min-width: 1024px) and (max-width: 1199px) {
-    article {width: 402px;}
+@media screen and (hover) and (max-width: 785px) {
+    .folio_thumbnail {width: 3rem;}
+}
+@media screen and (hover) and (min-width: 786px) {
+    .folio_thumbnail {width: 4rem;}
+}
+@media screen and (hover) and (min-width: 1024px) {
+    #portfolio-img {min-width: 30rem;}
+    .folio_thumbnail {width: 5rem;}
 }
 
-@media screen and (any-hover: hover) and (min-width: 1200px) {
-    article {width: 448px;}
-}
 
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    article {
-        width: 100%;
+
+
+
+@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    #portfolio-intro {display: none;}
+    #portfolio-contents {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: -5vh;
     }
+    #portfolio-img {
+        margin: 0;
+        max-width: unset;
+        width: 40vw;
+        height: auto;
+    }
+    #portfolio-img img {
+        width: 100%;
+        height: auto;
+    }
+    #portfolio-sidebar {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        justify-content: space-between;
+    }
+    #portfolio-panel {
+        right: 5vw;
+        width: unset;
+        flex-direction: row;
+        gap: 5vw;
+    }
+    #portfolio_thumbnails {
+        width: unset;
+        gap: 3vh;
+    }
+    .folio_thumbnail {width: 13vh;}    
 }
+
+@media screen and (any-hover: none) and (max-width: 699px) and (min-aspect-ratio: 1/1.8) {
+    #portfolio-intro {display: none;}
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
