@@ -17,23 +17,19 @@ function addMobileListeners() {
     window.addEventListener("deviceorientation", function(event){    
         if (screen.height > screen.width) {  // ie in portrait
             if (event.gamma < -45) {
-                splash.style.left = `${self.innerWidth * 2}px`;
+                splash.style.backgroundPositionX = "center, center";
             } else if (event.gamma > 45) {
-                splash.style.left = "0";
-            } else {
-                splash.style.left = `${self.innerWidth * 2 / 90 * event.gamma - self.innerWidth}px`;  
-                        // 2 refers to the 2 x self.innerWidth distance the background moves, between gamma=-45 and gamma=45.
-                        // 90 refers to gamma degrees between -45 to the left and 45 to the right
+                 splash.style.backgroundPositionX = "center, center";
+           } else {
+                splash.style.backgroundPositionX = `${event.gamma * -1}px, ${event.gamma * -2}px`;  
             };
         } else {
             if (event.beta < -45) {
-                splash.style.left = `${self.innerWidth * 2}px`;
+                splash.style.backgroundPositionX = "center, center";
             } else if (event.beta > 45) {
-                splash.style.left = "0";
+                splash.style.backgroundPositionX = "center, center";
             } else {
-                splash.style.left = `${self.innerWidth * 2 / 90 * event.beta - self.innerWidth}px`;  
-                        // 2 refers to the 2 x self.innerWidth distance the background moves, between beta=-45 and beta=45.
-                        // 90 refers to beta degrees between -45 to the left and 45 to the right
+                splash.style.backgroundPositionX = `${event.gamma * -2}px, ${event.gamma * -4}px`;  
             };
         }
     })

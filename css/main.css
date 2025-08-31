@@ -2,22 +2,24 @@
 
 /* Line# - Contents */
 
-/*   23 - Definitions of media queries */
-/*   42 - Site-wide settings */
-/*  110 - Site-wide typography */
-/*  147 - Backgrounds */
-/*  150 ---- Background gradient for landing section */
-/*  170 ---- Decorative background waves */
-/*  264 ---- Light shafts  */
-/*  349 - Header */
-/*  429 - Home/landing section */
-/*  432 ---- Miscellaneous elements on landing screen */
-/*  470 ---- Hero text elements */
-/*  624 - Special Effects  */
-/*  848 - About  */
-/*  936 - Contact  */
-/* 1013 - Footer */
-/* 1048 - Light/dark mode buttons */
+/*   25 - Definitions of media queries */
+/*   44 - Site-wide settings */
+/*  103 - Site-wide typography */
+/*  140 - Backgrounds */
+/*  153 ---- Background gradient for landing section */
+/*  173 ---- Ripples for landing section background */
+/*  197 ---- Decorative background waves */
+/*  267 ---- Light shafts  */
+/*  352 - Header */
+/*  432 - Home/landing section */
+/*  435 ---- Miscellaneous elements on landing screen */
+/*  473 ---- Hero text elements */
+/*  627 - Special Effects  */
+/*  738 - Portfolio  */
+/*  851 - About  */
+/*  939 - Contact  */
+/* 1016 - Footer */
+/* 1051 - Light/dark mode buttons */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~ Definitions of main media queries ~~~~ */
@@ -57,15 +59,6 @@ html, body {
     position: relative;
     overflow-x: hidden;
     width: 100vw;
-}
-.bkgd {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -4;
-    overflow: hidden;
 }
 section {
     position: relative;
@@ -146,6 +139,16 @@ a {color: inherit;}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~ Backgrounds ~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.bkgd {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    overflow: hidden;
+}
 
 /* Background gradient for landing section */
 

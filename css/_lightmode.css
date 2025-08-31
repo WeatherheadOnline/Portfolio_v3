@@ -56,10 +56,7 @@ h3 {color: var(--blue_lm_light);}
 /*       Header & Menu       */
 /* ************************* */
 
-.logo-accent-color {
-  fill: var(--blue_lm_dark);
-  stroke: var(--blue_lm_dark);
-}
+.logo-accent-color {fill: var(--blue_lm_dark);}
 .logo-main-color {fill: var(--blue_lm_lightest);}
 #logo:hover {outline: 2px solid var(--blue_lm_lightest);}
 #hamburger svg {stroke:var(--blue_lm_lightest);}

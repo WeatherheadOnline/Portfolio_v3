@@ -54,10 +54,7 @@ h2, h3 {color: var(--blue-bright);}
 /*       Header & Menu       */
 /* ************************* */
 
-.logo-accent-color {
-  fill: var(--logo-color-accent);
-  stroke: var(--logo-color-accent);
-}
+.logo-accent-color {fill: var(--logo-color-accent);}
 .logo-main-color {fill: var(--logo-color-main);}
 #logo:hover {outline: 2px solid var(--logo-color-accent);}
 #hamburger svg {stroke:var(--blue-bright);}
