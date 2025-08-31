@@ -3,6 +3,8 @@ const portfolioItems = [
         name: "CSSsandbox",
         articleLink: "/CSSsandbox/index.html",
         imgSrc: "img/folio_sandbox.png",
+        thumbSrc: "img/folio_sandbox_small.png",
+        thumbSrc: "",
         h3Text: "Design Showcase",
         bodyText: "<p>Check out these neat designs and effects I've made. My favorite is one that looks iridescent.</p>",
     },
@@ -10,6 +12,7 @@ const portfolioItems = [
         name: "jewelery",
         articleLink: "https://www.weatherheaddesigns.com",
         imgSrc: "img/folio_weatherheaddesigns.png",
+        thumbSrc: "img/folio_weatherheaddesigns_small.png",
         h3Text: "WeatherheadDesigns.com",
         bodyText: "<p>My personal jewellery website. Inventory can be updated quickly, easily and seamlessly: new product details get added to a database, and the code does the rest of the work.</p>",
     },
@@ -17,6 +20,7 @@ const portfolioItems = [
         name: "CreNav",
         articleLink: "/CreNav/index.php",
         imgSrc: "img/folio_crenav.png",
+        thumbSrc: "img/folio_crenav_small.png",
         h3Text: "Implementing a more complex design",
         bodyText: "<p>My replica of <a href='https://creativenavigation.com/' target='_blank'>an existing website</a>, with the addition of responsive design for mobile devices. It includes a functional \"Contact Us\" form and interactive mouse-over effects for key images and navigation links.</p>",
     },
@@ -24,6 +28,7 @@ const portfolioItems = [
         name: "boognish",
         articleLink: "http://www.whatdoesitween.com",
         imgSrc: "img/folio_boognish.png",
+        thumbSrc: "img/folio_boognish_small.png",
         h3Text: "WhatDoesItWeen.com",
         bodyText: "<p>A fansite for the band Ween. Updates are easy: the code automatically adds all song listings from the database. The site also features a snake game.</p>",
     },
@@ -31,6 +36,7 @@ const portfolioItems = [
         name: "pianoLessons",
         articleLink: "/piano/index.html",
         imgSrc: "img/folio_pianolessons.png",
+        thumbSrc: "img/folio_pianolessons_small.png",
         h3Text: "Multi-page small-business site",
         bodyText: "<p>A website I made for my friend. It's no longer online. I've replicated it here (some of the wording has been replaced for privacy reasons).</p>",
     },
@@ -38,6 +44,7 @@ const portfolioItems = [
         name: "portfolio_v2",
         articleLink: "/v2/index.php",
         imgSrc: "img/folio_portfolio_v2.png",
+        thumbSrc: "img/folio_portfolio_v2_small.png",
         h3Text: "This website (2024-2025)",
         bodyText: "<p>Here's a previous version of this website. The front page features a shimmering-text effect. I had some fun with the light/dark mode settings.</p>",
     },
@@ -45,6 +52,7 @@ const portfolioItems = [
         name: "this",
         articleLink: "#Home",
         imgSrc: "img/folio_this.png",
+        thumbSrc: "img/folio_this_small.png",
         h3Text: "WeatherheadOnline.com",
         bodyText: "<p>This website! It's pretty great. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
     },
@@ -71,7 +79,7 @@ for (let article = 0; article <= portfolioItems.length - 1; article++) {
     const buttonDiv = document.createElement("img");
     buttonDiv.className = "folio_thumbnail";
     buttonDiv.id = portfolioItems[article].name;
-    buttonDiv.src = portfolioItems[article].imgSrc;
+    buttonDiv.src = portfolioItems[article].thumbSrc;
     portfolioThumbnails.appendChild(buttonDiv);
 }
 
