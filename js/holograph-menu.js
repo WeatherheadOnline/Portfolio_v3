@@ -2,15 +2,19 @@
 ***   Instructions   ***
 ************************
 
-In the HTML file:
-(1) Add the class name "holographic-menu" to each input or textarea (or other) element you want to add to the holographic menu.
-(2) Add the custom property 'data-holomenu=""' to each of the inputs that have className="holographic-menu".
-(3) Fill in the value for the new custom property. This determines the text the user sees on the corresponding button in the holographic menu.
+(1) HTML: Add the class name "holographic-menu" to each input or textarea (or other) element you want to add to the holographic menu.
+(2) HTML: Add the custom property 'data-holomenu=""' to each of the inputs that have className="holographic-menu".
+(3) HTML: Fill in the value for the new custom property. This determines the text the user sees on the corresponding button in the holographic menu.
+(4) CSS: Add these properties:
 
 Cheat sheet: 
 - To add an input element to the holographic menu: give it the class name "holograph-menu".
 - To change how each input's name appears in the menu: change the value of its "data-holomenu" property.
+
+
 */
+
+
 
 /* ~~~ Generate the menu buttons ~~~ */
 
@@ -50,10 +54,4 @@ function holoMenuOn() {
 function holoMenuOff() {
     holographButtons.style.display = "none";
     holoIcon.style.display = "block";
-}
-
-document.onClick = function(event) {
-    if(!holographButtons.contains(event.target)) {
-        holoMenuOff();
-    };
 }
