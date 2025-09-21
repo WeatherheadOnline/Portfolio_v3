@@ -434,21 +434,33 @@ header {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
-#holograph-buttons {
-    display: flex;
+#holograph-menu {
     position: fixed;
     bottom: 0;
     right: 0;
 }
 
 @media screen and (hover) {
-    #holograph-buttons {display: none;}
+    #holograph-menu {display: none;}
 }
+
+#holograph-buttons {
+    display: flex;
+}
+
 .holomenu-btn {
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
 
+#holograph-icon svg {
+    width: 2.2rem;
+    height: auto;
+    stroke: red;   /* Move this to the dark- and light-mode CSS files */
+    border: 3px solid pink;
+    border-radius: 2px;
+
+}
 
 
 

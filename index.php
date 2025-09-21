@@ -316,8 +316,13 @@
     </div>
 
     <div id="holograph-menu">
-        
-        <div id="holograph-buttons"></div>                    
+        <div id="holograph-icon">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path style="fill:none;stroke-width:5.85" d="m 5.860226,3.5 v 13" />
+                <path style="fill:none;stroke-width:1.85" d="m 10,15.58 h 7" />
+            </svg>
+        </div>
+        <div id="holograph-buttons"></div>  <!-- This container gets autofilled with buttons for each input element -->
     </div>
     
     <?php
