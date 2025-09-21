@@ -433,35 +433,60 @@ header {
 /* ~~~~~~~~~~    Holographic Menu    ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Minimum CSS for functionality */
 
 #holograph-menu {
-    position: fixed;
-    bottom: 0;
-    right: 0;
 }
-
 @media screen and (hover) {
     #holograph-menu {display: none;}
 }
+#holograph-buttons {
+}
+#holograph-icon svg { /* Substitute your preferred values */
+}
+#holograph-menu span {  /* Substitute your preferred values */
+    width: 2rem;
+}
+
+/* Site-specific CSS */
+
+#holograph-menu {
+    position: fixed;
+    z-index: 2;
+    bottom: var(--hud-padding-mobile);
+    right: var(--hud-padding-mobile);
+    max-width: 70vw;
+}    
 
 #holograph-buttons {
-    display: flex;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
 .holomenu-btn {
     padding: 0.5rem;
+}
+
+.holomenu-btn, #holograph-menu span {
     border-radius: 0.5rem;
 }
 
 #holograph-icon svg {
     width: 2.2rem;
     height: auto;
-    stroke: red;   /* Move this to the dark- and light-mode CSS files */
-    border: 3px solid pink;
+    stroke: #888888;   
+    border: 3px solid #888888;
+    background-color: white;
     border-radius: 2px;
-
 }
 
+#holograph-menu span {
+    background-color: #888888;
+    width: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
