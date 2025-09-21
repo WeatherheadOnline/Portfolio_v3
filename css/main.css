@@ -428,6 +428,26 @@ header {
     #logo {width: 4rem;}
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~    Holographic Menu    ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#holograph-menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.holomenu-btn {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -457,7 +477,8 @@ h1.screen-reader-only {
     height: var(--greengeeks-height);
     width: auto;
 }
-/* Desktop */
+
+/* Desktop, tablets in landscape */
 @media screen and (hover),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
     #greenGeeks_landing {

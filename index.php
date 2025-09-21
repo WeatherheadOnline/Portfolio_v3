@@ -59,7 +59,7 @@
             </div>
             <div id="ripples" class="bkgd"></div>
             <div id="greenGeeks_landing">
-                <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://static.greengeeks.com/ggseal/Green_3.png' alt='GreenGeeks eco-friendly web hosting'></a>            
+                <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://greengeeks.com/includes/images/green-tags/Green_3.png' alt='GreenGeeks eco-friendly web hosting'></a>            
             </div>
             <div id="hero-text">
                 <div id="hero-text-primary">
@@ -261,14 +261,14 @@
                                 <div id="userNameWrapper">
                                     <label for="userName" class="labelText">
                                         Name<span class="asterisk">*</span>
-                                        <input type="text" id="userName" class="inputText" name="userName" required >
+                                        <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Name" required >
                                             <!--value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">-->
                                     </label>
                                 </div>
                                 <div id="returnAddressWrapper">
                                     <label for="returnAddress" class="labelText">
                                         Email address<span class="asterisk">*</span>
-                                        <input type="email" id="returnAddress" class="inputText" name="userEmail" required >
+                                        <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
                                             <!--value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">-->
                                     </label>
                                 </div>
@@ -276,14 +276,14 @@
                             <div class="formUnit">
                                 <label for="subject" class="labelText">
                                     Subject
-                                    <input type="text" id="messageSubject" class="inputText" name="subject" >
+                                    <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Subject" >
                                         <!--value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >-->
                                 </label>
                             </div>
                             <div class="formUnit">
                                 <label for="body" class="labelText">
                                     Message<span class="asterisk">*</span>
-                                    <textarea id="messageBody" class="inputText" name="message" rows="4" cols="60" required ></textarea>
+                                    <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="Message" rows="4" cols="60" required ></textarea>
                                 </label>
                             </div>
                             <div id="buttonsWrapper">
@@ -315,12 +315,15 @@
         <div class="mode-button active" id="darkmode"></div>
     </div>
 
-    </div>  <!-- close container for mode buttons -->
-
+    <div id="holograph-menu">
+        
+                            
+    </div>
+    
     <?php
-        $userName = dataFilter($_POST['userName']);
-        $userEmail = dataFilter($_POST['userEmail']);
-        $message = dataFilter($_POST['message']);
+        $userName = isset($_POST['userName']) ? dataFilter($_POST['userName']) : "";
+        $userEmail = isset($_POST['userEmail']) ? dataFilter($_POST['userEmail']) : "";
+        $message = isset($_POST['message']) ? dataFilter($_POST['message']) : "";
         
         date_default_timezone_set("America/Denver");
         
@@ -357,5 +360,6 @@
     <script src="js/ripples.js"></script>
     <script src="js/splash-text-bkgd.js"></script>
     <script src="js/portfolioCarousel.js"></script>
+    <script src="js/holograph-menu.js"></script>
 </body>
 </html>
