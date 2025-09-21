@@ -28,13 +28,13 @@ In the HTML file:
 */
 
 const inputElements = Array.from(document.getElementsByClassName("holograph-menu"));
-const holographMenu = document.getElementById("holograph-menu");
+const holographButtons = document.getElementById("holograph-buttons");
 
 inputElements.forEach(displayInput);
 
 function displayInput(inputField) {
     btnID = inputField.getAttribute("name") + "-holo";
-    holographMenu.innerHTML += `
+    holographButtons.innerHTML += `
         <button id=${btnID} class="holomenu-btn" onclick="buttonListenerEvent(${inputField.id})">
             ${inputField.getAttribute("data-holomenu")}
         </button>

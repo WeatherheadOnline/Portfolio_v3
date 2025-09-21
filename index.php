@@ -317,7 +317,7 @@
 
     <div id="holograph-menu">
         
-                            
+        <div id="holograph-buttons"></div>                    
     </div>
     
     <?php

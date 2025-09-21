@@ -433,13 +433,17 @@ header {
 /* ~~~~~~~~~~    Holographic Menu    ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#holograph-menu {
+
+#holograph-buttons {
     display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
 }
 
+@media screen and (hover) {
+    #holograph-buttons {display: none;}
+}
 .holomenu-btn {
     padding: 0.5rem;
     border-radius: 0.5rem;
