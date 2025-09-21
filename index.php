@@ -32,7 +32,6 @@
                 <a href="#Effects" onclick="menuOff()"><h4>Special Effects</h4></a>
                 <a href="#Portfolio" onclick="menuOff()"><h4>Portfolio</h4></a>
                 <a href="#About" onclick="menuOff()"><h4>About</h4></a>
-                <!-- <a href="#Plan" onclick="menuOff()"><h4>What To Expect</h4></a> -->
                 <a href="#Contact" onclick="menuOff()"><h4>Contact</h4></a>
             </div>
         </div>
@@ -59,7 +58,7 @@
             </div>
             <div id="ripples" class="bkgd"></div>
             <div id="greenGeeks_landing">
-                <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://static.greengeeks.com/ggseal/Green_3.png' alt='GreenGeeks eco-friendly web hosting'></a>            
+                <a href='https://www.greengeeks.com' alt='GreenGeeks' rel='nofollow' target="_blank"><img src='https://greengeeks.com/includes/images/green-tags/Green_3.png' alt='GreenGeeks eco-friendly web hosting'></a>            
             </div>
             <div id="hero-text">
                 <div id="hero-text-primary">
@@ -287,7 +286,7 @@
                                 </label>
                             </div>
                             <div id="buttonsWrapper">
-                                <button type="" id="clearForm">Clear the form</button>
+                                <button type="reset" id="clearForm">Clear the form</button>
                                 <button type="submit" id="submitEmail">Send message</button>
                             </div>
                             <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to you. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>

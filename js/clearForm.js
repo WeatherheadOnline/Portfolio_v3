@@ -5,7 +5,7 @@ function clearForm() {
     document.getElementById("userName").value = "";
     document.getElementById("returnAddress").value = "";
     document.getElementById("messageSubject").value = "";
-    document.getElementById("messageBody").innerText = "";
+    document.getElementById("messageBody").value = "";
     document.getElementById("messageSent").remove();
 }
 
