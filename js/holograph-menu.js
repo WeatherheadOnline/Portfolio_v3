@@ -19,6 +19,7 @@ Cheat sheet:
 /* ~~~ Generate the menu buttons ~~~ */
 
 const inputElements = Array.from(document.getElementsByClassName("holograph-menu"));
+const holographMenu = document.getElementById("holograph-menu");
 const holographButtons = document.getElementById("holograph-buttons");
 const holoIcon = document.getElementById("holograph-icon");
 const closeHoloMenu = document.getElementById("close-holograph-menu");
@@ -55,3 +56,22 @@ function holoMenuOff() {
     holographButtons.style.display = "none";
     holoIcon.style.display = "block";
 }
+
+/* ~~~ Keep the menu visible when the on-screen keyboard is active ~~~ */
+
+// if ("virtualKeyboard" in navigator) {
+//   navigator.virtualKeyboard.overlaysContent = true
+// };
+
+
+// let standardHeight = window.visualViewport.height;
+// let tempHeight = window.visualViewport.height;
+
+
+
+// addEventListener("resize", handleOnscreenKeyboard);
+
+// function handleOnscreenKeyboard(event) {
+//     holographMenu.style.bottom = `calc(${window.visualViewport.height.toString}px - 3rem)`;
+//     console.log("Visual viewport height: " + window.visualViewport.height);
+// }

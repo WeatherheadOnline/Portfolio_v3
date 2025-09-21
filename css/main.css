@@ -442,7 +442,6 @@ header {
     z-index: 4;
     bottom: var(--hud-padding-mobile);
     right: var(--hud-padding-mobile);
-    /* max-width: 70vw; */
 }    
 
 #holograph-buttons {
@@ -453,7 +452,6 @@ header {
 }
 
 .holomenu-btn {
-    /* padding: 0.2rem 0.5rem 0.4rem 0.5rem; */
     padding: 0 0.5rem;
     max-height: min-content;
 }
