@@ -12,7 +12,6 @@ function addDesktopListeners() {
     });
 }
 
-
 function addMobileListeners() {
     window.addEventListener("deviceorientation", function(event){    
         if (screen.height > screen.width) {  // ie in portrait
@@ -34,10 +33,3 @@ function addMobileListeners() {
         }
     })
 }
-
-
-
-
-
-
-    

@@ -58,7 +58,6 @@ const portfolioItems = [
     },
 ]
 
-// const article = document.getElementById("portfolio-contents");
 const imgLink = document.getElementById("portfolio-img").children[0];
 const image = imgLink.children[0];
 const articleBody = document.getElementById("portfolio-text-body");
@@ -71,7 +70,6 @@ const folioRightArrow = document.getElementById("portfolio_rightArrow");
 const portfolioThumbnails = document.getElementById("portfolio_thumbnails");
 
 let currentArticle = 0;
-
 
 // ~~~~~~~~~~~~ Add the thumbnail buttons ~~~~~~~~~~~~~~~~~~ //
 
@@ -90,7 +88,6 @@ folioButtons.forEach((button, index) => {
         currentArticle = index;
     });
 });
-
 
 // ~~~~~~~~~~~~ Handle click events to switch between items ~~~~~~~~~~//
 
@@ -132,17 +129,3 @@ function folioMoveRight() {
 }
 
 populate(currentArticle);
-
-
-
-//   Generate thumbnails:
-// for (let article = 0; article <= portfolioItems.length - 1; article++) {
-//     const buttonDiv = document.createElement("div");
-//     buttonDiv.className = "folio_thumbnail";
-//     buttonDiv.id = portfolioItems[article].name;
-//     buttonDiv.innerHTML = portfolioItems[article].svgCode;
-//     thumbnails.appendChild(buttonDiv);
-// }
-
-
-
