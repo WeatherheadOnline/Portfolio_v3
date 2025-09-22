@@ -2,19 +2,20 @@
 
 /* Line# - Contents */
 
-/*   25 - Definitions of media queries */
-/*   44 - Site-wide settings */
-/*  103 - Site-wide typography */
-/*  140 - Backgrounds */
-/*  153 ---- Background gradient for landing section */
-/*  173 ---- Ripples for landing section background */
-/*  197 ---- Decorative background waves */
-/*  267 ---- Light shafts  */
-/*  352 - Header */
-/*  432 - Home/landing section */
-/*  435 ---- Miscellaneous elements on landing screen */
-/*  473 ---- Hero text elements */
-/*  627 - Special Effects  */
+/*   26 - Definitions of media queries */
+/*   45 - Site-wide settings */
+/*  104 - Site-wide typography */
+/*  141 - Backgrounds */
+/*  154 ---- Background gradient for landing section */
+/*  174 ---- Ripples for landing section background */
+/*  198 ---- Decorative background waves */
+/*  268 ---- Light shafts  */
+/*  353 - Header */ 
+/*  433 - Home/landing section */ 
+/*  436 ---- Miscellaneous elements on landing screen */
+/*  453 ---- GreenGeeks logo on landing screen */
+/*  481 ---- Hero text elements */
+/*  627 - Special Effects  */                /*  Need to update numbers from here on  */
 /*  738 - Portfolio  */
 /*  851 - About  */
 /*  939 - Contact  */
@@ -490,31 +491,37 @@ h1.screen-reader-only {
     overflow: hidden;
     white-space: nowrap;
 }
-#greenGeeks_landing {
-    position: absolute;
-    right: var(--hud-padding-mobile);
-    bottom: var(--hud-padding-mobile);
+/* Phones in portrait orientation */
+@media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
+    #Home {padding: 0 5vw;}
 }
-#greenGeeks_landing a {
+
+/* GreenGeeks logo */
+
+#greenGeeks_landing_mobile {
+    display: flex;
+    justify-content: right;
+}
+#greenGeeks_landing_desktop {display: none;}
+.greenGeeks_landing a {
     display: flex;
     align-items: flex-end;
 }
-#greenGeeks_landing img {
+.greenGeeks_landing img {
     height: var(--greengeeks-height);
     width: auto;
 }
 
-/* Desktop, tablets in landscape */
+/* Desktop, phones in landscape */
 @media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #greenGeeks_landing {
+  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
+    #greenGeeks_landing_mobile {display: none;}
+    #greenGeeks_landing_desktop {
+        display: unset;
+        position: absolute;
         right: calc(var(--hud-padding-desktop) + 16px);
         bottom: var(--hud-padding-desktop);
     }
-}
-/* Phones in portrait orientation */
-@media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
-    #Home {padding: 0 5vw;}
 }
 
 /* Hero text elements */
