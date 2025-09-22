@@ -4,7 +4,6 @@ const portfolioItems = [
         articleLink: "/CSSsandbox/index.html",
         imgSrc: "img/folio_sandbox.png",
         thumbSrc: "img/folio_sandbox_small.png",
-        thumbSrc: "",
         h3Text: "Design Showcase",
         bodyText: "<p>Check out these neat designs and effects I've made. My favorite is one that looks iridescent.</p>",
     },
