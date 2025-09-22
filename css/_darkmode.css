@@ -75,6 +75,18 @@ h2, h3 {color: var(--blue-bright);}
     text-shadow: 2px 2px 0 var(--navy-lightest);
 }
 #menu h4:hover, #menu span:hover {background-color: var(--navy-lightest);}
+#holograph-icon svg {
+    stroke: var(--blue-bright);   
+    border: 3px solid var(--blue-bright);
+    background-color: var(--navy-darkest);
+}
+#holograph-menu span {
+    color: var(--blue-bright);
+    border: 2px solid var(--blue-bright);
+    background-color: var(--navy-darkest);
+}
+
+
 
 /* ******************************* */
 /*        Landing page             */

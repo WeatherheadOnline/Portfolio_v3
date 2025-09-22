@@ -80,6 +80,16 @@ h3 {color: var(--blue_lm_light);}
     color: var(--blue_lm_darkest);
     background-color: var(--lm_pastel_blue);
 }
+#holograph-icon svg {
+    stroke: var(--blue_lm_dark);   
+    border: 3px solid var(--blue_lm_dark);
+    background-color: var(--bkgd_lm);
+}
+#holograph-menu span {
+    color: var(--blue_lm_dark);
+    border: 2px solid var(--blue_lm_dark);
+    background-color: var(--bkgd_lm);
+}
 
 /* ******************************* */
 /*        Landing page             */
