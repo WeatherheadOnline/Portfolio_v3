@@ -277,7 +277,7 @@
                                 </div>
                             </div>
                             <div class="formUnit">
-                                <label for="subject" class="labelText">
+                                <label for="messageSubject" class="labelText">
                                     Subject
                                     <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Subject" >
                                         <!--value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >-->
