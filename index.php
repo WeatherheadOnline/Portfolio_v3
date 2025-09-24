@@ -11,6 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
 </head>
 <body>
+    <div id="modes">
+        <div class="mode-button" id="lightmode"></div>
+        <div class="mode-button active" id="darkmode"></div>
+    </div>
+
+    <div id="holograph-menu">
+        <div id="holograph-icon">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
+                <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
+            </svg>
+        </div>
+        <div id="holograph-buttons">  <!-- This container gets autofilled with buttons for each input element -->
+        </div>
+    </div>
+
     <header>
         <div id="logo">
             <a class="navlink" id="homeLink" href="#Home">
@@ -313,22 +329,6 @@
         </div>
     </footer>
 
-    <div id="modes">
-        <div class="mode-button" id="lightmode"></div>
-        <div class="mode-button active" id="darkmode"></div>
-    </div>
-
-    <div id="holograph-menu">
-        <div id="holograph-icon">
-            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path style="stroke-width:5.85" d="m 5.860226,3.5 v 13" />
-                <path style="stroke-width:1.85" d="m 10,15.58 h 7" />
-            </svg>
-        </div>
-        <div id="holograph-buttons">  <!-- This container gets autofilled with buttons for each input element -->
-        </div>
-    </div>
-    
     <?php
         $userName = isset($_POST['userName']) ? dataFilter($_POST['userName']) : "";
         $userEmail = isset($_POST['userEmail']) ? dataFilter($_POST['userEmail']) : "";

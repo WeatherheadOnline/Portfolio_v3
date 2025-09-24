@@ -437,36 +437,28 @@ header {
 @media screen and (hover) {
     #holograph-menu {display: none;}
 }
-
 #holograph-menu {
     position: fixed;
     z-index: 4;
     bottom: var(--hud-padding-mobile);
     right: var(--hud-padding-mobile);
 }    
-
 #holograph-buttons {
     display: none;
     flex-wrap: wrap;
     justify-content: right;
     margin-bottom: var(--hud-padding-mobile);
 }
-
 .holomenu-btn {
     padding: 0 0.5rem;
     max-height: min-content;
 }
-
-.holomenu-btn, #holograph-menu span {
-    border-radius: 0.5rem;
-}
-
+.holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
 #holograph-icon svg {
     width: 2.2rem;
     height: auto;
     border-radius: 2px;
 }
-
 #holograph-menu span {
     width: 3rem;
     font-size: 2rem;
