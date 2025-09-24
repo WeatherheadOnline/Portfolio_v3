@@ -215,17 +215,18 @@
                         <h3>Some info about me:</h3>
                         <ul>
                             <li>Proficient in HTML, CSS and JavaScript</li>
-                            <li>Entry-level PHP (check out my <a href="#Contact">contact form</a>)</li>
+                            <li><a href="https://www.coursera.org/learner/eddieweatherhead" target="_blank">Certificates</a> from Meta in HTML, CSS, Javascript, and Version Control</li>
                             <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
+                            <li>Entry-level <a href="#Contact">PHP</a></li>
                             <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
-                            <li>Design savvy; skilled in Adobe Photoshop and Illustrator</li>
                         </ul>
                     </hgroup>
-                    <hgroup>
+                    <hgroup id="more-of-my-work">
                         <h3>More of my work:</h3>
                         <div id="aboutMoreSpecsLinks">
-                            <a href="https://github.com/WeatherheadOnline" target="_blank"><p class="p-outline">Github account: <span class="linky">github.com/WeatherheadOnline</span></p></a>
-                            <a href="https://codepen.io/WeatherheadOnline" target="_blank"><p class="p-outline">Codepen account: <span class="linky">codepen.io/WeatherheadOnline</span></p></a>
+                            <a href="https://github.com/WeatherheadOnline" target="_blank"><p><span class="linky">github.com</span>/WeatherheadOnline</p></a>
+                            <a href="https://codepen.io/WeatherheadOnline" target="_blank"><p><span class="linky">codepen.io</span>/WeatherheadOnline</p></a>
+                            <a href="https://www.linkedin.com/in/eddieweatherhead/" target="_blank"><p><span class="linky">LinkedIn.com</span>/in/EddieWeatherhead</p></a>
                         </div>
                     </hgroup>
                 </div>    

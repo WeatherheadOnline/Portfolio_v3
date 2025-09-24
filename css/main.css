@@ -922,8 +922,17 @@ h1.screen-reader-only {
     margin: -3rem 0 -2rem 0;
 }
 #About ul {padding-left: 1.4rem;}
-#aboutMoreSpecs a {text-decoration: none;}
-span.linky {text-decoration: underline;}
+hgroup#more-of-my-work, #aboutMoreSpecsLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+#aboutMoreSpecsLinks {
+padding-left: 1.4rem;
+}
+span.linky {font-weight: bold;}
+
 #About .section-text-contents:last-child {
     display: flex;
     flex-direction: column;

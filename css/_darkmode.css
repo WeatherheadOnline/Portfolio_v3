@@ -135,6 +135,9 @@ h2, h3 {color: var(--blue-bright);}
 /* ************************* */
 
 .about-quote {background-color: var(--navy-lightest);}
+#aboutMoreSpecsLinks {color: var(--blue-bright);}
+span.linky {color: var(--blue-lightest);}
+
 
 /* ************************* */
 /*     "Contact" section     */
