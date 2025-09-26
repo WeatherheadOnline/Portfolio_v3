@@ -1,11 +1,12 @@
 const portfolioItems = [
     {
-        name: "CSSsandbox",
-        articleLink: "/CSSsandbox/index.html",
-        imgSrc: "img/folio_sandbox.png",
-        thumbSrc: "img/folio_sandbox_small.png",
-        h3Text: "Design Showcase",
-        bodyText: "<p>Check out these neat designs and effects I've made. My favorite is one that looks iridescent.</p>",
+        name: "holographMenu",
+        articleLink: "/input-menu/index.php",
+        imgSrc: "img/folio_holographMenu.png",
+        thumbSrc: "img/folio_holographMenu_small.png",
+        h3Text: 'Mobile accessibility "input tool"',
+        bodyText: "<p>Form input fields can be difficult to reach when you're using your mobile device one-handed. I've created this innovative input menu to improve accessibility and bring form inputs within easy reach of your thumbs.</p>",
+
     },
     {
         name: "jewelery",
@@ -13,15 +14,31 @@ const portfolioItems = [
         imgSrc: "img/folio_weatherheaddesigns.png",
         thumbSrc: "img/folio_weatherheaddesigns_small.png",
         h3Text: "WeatherheadDesigns.com",
-        bodyText: "<p>My personal jewellery website. Inventory can be updated quickly, easily and seamlessly: new product details get added to a database, and the code does the rest of the work.</p>",
+        bodyText: "<p>My personal jewellery website. The code allows inventory to be updated quickly, easily and seamlessly, just by adding new product details to the existing list.</p>",
+    },
+    {
+        name: "CSSsandbox",
+        articleLink: "/CSSsandbox/index.html",
+        imgSrc: "img/folio_sandbox.png",
+        thumbSrc: "img/folio_sandbox_small.png",
+        h3Text: "Design Showcase",
+        bodyText: "<p>Check out these designs and effects I've made. My favorite is one that looks like an iridescent gemstone when the user moves their mouse or tilts their device.</p>",
+    },
+    {
+        name: "pianoLessons",
+        articleLink: "/piano/index.html",
+        imgSrc: "img/folio_pianolessons.png",
+        thumbSrc: "img/folio_pianolessons_small.png",
+        h3Text: "Multi-page site for a client",
+        bodyText: "<p>A website I designed and made for a local client. It's no longer online; I've replicated it here (some of the wording has been replaced for privacy reasons).</p>",
     },
     {
         name: "CreNav",
         articleLink: "/CreNav/index.php",
         imgSrc: "img/folio_crenav.png",
         thumbSrc: "img/folio_crenav_small.png",
-        h3Text: "Implementing a more complex design",
-        bodyText: "<p>My replica of <a href='https://creativenavigation.com/' target='_blank'>an existing website</a>, with the addition of responsive design for mobile devices. It includes a functional \"Contact Us\" form and interactive mouse-over effects for key images and navigation links.</p>",
+        h3Text: "Developing from specifications",
+        bodyText: "<p>My replica of <a href='https://creativenavigation.com/' target='_blank'>an existing website</a>, with the addition of responsive design for mobile devices. It includes a functional \"Contact Us\" form, plus interactive mouse-over effects for user engagement.</p>",
     },
     {
         name: "boognish",
@@ -29,15 +46,7 @@ const portfolioItems = [
         imgSrc: "img/folio_boognish.png",
         thumbSrc: "img/folio_boognish_small.png",
         h3Text: "WhatDoesItWeen.com",
-        bodyText: "<p>A fansite for the band Ween. Updates are easy: the code automatically adds all song listings from the database. The site also features a snake game.</p>",
-    },
-    {
-        name: "pianoLessons",
-        articleLink: "/piano/index.html",
-        imgSrc: "img/folio_pianolessons.png",
-        thumbSrc: "img/folio_pianolessons_small.png",
-        h3Text: "Multi-page small-business site",
-        bodyText: "<p>A website I made for my friend. It's no longer online. I've replicated it here (some of the wording has been replaced for privacy reasons).</p>",
+        bodyText: "<p>An old fansite for the band Ween. Updates are easy: the code automatically looks through all song listings and adds them to the site. Just for fun, the site also features a themed snake game.</p>",
     },
     {
         name: "portfolio_v2",
@@ -45,7 +54,7 @@ const portfolioItems = [
         imgSrc: "img/folio_portfolio_v2.png",
         thumbSrc: "img/folio_portfolio_v2_small.png",
         h3Text: "This website (2024-2025)",
-        bodyText: "<p>Here's a previous version of this website. The front page features a shimmering-text effect. I had some fun with the light/dark mode settings.</p>",
+        bodyText: "<p>Here's a previous version of this website. The front page features a shimmering-text effect. (Hint: take a look at the light/dark mode settings.)</p>",
     },
     {
         name: "this",
@@ -53,7 +62,7 @@ const portfolioItems = [
         imgSrc: "img/folio_this.png",
         thumbSrc: "img/folio_this_small.png",
         h3Text: "WeatherheadOnline.com",
-        bodyText: "<p>This website! It's pretty great. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
+        bodyText: "<p>This website! It's pretty great. Did you notice? - the text at the top of the page responds to moving your mouse or tilting your device. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
     },
 ]
 
