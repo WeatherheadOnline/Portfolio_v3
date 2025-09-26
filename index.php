@@ -325,7 +325,7 @@
         </div>
         <div class="credits">
             <p>All design and assets by Weatherhead Online except:</p>
-            <p><a href="https://www.svgrepo.com/svg/3432/shining-sun">Light mode</a> and <a href="https://www.svgrepo.com/svg/94562/basic-moon" target="_blank">dark mode</a> icons from <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a>;</p>
+            <p><a href="https://www.svgrepo.com/svg/3432/shining-sun" target="_blank">Light mode</a> and <a href="https://www.svgrepo.com/svg/94562/basic-moon" target="_blank">dark mode</a> icons from <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a>;</p>
             <p>Floral shimmering background design by William Morris (vector reproduction by WeatherheadOnline.com)</p>
         </div>
     </footer>
