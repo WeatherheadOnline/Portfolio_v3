@@ -804,8 +804,8 @@ h1.screen-reader-only {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    @media screen and (hover: none) and (min-width: 700px), 
-    screen and (min-width: 1024px) {
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (hover: none) and (orientation: landscape) {
         flex-direction: row;
         gap: 2rem;
         align-items: top;
@@ -819,48 +819,27 @@ h1.screen-reader-only {
         width: max-content;
         margin: 0 auto;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-        /* margin: 0; */
-        /* max-width: unset; */
-        /* width: 40vw; */
-        /* height: auto; */
-    }
-    @media screen and (hover) and (min-width: 1024px) {
-        /* min-width: 30rem; */
-    }
-    @media screen and (hover) {
-       /* min-width: 25rem; */
-    }
 }
 
 #portfolio-img img {
     width: 100%;
     height: auto;
     margin: 0 auto;
-
+    outline: 2px solid;
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 50vw;
+    }
     @media screen and (hover) {
         height: 18rem;
-         width: auto;
+        width: auto;
     }
-
+    @media screen and (hover) and (max-width: 785px) {
+        height: 14rem;
+    }
     @media screen and (hover) and (max-width: 599px) {
         height: 12rem;
     }
-    @media screen and (hover: none) and (orientation: portrait) {
-    }
-
-     /* width: 100%; */
-    /* height: auto; */
-    outline: 2px solid;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-        /* width: 100%; */
-        /* height: auto; */
-    }
 }
-
-
-
-
 
 #portfolio-panel {
     display: flex;
@@ -870,18 +849,6 @@ h1.screen-reader-only {
     @media screen and (hover: none) and (orientation: portrait) {
         padding-bottom: 10vh;
     }
-
-    /* position: absolute;
-    bottom: 4vh;
-    width: 90vw;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-        right: 5vw;
-        width: unset;
-        flex-direction: row;
-        gap: 5vw;
-    }
-    @media screen and (hover) {
-    position: static;}     */
 }
 
 #portfolio_thumbnails {
@@ -902,6 +869,7 @@ h1.screen-reader-only {
 
 .folio_thumbnail {  
     width: 13vw;
+    max-width: 6rem;
     height: auto;
     outline: 1px solid;
     @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
@@ -917,7 +885,6 @@ h1.screen-reader-only {
         width: 5rem;
     }
 }    
-
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
