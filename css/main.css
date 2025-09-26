@@ -23,25 +23,6 @@
 /* 1051 - Light/dark mode buttons */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~ Definitions of main media queries ~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* Phones in landscape: */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px){}
-
-/* Tablets:  */
-
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px){}
-@media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px){}
-
-/* Desktop breakpoints: */
-@media screen and (hover) and (max-width: 599px) {}
-@media screen and (hover) and (min-width: 786px) {}
-@media screen and (hover) and (min-width: 1023px) {}
-@media screen and (hover) and (min-width: 1200px) {}
-@media screen and (hover) and (min-width: 1366px) {}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~ Site-wide settings ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -69,36 +50,31 @@ section {
 .section-text-contents {
     margin: 0 auto;
     padding: 5vh 2vw 5vh 2vw;
-}
-
-/* Phones, landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    .section-text-contents {padding: 8vh 8vw 8vh 10vw;}
-}
-
-/* Desktop */
-@media screen and (hover)  {
-    .section-text-contents {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        padding: 8vh 8vw 8vh 10vw;
+    }
+    @media screen and (hover)  {
         padding: 4rem var(--section-padding-desktop) 2rem var(--section-padding-desktop);
     }
+    @media screen and (hover) and (max-width: 599px) {
+        width: 400px;
+    }
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px) {
+        width: 550px;
+    }
+    @media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
+        width: 700px;
+    }
+    @media screen and (hover) and (min-width: 1024px),
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 960px;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 80vw; 
+    }
 }
-@media screen and (hover) and (max-width: 599px) {
-    .section-text-contents {width: 400px;}
-}
-@media screen and (hover) and (min-width: 600px) and (max-width: 785px) {
-    .section-text-contents {width: 550px;}
-}
-@media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
-    .section-text-contents {width: 700px;}
-}
-@media screen and (hover) and (min-width: 1024px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .section-text-contents {width: 960px;}
-}
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .section-text-contents {width: 80vw; }
-}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
@@ -114,6 +90,9 @@ h2 {
     font-family: "Cooper Black";
     font-size: 1.8rem; 
     margin-bottom: 2.5vh;
+    @media screen and (hover) {
+        font-size: 3rem;
+    }
 }
 h3{
     font-size: 1.6rem;
@@ -122,20 +101,16 @@ h3{
 }
 section:not(#Home) p, li {
     font-size: 0.9rem; 
+    @media screen and (hover) {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
 }
 li {
     padding: 0.3rem 0;
 }
 a {color: inherit;}
 
-/* Desktop */
-@media screen and (hover) {
-    h2 {font-size: 3rem;}
-    section:not(#Home) p, li {
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-    }
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~ Backgrounds ~~~~~~~~~~~~~~~~~ */
@@ -195,75 +170,82 @@ a {color: inherit;}
     }
 }
 
+
 /* Decorative background waves */
 
 .landing-waves {position: absolute;}
-.landing-waves img {height: 38vh; width: auto;}
+.landing-waves img {
+    height: 38vh; width: auto;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        height: 65vh; width: auto;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        height: 17rem; width: auto;
+    }
+}
 .landing-waves-aqua {  
     transform: scaleY(-1);
     right: 28vw;
     bottom: 5%;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        left: -45vw;
+        bottom: 0;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        right: 55vw;
+        bottom: 0;
+    }
 }
 .landing-waves-green { 
     transform: scaleY(-1);
     left: 30vw;
     top: 17%;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        left: 55vw;
+        top: 10vh;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        left: 50vw;
+        top: 25vh;
+    }
 }
 .landing-waves-purple {  
     left: -10vw;
     top: 2%;
-}
-#About .landing-waves:nth-child(1) {  
-    bottom: unset;
-    top: 70vh;
-}
-#About .landing-waves:nth-child(3) {    
-    top: unset;
-    bottom: 10vh;
-}
-
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    .landing-waves img {height: 65vh; width: auto;}
-    .landing-waves-aqua {  
-        left: -45vw;
-        bottom: 0;
-    }
-    .landing-waves-purple { 
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
         left: 40vw;
         top: -30vh;
     }
-    .landing-waves-green {
-        left: 55vw;
-        top: 10vh;
-    }
-}
-
-/* Desktop, and tablets in landscape orientation */
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .landing-waves img {height: 17rem; width: auto;}
-    .landing-waves-aqua {  
-        right: 55vw;
-        bottom: 0;
-    }
-    .landing-waves-purple {  
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
         left: 27vw;
         top: 10vh;
     }
-    .landing-waves-green { 
-        left: 50vw;
-        top: 25vh;
+}
+#About .landing-waves-aqua {  
+    bottom: unset;
+    top: 70vh;
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        top: 35vh;
     }
-    #About div.landing-waves-purple {left: 55vw;}
-    #About div.landing-waves-green {left: 60vw;}
+}
+#About .landing-waves-green {    
+    top: unset;
+    bottom: 10vh;
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        left: 60vw;
+    }
+}
+@media screen and (hover),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    #About .landing-waves-purple {left: 55vw;}
 }
 
-/* Desktop width 1024px and above, and tablets in landscape orientation */
-@media screen and (hover) and (min-width: 1024px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #About .landing-waves:nth-child(1) {top: 35vh;}
-}
 
 /* Light shafts background */
 
@@ -272,6 +254,14 @@ a {color: inherit;}
     top: 0;
     overflow: hidden;
     z-index: -3;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        top: 2vh;
+        height: 120%;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        height: 100%;
+    }
 }
 .lightshaft {
     width: 5rem;
@@ -284,6 +274,20 @@ a {color: inherit;}
     animation-name: lightshafts;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        left: 0;
+        top: -5h;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        width: 8rem;
+        top: -20rem;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 5rem;
+        left: calc(10vw - 4rem);
+        top: -6rem;
+    }
 }
 .lightshaft:nth-child(1) {
     transform: rotate(-15deg);
@@ -316,38 +320,6 @@ a {color: inherit;}
     to {opacity: 0.4}
 }
 
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #lightshafts-group {
-        top: 2vh;
-        height: 120%;
-    }
-    .lightshaft {
-        left: 0;
-        top: -5h;
-    }
-}
-
-/* Tablets in portrait orientation */
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    .lightshaft {
-        width: 8rem;
-        top: -20rem;
-    }
-}
-
-/* Desktop */
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #lightshafts-group {
-        height: 100%;
-    }
-    .lightshaft {
-        width: 5rem;
-        left: calc(10vw - 4rem);
-        top: -6rem;
-    }
-}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
