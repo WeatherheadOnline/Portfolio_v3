@@ -94,7 +94,7 @@ for (let article = 0; article <= portfolioItems.length - 1; article++) {
     buttonDiv.className = "folio_thumbnail";
     buttonDiv.id = portfolioItems[article].name;
     buttonDiv.src = portfolioItems[article].thumbSrc;
-    buttonDiv.alt = "A preview of " + portfolioItems[article].imgAlt;
+    buttonDiv.alt = "Jump to a preview of " + portfolioItems[article].imgAlt;
     portfolioThumbnails.appendChild(buttonDiv);
 }
 
