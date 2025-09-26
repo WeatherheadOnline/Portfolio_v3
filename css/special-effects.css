@@ -1,0 +1,92 @@
+#Effects hgroup.subheading {pointer-events: none;}
+#Effects hgroup, #SFX_panel {
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
+}
+#SFX_iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+}
+#SFX_iframe iframe {
+    height: 100vh;
+    width: 100%;
+    border-color: transparent;
+}
+#SFX_iframe p {margin: 0;}
+#SFX_iframe span {font-weight: bold;}
+#SFX_panel {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: fit-content;
+    margin: 30vh auto 0 auto;
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) {
+        margin-top: 3rem;
+    }
+}
+.SFX_thumbnails {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin: 0 auto;
+    @media screen and (hover) and (min-width: 600px), 
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @media screen and (hover) and (min-width: 786px) and (max-width: 1023px) {
+        margin: unset;
+    }
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        gap: 2rem;
+    }
+}
+.SFX_thumbnail {
+    height: 2.8rem;
+    width: 2.8rem;
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+}
+.SFX_thumbnail svg {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+.arrowsWrapper {
+    display: flex;
+    gap: 2rem;
+}
+.arrow {
+    width: 3.5rem;
+    height: 3.5rem;
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+}
+.arrow svg {border-radius: 10%;}
+#SFX_interactive {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 50px;
+    padding: 3% 6%;
+    transform-origin: right;
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+#SFX_interactive p {margin: -0.4rem;}
