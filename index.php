@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/_darkmode.css" type="text/css" class="modesheet">
+    <meta name="revised" content="Friday, September 26th, 2025, 7:00 pm">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="Eddie Weatherhead">
+    <meta name="language" content="english">
+    <meta name="description" content="I create modern, responsive animated websites. My speciality is making special effects for user engagement.">
+    <meta name="robots" content="follow, index">
+    <meta property="og:title" content="Weatherhead Online">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.weatherheadonline.com">
+    <meta property="og:image" content="img/folio_this_small.png">
+    <meta property="og:description" content="I create modern, responsive animated websites. My speciality is making special effects for user engagement.">
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/_darkmode.css" type="text/css" class="modesheet">
+    <title>Eddie Weatherhead</title>
 </head>
 <body>
     <div id="modes">
