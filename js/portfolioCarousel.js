@@ -1,7 +1,7 @@
 const portfolioItems = [
     {
         name: "holographMenu",
-        articleLink: "/input-menu/index.php",
+        articleLink: "/input-menu/",
         imgSrc: "img/folio_holographMenu.png",
         thumbSrc: "img/folio_holographMenu_small.png",
         h3Text: 'Mobile accessibility "input tool"',
@@ -18,7 +18,7 @@ const portfolioItems = [
     },
     {
         name: "CSSsandbox",
-        articleLink: "/CSSsandbox/index.html",
+        articleLink: "/CSSsandbox/",
         imgSrc: "img/folio_sandbox.png",
         thumbSrc: "img/folio_sandbox_small.png",
         h3Text: "Design Showcase",
@@ -26,7 +26,7 @@ const portfolioItems = [
     },
     {
         name: "pianoLessons",
-        articleLink: "/piano/index.html",
+        articleLink: "/piano/",
         imgSrc: "img/folio_pianolessons.png",
         thumbSrc: "img/folio_pianolessons_small.png",
         h3Text: "Multi-page site for a client",
@@ -34,7 +34,7 @@ const portfolioItems = [
     },
     {
         name: "CreNav",
-        articleLink: "/CreNav/index.php",
+        articleLink: "/CreNav",
         imgSrc: "img/folio_crenav.png",
         thumbSrc: "img/folio_crenav_small.png",
         h3Text: "Developing from specifications",
@@ -50,7 +50,7 @@ const portfolioItems = [
     },
     {
         name: "portfolio_v2",
-        articleLink: "/v2/index.php",
+        articleLink: "/v2/",
         imgSrc: "img/folio_portfolio_v2.png",
         thumbSrc: "img/folio_portfolio_v2_small.png",
         h3Text: "This website (2024-2025)",
