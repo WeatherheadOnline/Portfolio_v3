@@ -784,114 +784,108 @@ h1.screen-reader-only {
 /* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-#portfolio-contents {
-    width: 90vw;
-    margin: -3vh auto;
+#Portfolio .section-text-contents {
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 0;
 }
+
+#portfolio-contents {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#portfolio-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (hover: none) and (orientation: landscape) {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: top;
+        justify-content: left;
+    }
+}
+
 #portfolio-img {
     width: 100%;
-    max-width: 40vh;
-    margin: 0 auto;
+    @media screen and (hover) {
+        width: max-content;
+        margin: 0 auto;
+    }
 }
+
 #portfolio-img img {
     width: 100%;
     height: auto;
+    margin: 0 auto;
     outline: 2px solid;
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 50vw;
+    }
+    @media screen and (hover) {
+        height: 18rem;
+        width: auto;
+    }
+    @media screen and (hover) and (max-width: 785px) {
+        height: 14rem;
+    }
+    @media screen and (hover) and (max-width: 599px) {
+        height: 12rem;
+    }
 }
-#Portfolio h3 {margin-top: 0;}
+
 #portfolio-panel {
-    position: absolute;
-    bottom: 4vh;
-    width: 90vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3vh;
+    @media screen and (hover: none) and (orientation: portrait) {
+        padding-bottom: 10vh;
+    }
 }
+
 #portfolio_thumbnails {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     justify-content: center;
     gap: 3vw;
-}
-.folio_thumbnail {  
-    width: 13vw;
-    height: auto;
-    outline: 1px solid;
-}    
-
-/* Phones that are wider or not as tall, in portrait orientation */
-@media screen and (any-hover: none) and (max-width: 699px) and (min-aspect-ratio: 1/1.8) {
-    #portfolio-intro {display: none;}
-}
-
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #portfolio-intro {display: none;}
-    #portfolio-contents {
-        flex-direction: row;
-        justify-content: space-around;
-        margin-top: -5vh;
-    }
-    #portfolio-img {
-        margin: 0;
-        max-width: unset;
-        width: 40vw;
-        height: auto;
-    }
-    #portfolio-img img {
-        width: 100%;
-        height: auto;
-    }
-    #portfolio-sidebar {
-        width: 40vw;
-        display: flex;
-        flex-direction: column;
-        gap: 3vh;
-        justify-content: space-between;
-    }
-    #portfolio-panel {
-        right: 5vw;
-        width: unset;
-        flex-direction: row;
-        gap: 5vw;
-    }
-    #portfolio_thumbnails {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
         width: unset;
         gap: 3vh;
     }
-    .folio_thumbnail {width: 13vh;}    
-}
-
-/* Desktop */
-@media screen and (hover) {
-    #portfolio-panel {position: static;}    
-    #portfolio_thumbnails {
+    @media screen and (hover) {
         width: unset;
         gap: 1rem;
     }
-    #portfolio-img {min-width: 25rem;}
-    #portfolio-sidebar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
+}
+
+.folio_thumbnail {  
+    width: 13vw;
+    max-width: 6rem;
+    height: auto;
+    outline: 1px solid;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        width: 13vh;
+    }    
+    @media screen and (hover) and (max-width: 785px) {
+        width: 3rem;
     }
-}
-@media screen and (hover) and (max-width: 785px) {
-    .folio_thumbnail {width: 3rem;}
-}
-@media screen and (hover) and (min-width: 786px) {
-    .folio_thumbnail {width: 4rem;}
-}
-@media screen and (hover) and (min-width: 1024px) {
-    #portfolio-img {min-width: 30rem;}
-    .folio_thumbnail {width: 5rem;}
-}
+    @media screen and (hover) and (min-width: 786px) {
+        width: 4rem;
+    }
+    @media screen and (hover) and (min-width: 1024px) {
+        width: 5rem;
+    }
+}    
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */

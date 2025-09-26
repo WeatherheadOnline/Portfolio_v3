@@ -134,40 +134,43 @@
         <section id="Portfolio">
             <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-portfolio"></div>
             <div class="section-text-contents"> 
+
                 <hgroup class="subheading">
                     <h2>Portfolio</h2>
-                    <p id="portfolio-intro">These sites are all responsive - meaning they look just as good on mobile devices (in portrait and landscape orientation) as they do on a range of desktop screen sizes.</p>
                 </hgroup>
-            </div>
+
              <div id="portfolio-contents"> <!-- To edit portfolio items, see the object array in portfolioCarousel.js -->
-                <div id="portfolio-img">
-                    <a target="_blank">
-                        <img loading="lazy">
-                    </a>
-                </div>
-                <div id="portfolio-sidebar">
+                
+                <div id="portfolio-item-wrapper">
+                    <div id="portfolio-img">
+                        <a target="_blank">
+                            <img loading="lazy">
+                        </a>
+                    </div>
                     <div id="portfolio-item-text">
                         <a target="_blank">
                             <h3></h3>
                         </a>
                         <div id="portfolio-text-body"></div>
                     </div>
-                    <div id="portfolio-panel">
-                        <div class="portfolio_thumbnails" id="portfolio_thumbnails"></div>
-                        <div class="arrowsWrapper" id="portfolio-arrows">
-                            <div class="arrow leftArrow" id="portfolio_leftArrow">
-                                <svg viewBox="0 0 20 20">
-                                    <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
-                                </svg>
-                            </div>
-                            <div class="arrow rightArrow" id="portfolio_rightArrow">
-                                <svg viewBox="0 0 20 20">
-                                    <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
-                                </svg>
-                            </div>
+                </div>
+
+                <div id="portfolio-panel">
+                    <div class="portfolio_thumbnails" id="portfolio_thumbnails"></div>
+                    <div class="arrowsWrapper" id="portfolio-arrows">
+                        <div class="arrow leftArrow" id="portfolio_leftArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                            </svg>
+                        </div>
+                        <div class="arrow rightArrow" id="portfolio_rightArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     
