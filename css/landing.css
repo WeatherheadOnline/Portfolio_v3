@@ -22,18 +22,23 @@ h1.screen-reader-only {
     display: flex;
     justify-content: right;
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
-    display: none
+    screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
+        display: none
     }
 }
 #greenGeeks_landing_desktop {
     display: none;
     @media screen and (hover),
-      screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
+    screen and (hover: none) and (orientation: landscape) and (max-height: 699px)  {
         display: unset;
         position: absolute;
-        right: calc(var(--hud-padding-desktop) + 16px);
         bottom: var(--hud-padding-desktop);
+    }
+    @media screen and (hover) {
+        right: calc(var(--hud-padding-desktop) + 16px);
+    }
+    @media screen and (hover: none) and (orientation: landscape) and (max-height: 699px)  {
+        right: var(--hud-padding-desktop);
     }
 }
 .greenGeeks_landing a {
@@ -66,21 +71,25 @@ h1.screen-reader-only {
 #hero-text-primary {
     position: relative;
     @media screen and (hover), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
         max-width: 1024px;
         margin: 0 auto;
     }
-
 }
-
 #hero-text-primary > p:first-child {     /* "Make a"  */
     font-size: 13vw;
     @media screen and (any-hover: none) and (orientation: landscape){   
         font-size: 13vh;
         position: relative;
-        left: 15vw;
     }    
+    @media screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
+        left: 15vw;
+    }
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        margin-left: 1rem;
+    }
 
     @media screen and (hover), 
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
@@ -88,24 +97,22 @@ h1.screen-reader-only {
         font-size: clamp(2.5rem, 9vw, 5rem);
         line-height: 2rem;
     }
-    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-        margin-left: 1rem;
+    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        margin-left: -7vw;
     }
 } 
 #hero-text p:nth-child(2) {      /* "Splash"  */
     text-transform: uppercase;
     font-family: "Cooper Black";
     font-size: 21.2vw;
+    text-align: center;
     @media screen and (any-hover: none) and (orientation: landscape) {
         font-size: 26vh;
-        text-align: center;
     }
     @media screen and (hover), 
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
     screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {  
         font-size: clamp(5rem, 18vw, 12rem);
-        text-align: center;
     }
 }
 #hero-text-secondary {
@@ -115,22 +122,7 @@ h1.screen-reader-only {
     flex-direction: column;
     align-items: right;
     gap: 2rem;
-    @media screen and (any-hover: none) and (orientation: landscape) {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 1.8rem;
-        margin-top: 5vh;
-    }
-    @media screen and (any-hover: none) and (orientation: landscape) {
-        margin-top: 15vh; 
-    }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-        margin-top: 9vh; 
-    }
-    @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover) {
         width: max-content;
     }
     @media screen and (hover) and (min-width: 600px) {
@@ -138,20 +130,41 @@ h1.screen-reader-only {
         align-items: flex-end;
         justify-content: center;
     }  
-    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (hover) {    
         margin-top: 10vh;
         gap: 1.9rem;
     }    
-    @media screen and (hover) and (min-width: 786px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+    @media screen and (hover) and (min-width: 786px)  {
         gap: clamp(2rem, 4.8vw, 3.5rem);
     }
-        @media screen and (hover) and (min-width: 1024px) {
+    @media screen and (hover) and (min-width: 1024px) {
         gap: 3.5rem;
     }
     @media screen and (hover) and (min-width: 1200px) {
         gap: 4.5rem;
+    }
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1.8rem;
+        margin-top: 15vh; 
+    }    
+    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        margin-right: 0;
+        width: 100%;
+        margin-top: calc(20vh - 10rem);
+    }
+}
+ #hero-text-secondary p { 
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px) {    
+        width: 16rem;
+        text-align: right;
+    }
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        width: 16rem;
+        text-align: right;
     }
 }
 #hero-text-secondary span {
@@ -160,23 +173,16 @@ h1.screen-reader-only {
     text-align: right;
     font-size: 1.1rem;
     line-height: 1rem;
-    @media screen and (any-hover: none) and (orientation: landscape) {
-        font-size: 5vh;
-        line-height: 4.5vh;
-    }
-    @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover) {
         font-size: 1.2rem;
         line-height: 1rem;
     }
-    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-          display: inline;          /* This rule is for getting the secondary hero text onto two lines instead of three */
-          font-size: 1.3rem;
-      }
-    @media screen and (hover) and (min-width: 786px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px) {    
+        display: inline;          /* This rule is for getting the secondary hero text onto two lines instead of three */
+        font-size: 1.3rem;
+        line-height: 1.1rem;
+    }
+    @media screen and (hover) and (min-width: 786px)  {
           font-size: 1.4rem;
           line-height: 1.2rem;
     }
@@ -188,18 +194,25 @@ h1.screen-reader-only {
         font-size: 1.9rem;
         line-height: 1.6rem;
     }
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        display: inline;          /* This rule is for getting the secondary hero text onto two lines instead of three */
+        font-size: 1.3rem;
+        line-height: 1.1rem;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: 3.5vw;
+        line-height: 3vw;
+    }
 }
 #hero-text-secondary svg {
     width: 100%; 
     height: auto;
-    @media screen and (hover), 
-      screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover) {
         height: 3rem;   
         width: auto;
     }
-    @media screen and (hover) and (min-width: 786px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+    @media screen and (hover) and (min-width: 786px) {
         height: 3.2rem;
     }
     @media screen and (hover) and (min-width: 1024px) {
@@ -208,16 +221,17 @@ h1.screen-reader-only {
     @media screen and (hover) and (min-width: 1200px) {
         height: 4.6rem;
     }
-    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px) {    
         height: 2.1rem;
-  }
+    }
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        height: 2.1rem;
+    }
 }
-@media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-    #hero-text-secondary p { 
-        width: 16rem;
-        text-align: right;
-        line-height: 1.1rem;
+#hero-text-secondary img {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        height: 4vw;
+        width: auto;
     }
 }

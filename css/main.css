@@ -120,7 +120,8 @@ a {color: inherit;}
 /* ~~~~~~~~~~    Holographic Menu    ~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@media screen and (hover) {
+@media screen and (hover),
+    screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
     #holograph-menu {display: none;}
 }
 #holograph-menu {
