@@ -19,7 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/backgrounds.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <link rel="stylesheet" href="css/landing.css" type="text/css">
     <link rel="stylesheet" href="css/special-effects.css" type="text/css">
+    <link rel="stylesheet" href="css/portfolio.css" type="text/css">
     <link rel="stylesheet" href="css/_darkmode.css" type="text/css" class="modesheet">
     <title>Eddie Weatherhead</title>
 </head>

@@ -2,12 +2,7 @@
 
 /* - Site-wide settings */
 /* - Site-wide typography */
-/* - Header */ 
-/* - Home/landing section */ 
-/* ---- Miscellaneous elements on landing screen */
-/* ---- GreenGeeks logo on landing screen */
-/* ---- Hero text elements */            
-/* - Portfolio  */
+/* - Holographic menu */
 /* - About  */
 /* - Contact  */
 /* - Footer */
@@ -84,11 +79,23 @@ h2 {
     @media screen and (hover) {
         font-size: 3rem;
     }
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+        font-size: 8vw;
+    }
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: 8vh;
+    }
 }
-h3{
+h3 {
     font-size: 1.6rem;
     font-family: "Cooper Black";
     margin-top: 2rem;
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+        font-size: 4vw;
+    }
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: 4vh;
+    }
 }
 section:not(#Home) p, li {
     font-size: 0.9rem; 
@@ -96,91 +103,17 @@ section:not(#Home) p, li {
         font-size: 0.9rem;
         line-height: 1.3rem;
     }
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+        font-size: 2vw;
+    }
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: 2vh;
+    }
 }
 li {
     padding: 0.3rem 0;
 }
 a {color: inherit;}
-
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-header {
-    z-index: 2;
-    position: fixed;
-    height: max-content;
-    width: 100vw;
-    top: 0;
-    padding: var(--hud-padding-mobile);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    @media screen and (hover) {
-        width: calc(100vw - 16px);
-    }
-}
-#logo {
-    width: min(15vw, 15vh);
-    height: auto;
-    border-radius: 0.3rem;
-    @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-        width: 4rem;
-    }
-}
-#hamburger {
-    cursor: pointer;
-    padding: 0.5rem;
-}    
-#menu {
-    position: fixed;
-    z-index: 1;
-    padding: 20px;
-    top: var(--hud-padding-mobile);
-    right: var(--hud-padding-mobile);
-    display: none;
-    border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
-        overflow: hidden;
-        padding: 2rem;
-    }
-}    
-#menu span {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 3rem;
-    margin: 3px;
-    padding: 0 10px 5px;
-    line-height: 3rem;
-    border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
-        position: absolute;
-        top: -0.5rem;
-        right: 0px;
-        font-size: 2rem;
-        padding: 0 0.8rem;
-        line-height: 3rem;
-    }
-}
-#menu a {text-decoration: none;}
-#menu h4 {
-    border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
-       margin-right: 2rem;
-    }
-}
-@media screen and (hover) {
-    #hamburger svg {
-        width: 2.2rem;
-        height: auto;
-    }    
-}
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -218,316 +151,6 @@ header {
     line-height: 1rem;
     text-align: center;
 }
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~  Home/landing section  ~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* Miscellaneous elements on landing screen */
-
-#Home {font-family: "Courier Prime";}
-h1.screen-reader-only {
-    clip: rect(0,0,0,0);
-    border: 0;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-/* Phones in portrait orientation */
-@media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
-    #Home {padding: 0 5vw;}
-}
-
-/* GreenGeeks logo */
-
-#greenGeeks_landing_mobile {
-    display: flex;
-    justify-content: right;
-}
-#greenGeeks_landing_desktop {display: none;}
-.greenGeeks_landing a {
-    display: flex;
-    align-items: flex-end;
-}
-.greenGeeks_landing img {
-    height: var(--greengeeks-height);
-    width: auto;
-}
-
-/* Desktop, phones in landscape */
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
-    #greenGeeks_landing_mobile {display: none;}
-    #greenGeeks_landing_desktop {
-        display: unset;
-        position: absolute;
-        right: calc(var(--hud-padding-desktop) + 16px);
-        bottom: var(--hud-padding-desktop);
-    }
-}
-
-/* Hero text elements */
-
-#hero-text {
-    margin-top: 23vh;     
-    position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
-}
-#hero-text-primary {position: relative; }
-#hero-text-primary > p:first-child {font-size: 13vw;}      /* "Make a"  */
-#hero-text p:nth-child(2) {      /* "Splash"  */
-    text-transform: uppercase;
-    font-family: "Cooper Black";
-    font-size: 21.2vw;
-}
-#hero-text-secondary {
-    position: relative;
-    margin: 18vh auto 0 auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    gap: 2rem;
-}
-#hero-text-secondary span {
-    display: block;
-    min-width: max-content;
-    text-align: right;
-    font-size: 1.1rem;
-    line-height: 1rem;
-}
-#hero-text-secondary svg {
-    width: 100%; 
-    height: auto;
-}
-
-/* Phones and tablets in landscape orientation  */
-@media screen and (any-hover: none) and (orientation: landscape) {
-    #hero-text-secondary {        /* (same as for desktop) */
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-        gap: 1.8rem;
-        margin-top: 5vh;
-    }
-    #hero-text {margin-top: 20vh;}
-    #hero-text-primary > p:first-child {      /* "Make a"  */
-        font-size: 13vh;
-        position: relative;
-        left: 15vw;
-    }    
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        font-size: 26vh;
-        text-align: center;
-    }
-    #hero-text-secondary {margin-top: 15vh; }
-    #hero-text-secondary span {
-        font-size: 5vh;
-        line-height: 4.5vh;
-    }
-}
-
-/* Tablets in portrait orientation */
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    #hero-text {margin-top: 30vh;}
-    #hero-text-secondary {margin-top: 9vh; }
-}
-
-/* Desktop, and tablets in either portrait or landscape orientation */
-@media screen and (hover), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #hero-text {
-        margin: 20vh auto 0 auto;
-        width: max-content;
-    }
-    #hero-text-primary {
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-    #hero-text-primary p:first-child {      /* "Make a"  */
-        font-size: clamp(2.5rem, 9vw, 5rem);
-        line-height: 2rem;
-    }
-    #hero-text p:nth-child(2) {      /* "Splash"  */
-        font-size: clamp(5rem, 18vw, 12rem);
-        text-align: center;
-    }
-    #hero-text-secondary {width: max-content;}
-    #hero-text-secondary span {  
-        font-size: 1.2rem;
-        line-height: 1rem;
-    }
-    #hero-text-secondary svg {
-        height: 3rem;   
-        width: auto;
-    }
-}
-
-/* Desktop, any width at or over 600px */
-@media screen and (hover) and (min-width: 600px), 
-  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px)  {
-    #hero-text-secondary {        
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: center;
-    }        
-}
-/* Desktop, widths between 600 and 785px */
-@media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-    #hero-text-primary p:first-child {margin-left: 1rem;}
-    #hero-text-secondary p { 
-        width: 16rem;
-        text-align: right;
-        line-height: 1.1rem;
-    }
-    #hero-text-secondary span { 
-        display: inline;    /* This rule is for getting the secondary hero text onto two lines instead of three */
-        font-size: 1.3rem;
-    }
-    #hero-text-secondary {        
-        margin-top: 10vh;
-        gap: 1.9rem;
-    }    
-    #hero-text-secondary svg {height: 2.1rem;}
-}
-/* Desktop, widths of 786px or more  */
-@media screen and (hover) and (min-width: 786px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
-    #hero-text-secondary svg {height: 3.2rem;}
-    #hero-text-secondary { gap: clamp(2rem, 4.8vw, 3.5rem);}
-    #hero-text-secondary span {
-        font-size: 1.4rem;
-        line-height: 1.2rem;
-    }
-}
-/* Desktop, widths of 1024px or more */
-@media screen and (hover) and (min-width: 1024px) {
-    #hero-text-secondary svg {height: 4rem;}
-    #hero-text-secondary {gap: 3.5rem;}
-    #hero-text-secondary span {
-        font-size: 1.7rem;
-        line-height: 1.4rem;
-    }
-}
-/* Desktop, widths of 1200px or more */
-@media screen and (hover) and (min-width: 1200px) {
-    #hero-text-secondary svg {height: 4.6rem;}
-    #hero-text-secondary {gap: 4.5rem;}
-    #hero-text-secondary span {
-        font-size: 1.9rem;
-        line-height: 1.6rem;
-    }
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~  Portfolio section  ~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-#Portfolio .section-text-contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    gap: 0;
-}
-
-#portfolio-contents {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-#portfolio-item-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    @media screen and (hover) and (min-width: 1024px),
-    screen and (hover: none) and (orientation: landscape) {
-        flex-direction: row;
-        gap: 2rem;
-        align-items: top;
-        justify-content: left;
-    }
-}
-
-#portfolio-img {
-    width: 100%;
-    @media screen and (hover) {
-        width: max-content;
-        margin: 0 auto;
-    }
-}
-
-#portfolio-img img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    outline: 2px solid;
-    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
-        width: 50vw;
-    }
-    @media screen and (hover) {
-        height: 18rem;
-        width: auto;
-    }
-    @media screen and (hover) and (max-width: 785px) {
-        height: 14rem;
-    }
-    @media screen and (hover) and (max-width: 599px) {
-        height: 12rem;
-    }
-}
-
-#portfolio-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3vh;
-    @media screen and (hover: none) and (orientation: portrait) {
-        padding-bottom: 10vh;
-    }
-}
-
-#portfolio_thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: center;
-    gap: 3vw;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
-        width: unset;
-        gap: 3vh;
-    }
-    @media screen and (hover) {
-        width: unset;
-        gap: 1rem;
-    }
-}
-
-.folio_thumbnail {  
-    width: 13vw;
-    max-width: 6rem;
-    height: auto;
-    outline: 1px solid;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-        width: 13vh;
-    }    
-    @media screen and (hover) and (max-width: 785px) {
-        width: 3rem;
-    }
-    @media screen and (hover) and (min-width: 786px) {
-        width: 4rem;
-    }
-    @media screen and (hover) and (min-width: 1024px) {
-        width: 5rem;
-    }
-}    
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -688,17 +311,17 @@ fieldset {
 #buttonsWrapper button {
     width: 35vw;
     padding: 0.2rem 0;
-}
-
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape)  and (max-height: 699px){
-    #buttonsWrapper button {
+    @media screen and (any-hover: none) and (orientation: landscape)  and (max-height: 699px){
         width: 25vw;
         padding: 0.2rem 0;
     }
+    @media screen and (hover) {
+        width: 100%;
+    }
+
+ 
 }
 
-/* Desktop */
 @media screen and (hover) {
     #contactHGroup {max-width: 890px;}
     #buttonsWrapper button {width: 100%;}

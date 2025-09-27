@@ -1,0 +1,223 @@
+/* Miscellaneous elements on landing screen */
+
+h1.screen-reader-only {
+    clip: rect(0,0,0,0);
+    border: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#Home {
+    font-family: "Courier Prime";
+    @media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
+        padding: 0 5vw;
+    }
+}
+
+/* GreenGeeks logo */
+
+#greenGeeks_landing_mobile {
+    display: flex;
+    justify-content: right;
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
+    display: none
+    }
+}
+#greenGeeks_landing_desktop {
+    display: none;
+    @media screen and (hover),
+      screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px)  {
+        display: unset;
+        position: absolute;
+        right: calc(var(--hud-padding-desktop) + 16px);
+        bottom: var(--hud-padding-desktop);
+    }
+}
+.greenGeeks_landing a {
+    display: flex;
+    align-items: flex-end;
+}
+.greenGeeks_landing img {
+    height: var(--greengeeks-height);
+    width: auto;
+}
+
+/* Hero text elements */
+
+#hero-text {
+    margin-top: 23vh;     
+    position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        margin-top: 20vh;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        margin-top: 30vh;
+    }
+    @media screen and (hover), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        margin: 20vh auto 0 auto;
+        width: max-content;
+    }
+}
+#hero-text-primary {
+    position: relative;
+    @media screen and (hover), 
+  screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+}
+
+#hero-text-primary > p:first-child {     /* "Make a"  */
+    font-size: 13vw;
+    @media screen and (any-hover: none) and (orientation: landscape){   
+        font-size: 13vh;
+        position: relative;
+        left: 15vw;
+    }    
+
+    @media screen and (hover), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: clamp(2.5rem, 9vw, 5rem);
+        line-height: 2rem;
+    }
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        margin-left: 1rem;
+    }
+} 
+#hero-text p:nth-child(2) {      /* "Splash"  */
+    text-transform: uppercase;
+    font-family: "Cooper Black";
+    font-size: 21.2vw;
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        font-size: 26vh;
+        text-align: center;
+    }
+    @media screen and (hover), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {  
+        font-size: clamp(5rem, 18vw, 12rem);
+        text-align: center;
+    }
+}
+#hero-text-secondary {
+    position: relative;
+    margin: 18vh auto 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 2rem;
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 1.8rem;
+        margin-top: 5vh;
+    }
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        margin-top: 15vh; 
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        margin-top: 9vh; 
+    }
+    @media screen and (hover), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: max-content;
+    }
+    @media screen and (hover) and (min-width: 600px) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }  
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        margin-top: 10vh;
+        gap: 1.9rem;
+    }    
+    @media screen and (hover) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+        gap: clamp(2rem, 4.8vw, 3.5rem);
+    }
+        @media screen and (hover) and (min-width: 1024px) {
+        gap: 3.5rem;
+    }
+    @media screen and (hover) and (min-width: 1200px) {
+        gap: 4.5rem;
+    }
+}
+#hero-text-secondary span {
+    display: block;
+    min-width: max-content;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        font-size: 5vh;
+        line-height: 4.5vh;
+    }
+    @media screen and (hover), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+          display: inline;          /* This rule is for getting the secondary hero text onto two lines instead of three */
+          font-size: 1.3rem;
+      }
+    @media screen and (hover) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+          font-size: 1.4rem;
+          line-height: 1.2rem;
+    }
+    @media screen and (hover) and (min-width: 1024px) {
+        font-size: 1.7rem;
+        line-height: 1.4rem;
+    }
+    @media screen and (hover) and (min-width: 1200px) {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+    }
+}
+#hero-text-secondary svg {
+    width: 100%; 
+    height: auto;
+    @media screen and (hover), 
+      screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        height: 3rem;   
+        width: auto;
+    }
+    @media screen and (hover) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px)  {
+        height: 3.2rem;
+    }
+    @media screen and (hover) and (min-width: 1024px) {
+        height: 4rem;
+    }
+    @media screen and (hover) and (min-width: 1200px) {
+        height: 4.6rem;
+    }
+    @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        height: 2.1rem;
+  }
+}
+@media screen and (hover) and (min-width: 600px) and (max-width: 785px),
+  screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    #hero-text-secondary p { 
+        width: 16rem;
+        text-align: right;
+        line-height: 1.1rem;
+    }
+}

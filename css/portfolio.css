@@ -1,0 +1,99 @@
+#Portfolio .section-text-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 0;
+}
+#portfolio-contents {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#portfolio-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (hover: none) and (orientation: landscape) {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: top;
+        justify-content: left;
+    }
+}
+@media screen and (hover: none) and (orientation: landscape) {
+    #Portfolio h3 {
+        margin-top: 0;
+    }
+}
+#portfolio-img {
+    width: 100%;
+    @media screen and (hover) {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+#portfolio-img img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    outline: 2px solid;
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+        width: 50vw;
+    }
+    @media screen and (hover) {
+        height: 18rem;
+        width: auto;
+    }
+    @media screen and (hover) and (max-width: 785px) {
+        height: 14rem;
+    }
+    @media screen and (hover) and (max-width: 599px) {
+        height: 12rem;
+    }
+}
+#portfolio-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    @media screen and (hover: none) and (orientation: portrait) {
+        padding-bottom: 10vh;
+    }
+}
+#portfolio_thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    gap: 3vw;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+        width: unset;
+        gap: 3vh;
+    }
+    @media screen and (hover) {
+        width: unset;
+        gap: 1rem;
+    }
+}
+.folio_thumbnail {  
+    width: 13vw;
+    max-width: 6rem;
+    height: auto;
+    outline: 1px solid;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        width: 13vh;
+    }    
+    @media screen and (hover) and (max-width: 785px) {
+        width: 3rem;
+    }
+    @media screen and (hover) and (min-width: 786px) {
+        width: 4rem;
+    }
+    @media screen and (hover) and (min-width: 1024px) {
+        width: 5rem;
+    }
+}
