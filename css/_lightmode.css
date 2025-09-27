@@ -6,6 +6,7 @@
     --blue_lm_light: #0054b2;
     --blue_lm_dark: #003294;
     --blue_lm_darkest: #00187a;
+    --hero-text-shadow-lm: #a0d1f6;
 
     --lm_pastel_blue: #c5eefb;
     --lm_pastel_green: #b9e4b9;
@@ -13,7 +14,6 @@
     --SFX-bkgd: #FFFFFFAA; 
     --lm_ripple_click: #2a992a;
 }
-
 body {
     background-color: var(--bkgd_lm);
     color: var(--blue_lm_darkest);
@@ -75,6 +75,7 @@ h3 {color: var(--blue_lm_light);}
     font-size: 1.7rem;
     color: var(--blue_lm_light);
     font-family: "Cooper Black";
+    text-shadow: 1px 1px 0 var(--blue_lm_lightest);
 }
 #menu h4:hover, #menu span:hover {  
     color: var(--blue_lm_darkest);
@@ -95,12 +96,15 @@ h3 {color: var(--blue_lm_light);}
 /*        Landing page             */
 /* ******************************* */
 
-#hero-text-primary > p:first-child {color: var(--blue_lm_lightest);}   /* "Make a"  */
-#hero-text-secondary {color: var(--blue_lm_light);}
-
-/* "SPLASH" moving background effect */
-
-#hero-text p:nth-child(2) {      /* "Splash"  */
+#hero-text-primary > p:first-child {   /* "Make a"  */
+    color: var(--blue_lm_lightest);
+    text-shadow: 2px 2px 0 var(--hero-text-shadow-lm);
+}
+#hero-text-secondary {
+    color: var(--blue_lm_light);
+    text-shadow: 2px 2px 0 var(--hero-text-shadow-lm);
+}
+#hero-text p:nth-child(2) {      /* "SPLASH" moving background effect */
     background: 
         url(../img/waves_text_lightmode_front_darker.svg), 
         url(../img/waves_text_lightmode_back_lighter.svg), 
@@ -113,21 +117,21 @@ h3 {color: var(--blue_lm_light);}
     background-position-y: 110%, 80%;
     background-position-x: center, center;
     background-size: 10%, 10%;
+    filter: drop-shadow(2px 2px 0 var(--hero-text-shadow-lm));
 }
-
 @media screen and (any-hover: none) and (orientation: landscape) {
     #hero-text p:nth-child(2) {background-size: 6%, 6%;}    /* "Splash"  */     
 }
 @media screen and (hover) and (min-width: 1200px) {
     #hero-text p:nth-child(2) {background-position-y: 140%, 100%;}   /* "Splash"  */       
 }
+#hero-text-secondary svg {filter: drop-shadow(2px 2px 0 var(--hero-text-shadow-lm));}
 
 /* ******************************* */
 /*        Special Effects          */
 /* ******************************* */
 
 #SFX_interactive {
-    /* color: var(--blue_lm_light); */
     outline: 5px solid var(--blue_lm_lightest);
     background-color: var(--bkgd_lm);
 }

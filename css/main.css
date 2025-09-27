@@ -1,12 +1,8 @@
-/* ~~~~~  Table of contents ~~~~~ */
+/* ~~~~~~~~~~~  Contents ~~~~~~~~~~ */
 
 /* - Site-wide settings */
 /* - Site-wide typography */
-/* - Holographic menu */
-/* - About  */
-/* - Contact  */
 /* - Footer */
-/* - Light/dark mode buttons */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~ Site-wide settings ~~~~~~~~~~~~ */
@@ -61,7 +57,6 @@ section {
     }
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~ Site-wide typography ~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -115,224 +110,16 @@ li {
 }
 a {color: inherit;}
 
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~    Holographic Menu    ~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-@media screen and (hover),
-    screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #holograph-menu {display: none;}
-}
-#holograph-menu {
-    position: fixed;
-    z-index: 4;
-    bottom: var(--hud-padding-mobile);
-    right: var(--hud-padding-mobile);
-}    
-#holograph-buttons {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: right;
-    margin-bottom: var(--hud-padding-mobile);
-}
-.holomenu-btn {
-    padding: 0 0.5rem;
-    max-height: min-content;
-}
-.holomenu-btn, #holograph-menu span {border-radius: 0.5rem;}
-#holograph-icon svg {
-    width: 2.2rem;
-    height: auto;
-    border-radius: 2px;
-}
-#holograph-menu span {
-    width: 3rem;
-    font-size: 2rem;
-    line-height: 1rem;
-    text-align: center;
-}
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~  About section    ~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* #About ul {margin-bottom: 5vh;} */
-
-.about-quote {border-radius: 0.5rem;}    
-.about-quote {
-    width: 80vw;
-    padding: 1rem;
-}   
-.about-quote p:first-of-type {    /* the quote */
-    font-size: 1.3rem;
-    text-align: center;
-}
-.about-quote p:nth-of-type(2) {    /* the author */
-    font-size: 0.9rem;
-    text-align: right;
-    margin-top: 1rem;
-}
-.about-quote a {text-decoration: none;}
-#aboutParagraphs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-    margin: -3rem 0 -2rem 0;
-}
-#About ul {padding-left: 1.4rem;}
-hgroup#more-of-my-work, #aboutMoreSpecsLinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0.5rem;
-}
-#aboutMoreSpecsLinks {
-padding-left: 1.4rem;
-}
-span.linky {font-weight: bold;}
-
-#About .section-text-contents:last-child {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #aboutParagraphs {margin: 0;}
-}
-
-/* Tablets in portrait orientation */
-@media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-    .about-quote {
-        width: 20rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #aboutParagraphs {margin-top: -3rem;}
-}
-
-/* Desktop, and tablets in landscape orientation (see below for more tablet rules) */
-@media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .about-quote {
-        width: 20rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #aboutParagraphs {margin: -1rem 0;}
-}
-
-/* Desktop widths of at least 786px, and phones in landscape orientation */
-@media screen and (hover) and (min-width: 786px), 
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    #About .section-text-contents:last-child {
-        flex-direction: row;
-        gap: 1rem;
-    }
-    #aboutMoreSpecs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 0.3rem     /* to match the li padding next to it, so they align at their lower edges */
-    }
-}
-
-/* Desktop widths of at least 1024px, and tablets in landscape orientation (see above for more tablet rules) */
-@media screen and (hover) and (min-width: 1024px),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #About .section-text-contents:last-child {
-        flex-direction: row;
-        gap: 2rem;
-    }
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~  Contact section  ~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-.phone-email {
-    text-align: center;
-    position: relative;
-    width: 100%;
-}
-.asterisk {color: rgb(255, 27, 50);}
-#messageSent {
-    opacity: 0.9;
-    box-sizing: border-box;
-    width: 80%;
-    padding: 2rem;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
-#messageSent span {
-    font-size: 3rem;
-    line-height: 1.5rem;
-    position: absolute;
-    top: 0.1rem;
-    right: 0.1rem;
-    cursor: pointer;
-}
-#messageSent p {
-    font-size: 1.5rem;
-    text-align: center;
-}
-#disclaimer {
-    font-size: 0.8rem;
-    font-style: italic;
-    width: 90%;
-    margin: auto;
-}
-form {
-    width: 100%;
-    margin: 0 auto;
-}
-fieldset {
-    margin-top: 1.5rem;
-    padding: 0.5rem 1rem;
-    position: relative;
-}
-.inputText, .labelText {
-    display: block;
-    width: 100%;
-}
-.inputText {padding: 0.3rem 0.5rem;}
-#buttonsWrapper {
-    display: flex;
-    justify-content: center;
-    gap: 3vw;
-    width: 100%;
-    margin: 3vw 0;
-}
-#buttonsWrapper button {
-    width: 35vw;
-    padding: 0.2rem 0;
-    @media screen and (any-hover: none) and (orientation: landscape)  and (max-height: 699px){
-        width: 25vw;
-        padding: 0.2rem 0;
-    }
-    @media screen and (hover) {
-        width: 100%;
-    }
-
- 
-}
-
-@media screen and (hover) {
-    #contactHGroup {max-width: 890px;}
-    #buttonsWrapper button {width: 100%;}
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~  Footer ~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-footer {padding: 5vh 0;}
+footer {
+    padding: 5vh 0;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        margin: 10vh 0;
+    }
+}
 footer p {
     text-align: center;
     font-size: 0.8rem;
@@ -342,72 +129,8 @@ footer p {
     width: auto;
     display: block;
     margin: auto;
-}    
-
-/* Phones in landscape orientation */
-@media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-    footer {margin: 10vh 0;}
-}
-
-/* Desktop */
-@media screen and (hover) {
-    .greengeeks img {
+    @media screen and (hover) {
         width: 90px;
         height: auto;
     }    
-    .greengeeks a {
-        display: block;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~ Light/dark mode buttons  ~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-#modes {
-    z-index: 3;
-    position: fixed;
-    bottom: 0;
-    margin: var(--hud-padding-desktop);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    box-shadow: 0 0 3px 1px #000000 inset;
-}
-
-.mode-button {
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-}
-@media (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    .mode-button {
-        height: 17px;
-        width: 17px;
-    }
-}
-#modes {
-    background-color: #44444488;
-    outline: 2px solid #88888888;
-}
-.mode-button.active {outline: 6px solid #888888;}
-#modes #lightmode {
-    background-color: #F8FFAA;
-    border: 1px solid #F8FFAA;
-    background-image: url(../img/shining-sun-svgrepo-com.svg);
-    background-size: contain;
-}
-#modes #darkmode {
-    background-color: #000000;
-    border: 1px solid #000000;
-    background-image: url(../img/basic-moon-svgrepo-com.svg);
-    background-size: contain;
-}
-.mode-button.active {box-shadow: 0 0 3px 7px black;}
+}    

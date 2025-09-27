@@ -1,0 +1,69 @@
+.phone-email {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.asterisk {color: rgb(255, 27, 50);}
+#messageSent {
+    opacity: 0.9;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#messageSent span {
+    font-size: 3rem;
+    line-height: 1.5rem;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    cursor: pointer;
+}
+#messageSent p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+#disclaimer {
+    font-size: 0.8rem;
+    font-style: italic;
+    width: 90%;
+    margin: auto;
+}
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+fieldset {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+.inputText, .labelText {
+    display: block;
+    width: 100%;
+}
+.inputText {padding: 0.3rem 0.5rem;}
+#buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    width: 100%;
+    margin: 3vw 0;
+}
+#buttonsWrapper button {
+    width: 35vw;
+    padding: 0.2rem 0;
+    @media screen and (any-hover: none) and (orientation: landscape)  and (max-height: 699px){
+        width: 25vw;
+        padding: 0.2rem 0;
+    }
+    @media screen and (hover) {
+        width: 100%;
+    }
+}
+@media screen and (hover) {
+    #contactHGroup {max-width: 890px;}
+    #buttonsWrapper button {width: 100%;}
+}

@@ -1,0 +1,41 @@
+#modes {
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+    margin: var(--hud-padding-desktop);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 1px #000000 inset;
+}
+.mode-button {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    @media (hover),
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+            height: 17px;
+            width: 17px;
+    }
+}
+#modes {
+    background-color: #44444488;
+    outline: 2px solid #88888888;
+}
+.mode-button.active {outline: 6px solid #888888;}
+#modes #lightmode {
+    background-color: #F8FFAA;
+    border: 1px solid #F8FFAA;
+    background-image: url(../img/shining-sun-svgrepo-com.svg);
+    background-size: contain;
+}
+#modes #darkmode {
+    background-color: #000000;
+    border: 1px solid #000000;
+    background-image: url(../img/basic-moon-svgrepo-com.svg);
+    background-size: contain;
+}
+.mode-button.active {box-shadow: 0 0 3px 7px black;}

@@ -1,0 +1,73 @@
+.about-quote {
+    border-radius: 0.5rem;
+    width: 80vw;
+    padding: 1rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (hover: none) and (orientation: portrait) and (max-width: 699px) {
+        border-radius: 0.5rem;
+        width: 80vw;
+        padding: 1rem;
+    }
+}
+.about-quote p:first-of-type {    /* the quote */
+    font-size: 1.3rem;
+    text-align: center;
+}
+.about-quote p:nth-of-type(2) {    /* the author */
+    font-size: 0.9rem;
+    text-align: right;
+    margin-top: 1rem;
+}
+.about-quote a {text-decoration: none;}
+#aboutParagraphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: -3rem 0 -2rem 0;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        margin: 0;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+        margin-top: -3rem;
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        margin: -1rem 0;
+    }
+}
+#About ul {padding-left: 1.4rem;}
+hgroup#more-of-my-work, #aboutMoreSpecsLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+#aboutMoreSpecsLinks {padding-left: 1.4rem;}
+span.linky {font-weight: bold;}
+#About .section-text-contents:last-child {
+    display: flex;
+    flex-direction: column;
+    @media screen and (hover) and (min-width: 786px), 
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    @media screen and (hover) and (min-width: 1024px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+@media screen and (hover) and (min-width: 786px), 
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    #aboutMoreSpecs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0.3rem     /* to match the li padding next to it, so they align at their lower edges */
+    }
+}
