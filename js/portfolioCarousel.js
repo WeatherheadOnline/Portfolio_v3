@@ -101,6 +101,7 @@ for (let article = 0; article <= portfolioItems.length - 1; article++) {
 const folioButtons = Array.from(document.getElementsByClassName("folio_thumbnail"));
 folioButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
+        deactivate();
         populate(index);
         currentArticle = index;
     });
@@ -126,9 +127,12 @@ function populate(currentArticle) {
     h3Link.href = portfolioItems[currentArticle].articleLink;
     h3Text.innerText = portfolioItems[currentArticle].h3Text;
     articleBody.innerHTML = portfolioItems[currentArticle].bodyText;
+    const thumbnail = document.getElementById(portfolioItems[currentArticle].name);
+    thumbnail.classList.add("active");
 }
 
 function folioMoveLeft() {
+    deactivate();
     if(currentArticle > 0) {
         currentArticle--;
     } else {
@@ -138,12 +142,18 @@ function folioMoveLeft() {
 }
 
 function folioMoveRight() {
+    deactivate();
     if(currentArticle < portfolioItems.length - 1) {
         currentArticle++;
     } else {
         currentArticle = 0;
     };
     populate(currentArticle);
+}
+
+function deactivate() {
+        const prevActive = document.getElementById(portfolioItems[currentArticle].name);
+        prevActive.classList.remove("active");
 }
 
 populate(currentArticle);
