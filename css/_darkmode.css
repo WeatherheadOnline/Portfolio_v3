@@ -158,13 +158,15 @@ input, textarea {
     font-size: 1.5rem;
     text-align: center;
 }
-button {
+button, button:enabled {
     background-color: var(--navy-lightest);
     color: var(--blue-lightest);
     border: 1px solid var(--green-light);
     font-family: inherit;
     font-size: inherit;
 }
+button:active {background-color: var(--navy-darkest);}
+
 
 /* ************************* */
 /*      Footer               */
