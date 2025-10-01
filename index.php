@@ -11,7 +11,7 @@
     <meta property="og:title" content="Weatherhead Online">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.weatherheadonline.com">
-    <meta property="og:image" content="img/folio_this_small.png">
+    <meta name="image" property="og:image" content="img/folio_this_small.png">
     <meta property="og:description" content="I create modern, responsive animated websites. My speciality is making special effects for user engagement.">
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

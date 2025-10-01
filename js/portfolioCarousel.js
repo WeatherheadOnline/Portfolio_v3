@@ -1,12 +1,12 @@
 const portfolioItems = [
     {
         name: "holographMenu",
-        articleLink: "/input-menu/",
+        articleLink: "/holographic-menu/",
         imgSrc: "img/folio_holographicMenu.png",
-        imgAlt: "the website for the new form input menu",
+        imgAlt: "the website for the new form-input menu",
         thumbSrc: "img/folio_holographicMenu_small.png",
-        h3Text: 'Mobile accessibility "input tool"',
-        bodyText: "<p>Form input fields can be difficult to reach when you're using your mobile device one-handed. I've created this innovative input menu to improve accessibility and bring form inputs within easy reach of your thumbs.</p>",
+        h3Text: "Holographic Menu",
+        bodyText: "<p>Form input fields can be difficult to reach when using a mobile device one-handed. This UI generator improves your mobile users' experience by bringing form inputs within easy reach of their thumbs.</p>",
 
     },
     {
