@@ -38,7 +38,7 @@ const portfolioItems = [
     },
     {
         name: "CreNav",
-        articleLink: "/CreNav",
+        articleLink: "/CreNav/",
         imgSrc: "img/folio_crenav.png",
         imgAlt: "a website made to the specifications of Creative Navigation",
         thumbSrc: "img/folio_crenav_small.png",
@@ -47,7 +47,7 @@ const portfolioItems = [
     },
     {
         name: "boognish",
-        articleLink: "http://www.whatdoesitween.com",
+        articleLink: "/WhatDoesItWeen/",
         imgSrc: "img/folio_boognish.png",
         imgAlt: "the website www.whatdoesitween.com",
         thumbSrc: "img/folio_boognish_small.png",
