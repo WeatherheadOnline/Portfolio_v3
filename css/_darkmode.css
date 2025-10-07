@@ -113,6 +113,7 @@ h2, h3 {color: var(--blue-bright);}
 #hero-text p:nth-child(2) {filter: drop-shadow(2px 2px 0 var(--hero-text-shadow));}  /* "Splash"  */
 #hero-text-secondary {text-shadow: 2px 2px 0 var(--hero-text-shadow);}
 #hero-text-secondary svg {filter: drop-shadow(2px 2px 0 var(--hero-text-shadow));}
+.AWIA {background-image: url(../img/AWIA-2025_white.png);}
 
 /* ******************************* */
 /*        Special Effects          */

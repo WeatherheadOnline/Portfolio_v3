@@ -16,21 +16,27 @@ h1.screen-reader-only {
     }
 }
 
-/* GreenGeeks logo */
+/* GreenGeeks and AWIA badges */
 
-#greenGeeks_landing_mobile {
+.badges {
     display: flex;
     justify-content: right;
+    align-items: top;
+    gap: var(--hud-padding-desktop);
+    height: var(--badge-height);
+}
+
+#badges_mobile {
     @media screen and (hover),
     screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
-        display: none
+        display: none;
     }
 }
-#greenGeeks_landing_desktop {
+#badges_desktop {
     display: none;
     @media screen and (hover),
     screen and (hover: none) and (orientation: landscape) and (max-height: 699px)  {
-        display: unset;
+        display: flex;
         position: absolute;
         bottom: var(--hud-padding-desktop);
     }
@@ -41,13 +47,21 @@ h1.screen-reader-only {
         right: var(--hud-padding-desktop);
     }
 }
-.greenGeeks_landing a {
-    display: flex;
-    align-items: flex-end;
-}
-.greenGeeks_landing img {
-    height: var(--greengeeks-height);
+.badges a {
+    height: 100%;
     width: auto;
+}
+.badges img {
+    height: 100%;
+    width: auto;
+}
+.opacity-zero {opacity: 0;}  /* Background image is controlled by dark/light-mode stylesheet; size is controlled via this invisible element. */
+a.AWIA {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.7; 
+    height: 85%;
 }
 
 /* Hero text elements */
@@ -148,7 +162,7 @@ h1.screen-reader-only {
         align-items: flex-end;
         justify-content: center;
         gap: 1.8rem;
-        margin-top: 15vh; 
+        margin-top: 5vh; 
     }    
     @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px), 
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
@@ -171,7 +185,7 @@ h1.screen-reader-only {
     display: block;
     min-width: max-content;
     text-align: right;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1rem;
     @media screen and (hover) {
         font-size: 1.2rem;
@@ -226,12 +240,5 @@ h1.screen-reader-only {
     }
     @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
         height: 2.1rem;
-    }
-}
-#hero-text-secondary img {
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-        height: 4vw;
-        width: auto;
     }
 }

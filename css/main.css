@@ -12,7 +12,7 @@
     --hud-padding-mobile: 1vh;
     --hud-padding-desktop: 1rem;
     --section-padding-desktop: 15px;
-    --greengeeks-height: 2rem;
+    --badge-height: 2rem;
 }
 * {
     box-sizing: border-box;
