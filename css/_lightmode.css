@@ -28,7 +28,7 @@ h3 {color: var(--blue_lm_light);}
 .landing-waves {opacity: 0.3;}
 .landing-waves-aqua {opacity: 0.6;}
 .lightshaft {display: none;}
-.bkgd-gradient-lm-green {
+/* .bkgd-gradient-lm-green {
     background: linear-gradient(
         var(--bkgd_lm),
         var(--lm_pastel_green)
@@ -39,8 +39,8 @@ h3 {color: var(--blue_lm_light);}
         var(--bkgd_lm),
         var(--lm_pastel_purple)
     );
-}
-.bkgd-gradient-lm-portfolio {
+} */
+/* .bkgd-gradient-lm-portfolio {
     background: linear-gradient(
         to right,
         var(--lm_pastel_blue),
@@ -48,7 +48,7 @@ h3 {color: var(--blue_lm_light);}
         var(--bkgd_lm) 80%,
         var(--lm_pastel_blue)
     )
-}
+} */
 .rippleClick svg {stroke: var(--lm_ripple_click);}
 .rippleInt svg {stroke: var(--blue_lm_light);}
 
@@ -148,7 +148,10 @@ h3 {color: var(--blue_lm_light);}
 /*     "About" section     */
 /* ************************* */
 
-.about-quote {background-color: var(--SFX-bkgd);}
+.about-quote {
+    background-color: var(--SFX-bkgd);
+    border: 2px solid var(--lm_pastel_purple);
+}
 
 /* ************************* */
 /*     "Contact" section     */

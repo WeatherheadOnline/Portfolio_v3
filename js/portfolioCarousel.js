@@ -1,5 +1,15 @@
 const portfolioItems = [
     {
+        name: "aquaEarth",
+        articleLink: "https://www.aquaearth.com.au",
+        imgSrc: "img/folio_aquaearth.png",
+        imgAlt: "the website for the new form-input menu",
+        thumbSrc: "img/folio_aquaearth_small.png",
+        h3Text: "Small Business Site",
+        bodyText: '<p>A small business site for a client ("aquaearth"). Features: full-screen landing page, expandable menus, and modal (click-to-enlarge) photos.</p>',
+
+    },
+    {
         name: "holographMenu",
         articleLink: "/holographic-menu/",
         imgSrc: "img/folio_holographicMenu.png",
@@ -42,7 +52,7 @@ const portfolioItems = [
         imgSrc: "img/folio_crenav.png",
         imgAlt: "a website made to the specifications of Creative Navigation",
         thumbSrc: "img/folio_crenav_small.png",
-        h3Text: "Developing from specifications",
+        h3Text: "From specifications",
         bodyText: "<p>My replica of <a href='https://creativenavigation.com/' target='_blank'>an existing website</a>, with the addition of responsive design for mobile devices. It includes a functional \"Contact Us\" form, plus interactive mouse-over effects for user engagement.</p>",
     },
     {
@@ -70,7 +80,7 @@ const portfolioItems = [
         imgAlt: "the website you're at right now",
         thumbSrc: "img/folio_this_small.png",
         h3Text: "WeatherheadOnline.com",
-        bodyText: "<p>This website! It's pretty great. Did you notice? - the text at the top of the page responds to moving your mouse or tilting your device. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
+        bodyText: "<p>This website! It's pretty great. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
     },
 ]
 

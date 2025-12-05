@@ -38,7 +38,7 @@
 }
 #portfolio-img img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1.8 / 1;
     margin: 0 auto;
     outline: 2px solid;
     @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
@@ -55,6 +55,12 @@
         height: 12rem;
     }
 }
+div#portfolio-text-body {
+    height: 15vh;
+    @media screen and (hover) {
+        height: 5rem;
+    }
+}
 #portfolio-panel {
     display: flex;
     flex-direction: column;
@@ -67,7 +73,7 @@
 #portfolio_thumbnails {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     gap: 3vw;
     @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
@@ -80,7 +86,7 @@
     }
 }
 .folio_thumbnail {  
-    width: 13vw;
+    width: 15vw;
     max-width: 6rem;
     height: auto;
     outline: 1px solid;

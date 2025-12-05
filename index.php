@@ -116,99 +116,8 @@
             </div> 
         </section>
 
-        <section id="Effects">
-            <div class="bkgd bkgd-gradient-linear bkgd-gradient-lm-green"></div>
-            <div id="lightshafts-group" class="bkgd">
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-                <div class="lightshaft bkgd"></div>
-            </div>
-            <div class="section-text-contents">
-                <hgroup class="subheading">
-                    <h2>Special Effects</h2>
-                    <p>My speciality is making special effects for websites. Here are some examples of available special effects; I can also build custom effects to match your brand and website.</p>
-                <div id="SFX_interactive"></div>  <!-- To edit text, see the object array in effectsSection.js -->
-                </hgroup>
-                <div id="SFX_iframe">                    
-                    <iframe loading="lazy" src="" title="Demonstration of sparkly background"></iframe>
-                </div>
-                <div id="SFX_panel">
-                    <div class="SFX_thumbnails" id="SFX_all_thumbnails"></div>
-                    <div class="arrowsWrapper">
-                        <div class="arrow leftArrow" id="SFX_leftArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
-                            </svg>
-                        </div>
-                        <div class="arrow rightArrow" id="SFX_rightArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Portfolio">
-            <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-portfolio"></div>
-            <div class="section-text-contents"> 
-
-                <hgroup class="subheading">
-                    <h2>Portfolio</h2>
-                </hgroup>
-
-             <div id="portfolio-contents"> <!-- To edit portfolio items, see the object array in portfolioCarousel.js -->
-                
-                <div id="portfolio-item-wrapper">
-                    <div id="portfolio-img">
-                        <a target="_blank">
-                            <img loading="lazy">
-                        </a>
-                    </div>
-                    <div id="portfolio-item-text">
-                        <a target="_blank">
-                            <h3></h3>
-                        </a>
-                        <div id="portfolio-text-body"></div>
-                    </div>
-                </div>
-
-                <div id="portfolio-panel">
-                    <div class="portfolio_thumbnails" id="portfolio_thumbnails"></div>
-                    <div class="arrowsWrapper" id="portfolio-arrows">
-                        <div class="arrow leftArrow" id="portfolio_leftArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
-                            </svg>
-                        </div>
-                        <div class="arrow rightArrow" id="portfolio_rightArrow">
-                            <svg viewBox="0 0 20 20">
-                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-    
         <section id="About">
             <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-purple"></div>
-            <div id="home-bkgd-waves" class="bkgd">
-                <div class="landing-waves landing-waves-aqua">  
-                    <img src="img/waves_bkgd_aqua.svg">
-                </div>
-                <div class="landing-waves landing-waves-purple">  
-                    <img src="img/waves_bkgd_purple.svg">
-                </div>
-                <div class="landing-waves landing-waves-green">  
-                    <img src="img/waves_bkgd_green.svg">
-                </div>
-            </div>
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>About me</h2>
@@ -272,6 +181,96 @@
             </div>
         </section>
                 
+        <section id="Effects">
+            <div class="bkgd bkgd-gradient-linear bkgd-gradient-lm-green"></div>
+            <div id="lightshafts-group" class="bkgd">
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+                <div class="lightshaft bkgd"></div>
+            </div>
+            <div class="section-text-contents">
+                <hgroup class="subheading">
+                    <h2>Special Effects</h2>
+                    <p>My speciality is making special effects for websites. Here are some examples of available special effects; I can also build custom effects to match your brand and website.</p>
+                <div id="SFX_interactive"></div>  <!-- To edit text, see the object array in effectsSection.js -->
+                </hgroup>
+                <div id="SFX_iframe">                    
+                    <iframe loading="lazy" src="" title="Demonstration of sparkly background"></iframe>
+                </div>
+                <div id="SFX_panel">
+                    <div class="SFX_thumbnails" id="SFX_all_thumbnails"></div>
+                    <div class="arrowsWrapper">
+                        <div class="arrow leftArrow" id="SFX_leftArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                            </svg>
+                        </div>
+                        <div class="arrow rightArrow" id="SFX_rightArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Portfolio">
+            <div class="bkgd bkgd-gradient-radial bkgd-gradient-lm-portfolio"></div>
+            <div id="home-bkgd-waves" class="bkgd">
+                <div class="landing-waves landing-waves-aqua">  
+                    <img src="img/waves_bkgd_aqua.svg">
+                </div>
+                <div class="landing-waves landing-waves-purple">  
+                    <img src="img/waves_bkgd_purple.svg">
+                </div>
+                <div class="landing-waves landing-waves-green">  
+                    <img src="img/waves_bkgd_green.svg">
+                </div>
+            </div>
+
+            <div class="section-text-contents"> 
+                <hgroup class="subheading">
+                    <h2>Portfolio</h2>
+                </hgroup>
+             <div id="portfolio-contents"> <!-- To edit portfolio items, see the object array in portfolioCarousel.js -->
+                
+                <div id="portfolio-item-wrapper">
+                    <div id="portfolio-img">
+                        <a target="_blank">
+                            <img loading="lazy">
+                        </a>
+                    </div>
+                    <div id="portfolio-item-text">
+                        <a target="_blank">
+                            <h3></h3>
+                        </a>
+                        <div id="portfolio-text-body"></div>
+                    </div>
+                </div>
+
+                <div id="portfolio-panel">
+                    <div class="portfolio_thumbnails" id="portfolio_thumbnails"></div>
+                    <div class="arrowsWrapper" id="portfolio-arrows">
+                        <div class="arrow leftArrow" id="portfolio_leftArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 11.8,3.1 -7,7 z m -7,7 7,7 z" />
+                            </svg>
+                        </div>
+                        <div class="arrow rightArrow" id="portfolio_rightArrow">
+                            <svg viewBox="0 0 20 20">
+                                <path style="fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" d="m 8.2,3.1 7,7 z m 7,7 -7,7 z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    
         <section id="Contact">
             <div class="bkgd bkgd-gradient-linear bkgd-gradient-lm-green"></div>
             <div id="lightshafts-group" class="bkgd">
@@ -285,15 +284,10 @@
             <div class="section-text-contents">
                 <hgroup class="subheading">
                     <h2>Contact</h2>
-                    <p>I'd love to hear from you!</p>
-                </hgroup>
-                <hgroup class="phone-email">
-                    <h3>Email:</h3>
-                    <p><a href="mailto:eddie@weatherheadonline.com"><email>eddie@weatherheadonline.com</email></a></p>
-                    <!-- <p>Text/call: <a href="tel:970-305-4682" class="bold">970-305-4682</a></p> -->
-                </hgroup>
-                <hgroup class="subheading" id="contactHGroup">
-                    <h3>Or send me a message here:</h3>
+                    <!-- <p>I'd love to hear from you!</p>
+                    <p>Drop me a line:</p> -->
+                    <h3>I'd love to hear from you! Drop me a line:</h3>
+                    <hgroup class="subheading" id="contactHGroup">
                     <form method="POST" action="#contactHGroup">
                         <fieldset>
                             <?php  if (isset ($_POST['subject']) ) {echo "

@@ -106,15 +106,15 @@
         top: 10vh;
     }
 }
-#About .landing-waves-aqua {  
+#Portfolio .landing-waves-aqua {  
     bottom: unset;
     top: 70vh;
     @media screen and (hover) and (min-width: 1024px),
     screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-        top: 35vh;
+        top: 40vh;
     }
 }
-#About .landing-waves-green {    
+#Portfolio .landing-waves-green {    
     top: unset;
     bottom: 10vh;
     @media screen and (hover),
@@ -124,7 +124,7 @@
 }
 @media screen and (hover),
   screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-    #About .landing-waves-purple {left: 55vw;}
+    #Portfolio .landing-waves-purple {left: 55vw;}
 }
 
 /* Light shafts background */
