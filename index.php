@@ -144,40 +144,49 @@
                 </div>
             </div>
             <div class="section-text-contents">
-                <div id="aboutMoreSpecs">
-                    <hgroup>
-                        <h3>Some info about me:</h3>
-                        <ul>
-                            <li>Proficient in HTML, CSS and JavaScript</li>
-                            <li><a href="https://www.coursera.org/learner/eddieweatherhead" target="_blank">Certificates</a> from Meta in HTML, CSS, Javascript, and Version Control</li>
-                            <li>Responsive web design certification from <a href="freecodecamp.org" target="_blank">freecodecamp.org</a></li>
-                            <li>Entry-level <a href="#Contact">PHP</a></li>
-                            <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
-                        </ul>
-                    </hgroup>
-                    <hgroup id="more-of-my-work">
-                        <h3>More of my work:</h3>
-                        <div id="aboutMoreSpecsLinks">
-                            <a href="https://github.com/WeatherheadOnline" target="_blank"><p><span class="linky">github.com</span>/WeatherheadOnline</p></a>
-                            <a href="https://codepen.io/WeatherheadOnline" target="_blank"><p><span class="linky">codepen.io</span>/WeatherheadOnline</p></a>
-                            <a href="https://www.linkedin.com/in/eddieweatherhead/" target="_blank"><p><span class="linky">LinkedIn.com</span>/in/EddieWeatherhead</p></a>
-                        </div>
-                    </hgroup>
+                <hgroup id="available-now">
+                    <h3>Available now!</h3>
+                    <p>I am available for hire, to make your website come to life. Quality sites at low rates.</p>
+                    <p>No design? No worries! I can create a website design to suit your needs and your brand (using the industry-standard design tool <a href="https://www.figma.com/">Figma</a>).</p>
+                    <p>Check out my <a href="#Portfolio">portfolio</a> to see what I can do for you. <a href="#Contact">Drop me a line</a> with any questions - I'd love to hear from you.</p>
+                </hgroup>
+
+                <div id="about-main-text">
+                    <div id="aboutMoreSpecs">
+                        <hgroup>
+                            <h3>Some info about me:</h3>
+                            <ul>
+                                <li>Proficient in HTML, CSS and JavaScript</li>
+                                <li><a href="https://www.coursera.org/learner/eddieweatherhead" target="_blank">Certificates</a> from Meta in React, HTML, CSS, Javascript, and Version Control</li>
+                                <li>Responsive web design certification from <a href="https://www.freecodecamp.org" target="_blank">freecodecamp.org</a></li>
+                                <li>Entry-level <a href="#Contact">PHP</a></li>
+                                <li>Fluent typist in the <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout" target="_blank">Dvorak keyboard layout</a> in addition to the more standard (but less efficient) Qwerty layout</li>
+                            </ul>
+                        </hgroup>
+                        <hgroup id="more-of-my-work">
+                            <h3>More of my work:</h3>
+                            <div id="aboutMoreSpecsLinks">
+                                <a href="https://github.com/WeatherheadOnline" target="_blank"><p><span class="linky">github.com</span>/WeatherheadOnline</p></a>
+                                <a href="https://codepen.io/WeatherheadOnline" target="_blank"><p><span class="linky">codepen.io</span>/WeatherheadOnline</p></a>
+                                <a href="https://www.linkedin.com/in/eddieweatherhead/" target="_blank"><p><span class="linky">LinkedIn.com</span>/in/EddieWeatherhead</p></a>
+                            </div>
+                        </hgroup>
+                    </div>
+                    <div id="aboutOffer">
+                        <hgroup>
+                            <h3>What I can offer you:</h3>
+                            <ul>
+                                <li>A responsive website that looks great on mobile - in portrait and landscape orientation - and on a range of desktop screen sizes.</li>
+                                <li>A favicon: a custom icon your visitor will see at the top of their browser window.</li>
+                                <li>Animated hover effects to engage your visitor.</li>
+                                <li>Aesthetic background effects to further enhance their experience, including subtle animations or glitter.</li>
+                                <li>User accessibility conforming to current standards, giving your website wider reach and inclusivity.</li>
+                                <li>Modern design. I keep up-to-date with web design trends and can design as well as develop your site.</li>
+                                <li>Code that's well-organized, making it easy to maintain and update.</li>
+                            </ul>
+                        </hgroup>
+                    </div>
                 </div>    
-                <div id="aboutOffer">
-                    <hgroup>
-                        <h3>What I can offer you:</h3>
-                        <ul>
-                            <li>A responsive website that looks great on mobile - in portrait and landscape orientation - and on a range of desktop screen sizes.</li>
-                            <li>A favicon: a custom icon your visitor will see at the top of their browser window.</li>
-                            <li>Animated hover effects to engage your visitor.</li>
-                            <li>Aesthetic background effects to further enhance their experience, including subtle animations or glitter.</li>
-                            <li>User accessibility conforming to current standards, giving your website wider reach and inclusivity.</li>
-                            <li>Modern design. I keep up-to-date with web design trends and can design as well as develop your site.</li>
-                            <li>Code that's well-organized, making it easy to maintain and update.</li>
-                        </ul>
-                    </hgroup>
-                </div>
             </div>
         </section>
                 

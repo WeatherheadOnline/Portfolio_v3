@@ -1,6 +1,6 @@
 :root {
-    --bkgd_lm: #FFFFFF;
-    --menu_lm_edges: #FFFFFFBF;
+    --bkgd_lm: #E8E8E8;
+    --menu_lm_edges: #E8E8E8BF;
 
     --blue_lm_lightest: #0088f0;
     --blue_lm_light: #0054b2;
@@ -28,27 +28,6 @@ h3 {color: var(--blue_lm_light);}
 .landing-waves {opacity: 0.3;}
 .landing-waves-aqua {opacity: 0.6;}
 .lightshaft {display: none;}
-/* .bkgd-gradient-lm-green {
-    background: linear-gradient(
-        var(--bkgd_lm),
-        var(--lm_pastel_green)
-    );
-}
-.bkgd-gradient-lm-purple {
-    background: linear-gradient(
-        var(--bkgd_lm),
-        var(--lm_pastel_purple)
-    );
-} */
-/* .bkgd-gradient-lm-portfolio {
-    background: linear-gradient(
-        to right,
-        var(--lm_pastel_blue),
-        var(--bkgd_lm) 20%,
-        var(--bkgd_lm) 80%,
-        var(--lm_pastel_blue)
-    )
-} */
 .rippleClick svg {stroke: var(--lm_ripple_click);}
 .rippleInt svg {stroke: var(--blue_lm_light);}
 

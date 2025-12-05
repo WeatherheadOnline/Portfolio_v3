@@ -39,6 +39,15 @@
         margin: -1rem 0;
     }
 }
+#available-now p {
+    margin: 5vw 0 0 5vw;
+    @media screen and (min-width: 786px) {
+        margin-left: 1.4rem;
+    }
+    @media screen and (hover) {
+        margin: 1rem 0 0 0;
+    }
+}
 #About ul {padding-left: 1.4rem;}
 hgroup#more-of-my-work, #aboutMoreSpecsLinks {
     display: flex;
@@ -48,7 +57,7 @@ hgroup#more-of-my-work, #aboutMoreSpecsLinks {
 }
 #aboutMoreSpecsLinks {padding-left: 1.4rem;}
 span.linky {font-weight: bold;}
-#About .section-text-contents:last-child {
+#About #about-main-text {
     display: flex;
     flex-direction: column;
     @media screen and (hover) and (min-width: 786px), 
