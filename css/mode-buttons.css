@@ -16,7 +16,7 @@
     width: 17px;
     border-radius: 50%;
     @media (hover),
-      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
             height: 17px;
             width: 17px;
     }

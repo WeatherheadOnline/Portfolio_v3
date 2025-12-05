@@ -157,9 +157,11 @@
             <div class="section-text-contents">
                 <hgroup id="available-now">
                     <h3>Available now!</h3>
-                    <p>I am available for hire, to make your website come to life. Quality sites at low rates.</p>
-                    <p>No design? No worries! I can create a website design to suit your needs and your brand (using the industry-standard design tool <a href="https://www.figma.com/">Figma</a>).</p>
-                    <p>Check out my <a href="#Portfolio">portfolio</a> to see what I can do for you. <a href="#Contact">Drop me a line</a> with any questions - I'd love to hear from you.</p>
+                    <div>
+                        <p>Hi! I'm Eddie Weatherhead of Weatherhead Online. I'm available for hire, to make your website come to life.</p>
+                        <p>I charge low rates and make quality sites that look great on any size screen. No design? No worries! I can create a website design for you to suit your needs and your brand.</p>
+                        <p>Check out my <a href="#Portfolio">portfolio</a> to see what I can do for you. <a href="#Contact">Drop me a line</a> with any questions - I'd love to hear from you.</p>
+                    </div>
                 </hgroup>
 
                 <div id="about-main-text">

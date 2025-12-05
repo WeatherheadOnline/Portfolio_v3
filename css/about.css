@@ -1,15 +1,32 @@
+#aboutParagraphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 0 5vw;
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
+        margin: 0;
+    }
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
+    }
+    @media screen and (hover),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
+    }
+}
 .about-quote {
     border-radius: 0.5rem;
     width: 80vw;
     padding: 1rem;
-    width: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media screen and (hover: none) and (orientation: portrait) and (max-width: 699px) {
+    @media screen and (hover: none) and (orientation: portrait) and (max-width: 785) {
         border-radius: 0.5rem;
         width: 80vw;
         padding: 1rem;
+    }
+    @media screen and (hover) {
+        width: 20rem;
     }
 }
 .about-quote p:first-of-type {    /* the quote */
@@ -22,25 +39,18 @@
     margin-top: 1rem;
 }
 .about-quote a {text-decoration: none;}
-#aboutParagraphs {
+#About div.section-text-contents:last-of-type {
     display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-    margin: -3rem 0 -2rem 0;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
-        margin: 0;
-    }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
-        margin-top: -3rem;
-    }
-    @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
-        margin: -1rem 0;
-    }
+    flex-direction: column;
+    gap: 2rem;
+}
+#available-now {
+    max-width: 670px;
+    margin: 0 auto;
 }
 #available-now p {
     margin: 5vw 0 0 5vw;
+    max-width: 670px;
     @media screen and (min-width: 786px) {
         margin-left: 1.4rem;
     }
@@ -61,18 +71,18 @@ span.linky {font-weight: bold;}
     display: flex;
     flex-direction: column;
     @media screen and (hover) and (min-width: 786px), 
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         flex-direction: row;
         gap: 1rem;
     }
     @media screen and (hover) and (min-width: 1024px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         flex-direction: row;
         gap: 2rem;
     }
 }
 @media screen and (hover) and (min-width: 786px), 
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
     #aboutMoreSpecs {
         display: flex;
         flex-direction: column;

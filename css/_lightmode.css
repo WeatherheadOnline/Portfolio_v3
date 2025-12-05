@@ -22,6 +22,19 @@ body {
 h2 {color: var(--blue_lm_lightest);}
 h3 {color: var(--blue_lm_light);}
 
+
+a {
+    color: black;
+    /* color: var(--blue_lm_light); */
+}
+a:hover {
+    color: var(--navy-lightest);
+    background: var(--blue-light);
+}
+a:active {
+    background: var(--blue-bright);
+}
+
 /* ************************* */
 /*       Backgrounds         */
 /* ************************* */
@@ -133,6 +146,12 @@ nav p {color: var(--blue_lm_light); font-weight: bold;}
 .about-quote {
     background-color: var(--SFX-bkgd);
     border: 2px solid var(--lm_pastel_purple);
+}
+.about-quote:hover {
+    box-shadow: 2px 4px 10px rgb(from var(--lm_pastel_purple) r g b / 0.6);
+}
+.about-quote a {
+    color: unset;
 }
 
 /* ************************* */

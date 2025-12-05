@@ -1,5 +1,5 @@
 @media screen and (hover),
-    screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
+    screen and (hover: none) and (orientation: landscape) and (max-height: 785px) {
     #holograph-menu {display: none;}
 }
 #holograph-menu {

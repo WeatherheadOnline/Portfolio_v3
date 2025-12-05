@@ -41,7 +41,7 @@
     aspect-ratio: 1.8 / 1;
     margin: 0 auto;
     outline: 2px solid;
-    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 786px) {
         width: 50vw;
     }
     @media screen and (hover) {
@@ -76,7 +76,7 @@ div#portfolio-text-body {
     width: 100%;
     justify-content: center;
     gap: 3vw;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         width: unset;
         gap: 3vh;
     }
@@ -90,7 +90,7 @@ div#portfolio-text-body {
     max-width: 6rem;
     height: auto;
     outline: 1px solid;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         width: 13vh;
     }    
     @media screen and (hover) and (max-width: 785px) {

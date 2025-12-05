@@ -27,7 +27,6 @@
     height: 35%;
     bottom: 5%;
 }
-
 /* Ripples for landing section background */
 
 .ripple {
@@ -57,11 +56,11 @@
 .landing-waves {position: absolute;}
 .landing-waves img {
     height: 38vh; width: auto;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 786px) {
         height: 65vh; width: auto;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         height: 17rem; width: auto;
     }
 }
@@ -69,12 +68,12 @@
     transform: scaleY(-1);
     right: 28vw;
     bottom: 5%;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 786px) {
         left: -45vw;
         bottom: 0;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         right: 55vw;
         bottom: 0;
     }
@@ -83,12 +82,12 @@
     transform: scaleY(-1);
     left: 30vw;
     top: 17%;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         left: 55vw;
         top: 10vh;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         left: 50vw;
         top: 25vh;
     }
@@ -96,12 +95,12 @@
 .landing-waves-purple {  
     left: -10vw;
     top: 2%;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         left: 40vw;
         top: -30vh;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         left: 27vw;
         top: 10vh;
     }
@@ -110,7 +109,7 @@
     bottom: unset;
     top: 70vh;
     @media screen and (hover) and (min-width: 1024px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         top: 40vh;
     }
 }
@@ -118,12 +117,12 @@
     top: unset;
     bottom: 10vh;
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         left: 60vw;
     }
 }
 @media screen and (hover),
-  screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+  screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
     #Portfolio .landing-waves-purple {left: 55vw;}
 }
 
@@ -134,12 +133,12 @@
     top: 0;
     overflow: hidden;
     z-index: -3;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         top: 2vh;
         height: 120%;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         height: 100%;
     }
 }
@@ -154,16 +153,16 @@
     animation-name: lightshafts;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         left: 0;
         top: -5h;
     }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         width: 8rem;
         top: -20rem;
     }
     @media screen and (hover),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         width: 5rem;
         left: calc(10vw - 4rem);
         top: -6rem;

@@ -1,4 +1,7 @@
-#Effects hgroup.subheading {pointer-events: none;}
+#Effects hgroup.subheading {
+    pointer-events: none;
+    margin-top: 1rem;
+}
 #Effects hgroup, #SFX_panel {
     position: relative;
     z-index: 1;
@@ -39,7 +42,7 @@
     gap: 3vw;
     margin: 0 auto;
     @media screen and (hover) and (min-width: 600px), 
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, 1fr);
     }
@@ -47,14 +50,14 @@
         margin: unset;
     }
     @media screen and (hover) and (min-width: 1024px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         gap: 2rem;
     }
 }
 .SFX_thumbnail {
     height: 2.8rem;
     width: 2.8rem;
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         height: 3.8rem;
         width: 3.8rem;
     }
@@ -71,7 +74,7 @@
 .arrow {
     width: 3.5rem;
     height: 3.5rem;
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         width: 4.8rem;
         height: 4.8rem;
     }

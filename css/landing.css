@@ -11,7 +11,7 @@ h1.screen-reader-only {
 }
 #Home {
     font-family: "Courier Prime";
-    @media screen and (any-hover: none) and (orientation: portrait) and (max-width: 699px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (max-width: 785px) {
         padding: 0 5vw;
     }
 }
@@ -28,14 +28,14 @@ h1.screen-reader-only {
 
 #badges_mobile {
     @media screen and (hover),
-    screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
+    screen and (hover: none) and (orientation: landscape) and (max-height: 785px) {
         display: none;
     }
 }
 #badges_desktop {
     display: none;
     @media screen and (hover),
-    screen and (hover: none) and (orientation: landscape) and (max-height: 699px)  {
+    screen and (hover: none) and (orientation: landscape) and (max-height: 785px)  {
         display: flex;
         position: absolute;
         bottom: var(--hud-padding-desktop);
@@ -43,7 +43,7 @@ h1.screen-reader-only {
     @media screen and (hover) {
         right: calc(var(--hud-padding-desktop) + 16px);
     }
-    @media screen and (hover: none) and (orientation: landscape) and (max-height: 699px)  {
+    @media screen and (hover: none) and (orientation: landscape) and (max-height: 785px)  {
         right: var(--hud-padding-desktop);
     }
 }
@@ -72,12 +72,12 @@ a.AWIA {
     @media screen and (any-hover: none) and (orientation: landscape) {
         margin-top: 20vh;
     }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         margin-top: 30vh;
     }
     @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         margin: 20vh auto 0 auto;
         width: max-content;
     }
@@ -85,8 +85,8 @@ a.AWIA {
 #hero-text-primary {
     position: relative;
     @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         max-width: 1024px;
         margin: 0 auto;
     }
@@ -97,21 +97,21 @@ a.AWIA {
         font-size: 13vh;
         position: relative;
     }    
-    @media screen and (hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (hover: none) and (orientation: landscape) and (max-height: 785px) {
         left: 15vw;
     }
     @media screen and (hover) and (min-width: 600px) and (max-width: 785px),
-    screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         margin-left: 1rem;
     }
 
     @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         font-size: clamp(2.5rem, 9vw, 5rem);
         line-height: 2rem;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         margin-left: -7vw;
     }
 } 
@@ -124,8 +124,8 @@ a.AWIA {
         font-size: 26vh;
     }
     @media screen and (hover), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {  
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {  
         font-size: clamp(5rem, 18vw, 12rem);
     }
 }
@@ -157,15 +157,15 @@ a.AWIA {
     @media screen and (hover) and (min-width: 1200px) {
         gap: 4.5rem;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
         gap: 1.8rem;
         margin-top: 5vh; 
     }    
-    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px), 
-    screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px), 
+    screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         margin-right: 0;
         width: 100%;
         margin-top: calc(20vh - 10rem);
@@ -176,7 +176,7 @@ a.AWIA {
         width: 16rem;
         text-align: right;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         width: 16rem;
         text-align: right;
     }
@@ -208,13 +208,13 @@ a.AWIA {
         font-size: 1.9rem;
         line-height: 1.6rem;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         display: inline;          /* This rule is for getting the secondary hero text onto two lines instead of three */
         font-size: 1.3rem;
         line-height: 1.1rem;
     }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         font-size: 3.5vw;
         line-height: 3vw;
     }
@@ -238,7 +238,7 @@ a.AWIA {
     @media screen and (hover) and (min-width: 600px) and (max-width: 785px) {    
         height: 2.1rem;
     }
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {    
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {    
         height: 2.1rem;
     }
 }

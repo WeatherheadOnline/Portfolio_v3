@@ -28,11 +28,12 @@ section {
     position: relative;
     min-height: 100vh;
     width: 100vw;
+    padding-bottom: 4rem;
 }
 .section-text-contents {
     margin: 0 auto;
     padding: 5vh 2vw 5vh 2vw;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         padding: 8vh 8vw 8vh 10vw;
     }
     @media screen and (hover)  {
@@ -48,11 +49,11 @@ section {
         width: 700px;
     }
     @media screen and (hover) and (min-width: 1024px),
-      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         width: 960px;
     }
-    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-      screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
+      screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         width: 80vw; 
     }
 }
@@ -66,6 +67,9 @@ body {font-family: "Roboto Mono", monospace;}
 .subheading {   /* Class is used on hgroups */
     text-align: center;
     padding: 2.5vh;
+    @media screen and (hover) {
+        padding: 1rem;
+    }
 }
 h2 {
     font-family: "Cooper Black";
@@ -74,10 +78,10 @@ h2 {
     @media screen and (hover) {
         font-size: 3rem;
     }
-    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 786px) {
         font-size: 8vw;
     }
-    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 786px) {
         font-size: 8vh;
     }
 }
@@ -85,10 +89,10 @@ h3 {
     font-size: 1.6rem;
     font-family: "Cooper Black";
     margin-top: 2rem;
-    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 786px) {
         font-size: 4vw;
     }
-    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 786px) {
         font-size: 4vh;
     }
 }
@@ -98,10 +102,10 @@ section:not(#Home) p, li {
         font-size: 0.9rem;
         line-height: 1.3rem;
     }
-    @media screen and (hover: none) and (orientation: portrait) and (min-width: 700px) {
+    @media screen and (hover: none) and (orientation: portrait) and (min-width: 786px) {
         font-size: 2vw;
     }
-    @media screen and (hover: none) and (orientation: landscape) and (min-height: 700px) {
+    @media screen and (hover: none) and (orientation: landscape) and (min-height: 786px) {
         font-size: 2vh;
     }
 }
@@ -116,7 +120,7 @@ a {color: inherit;}
 
 footer {
     padding: 5vh 0;
-    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 699px) {
+    @media screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         margin: 10vh 0;
     }
 }

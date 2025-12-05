@@ -6,7 +6,7 @@ const portfolioItems = [
         imgAlt: "the website for the new form-input menu",
         thumbSrc: "img/folio_aquaearth_small.png",
         h3Text: "Small Business Site",
-        bodyText: '<p>A small business site for a client ("aquaearth"). Features: full-screen landing page, expandable menus, and modal (click-to-enlarge) photos.</p>',
+        bodyText: '<p>A small business site for a client ("aquaearth"). Features: expandable menus, modal (click-to-enlarge) photos, and pages with multiple tabs.</p>',
 
     },
     {
