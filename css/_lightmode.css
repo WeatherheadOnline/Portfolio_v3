@@ -1,4 +1,5 @@
 :root {
+    --white: #FFFFFF;
     --bkgd_lm: #E8E8E8;
     --menu_lm_edges: #E8E8E8BF;
 
@@ -60,6 +61,8 @@ h3 {color: var(--blue_lm_light);}
     color: var(--blue_lm_darkest);
     background-color: var(--lm_pastel_blue);
 }
+nav {background-color: rgb(from var(--bkgd_lm) r g b / 0.8);}
+nav p {color: var(--blue_lm_light); font-weight: bold;}
 #holograph-icon svg {
     stroke: var(--blue_lm_dark);   
     border: 3px solid var(--blue_lm_dark);

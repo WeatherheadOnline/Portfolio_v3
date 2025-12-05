@@ -15,9 +15,9 @@
     --green-light: #67d467;
     --green-bright: #32b032;
     --purple-deep: #1c01a4;
-
-    --menu-edges: #0d3854dd;
-    --menu-center: #0d3854ff;
+    --menu-bkgd: #0d3854;
+    /* --menu-edges: #0d3854dd;
+    --menu-center: #0d3854ff; */
 }
 
 body {
@@ -61,10 +61,10 @@ h2, h3 {color: var(--blue-bright);}
 #menu {
     background: linear-gradient(
         to right,
-        var(--menu-edges),
-        var(--menu-center) 24%,
-        var(--menu-center) 76%,
-        var(--menu-edges)
+        rgb(from var(--menu-bkgd) r g b / 0.85),
+        var(--menu-bkgd) 24%,
+        var(--menu-bkgd) 76%,
+        rgb(from var(--menu-bkgd) r g b / 0.85)
     );
     box-shadow: 0 0 10px var(--navy-darkest);
 }    
@@ -74,7 +74,8 @@ h2, h3 {color: var(--blue-bright);}
     color: var(--blue-light);
     text-shadow: 2px 2px 0 var(--navy-lightest);
 }
-#menu h4:hover, #menu span:hover {background-color: var(--navy-lightest);}
+#menu h4:hover, #menu span:hover {background-color: var(--navy-dark);}
+nav {background-color: rgb(from var(--logo-color-accent) r g b / 0.8);}
 #holograph-icon svg {
     stroke: var(--blue-bright);   
     border: 3px solid var(--blue-bright);

@@ -10,7 +10,7 @@ header {
     align-items: flex-start;
     flex-wrap: nowrap;
     @media screen and (hover) {
-        width: calc(100vw - 16px);
+        width: calc(100vw - var(--hud-padding-desktop));
     }
 }
 #logo {
@@ -19,13 +19,19 @@ header {
     border-radius: 0.3rem;
     @media screen and (hover), 
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 700px),
-    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px) {
+    screen and (any-hover: none) and (orientation: landscape) and (min-height: 700px){
         width: 4rem;
     }
 }
 #hamburger {
     cursor: pointer;
-    padding: 0.5rem;
+    padding: var(--hud-padding-mobile);
+    @media screen and (hover) and (max-width: 785px) {
+        padding: var(--hud-padding-desktop);
+    }
+    @media screen and (hover) and (min-width: 786px) {
+        display: none;
+    }
 }    
 #menu {
     position: fixed;
@@ -34,8 +40,8 @@ header {
     top: var(--hud-padding-mobile);
     right: var(--hud-padding-mobile);
     display: none;
-    border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
+    border-radius: 5px; 
+    @media screen and (hover) and (max-width: 785px) {
         overflow: hidden;
         padding: 2rem;
     }
@@ -49,7 +55,7 @@ header {
     padding: 0 10px 5px;
     line-height: 3rem;
     border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
+    @media screen and (hover) and (max-width: 785px) {
         position: absolute;
         top: -0.5rem;
         right: 0px;
@@ -61,7 +67,7 @@ header {
 #menu a {text-decoration: none;}
 #menu h4 {
     border-radius: 5px;
-    @media screen and (hover) and (max-width: 599px) {
+    @media screen and (hover) and (max-width: 785px) {
        margin-right: 2rem;
     }
 }
@@ -71,3 +77,29 @@ header {
         height: auto;
     }    
 }
+nav {
+    display: none;
+    @media screen and (any-hover: hover) and (min-width: 786px) {
+        width: calc(100% - 4rem - var(--hud-padding-desktop));
+        display: flex;
+        flex-wrap: wrap;
+        height: min-content;
+        padding: 0.5rem;
+        margin-left: var(--hud-padding-desktop);
+        justify-content: flex-end;
+        gap: 0.5rem calc(10vw - 3rem);
+    }
+}
+nav p {
+    @media screen and (any-hover: none) and (orientation: landscape) {
+        text-align: center;
+        padding: 0.2rem 0.4rem;
+        margin: 1vh;
+    }
+    @media screen and (any-hover: hover) and (min-width: 786px) {
+        text-align: center;
+        margin: 0;
+        padding: 0.2rem 0.5rem;
+    }
+}
+nav a {text-decoration: none;}
