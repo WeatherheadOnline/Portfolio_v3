@@ -287,52 +287,51 @@
                     <!-- <p>I'd love to hear from you!</p>
                     <p>Drop me a line:</p> -->
                     <h3>I'd love to hear from you! Drop me a line:</h3>
-                    <hgroup class="subheading" id="contactHGroup">
-                    <form method="POST" action="#contactHGroup">
-                        <fieldset>
-                            <?php  if (isset ($_POST['subject']) ) {echo "
-                                <div id='messageSent'>
-                                    <span>&times;</span>
-                                    <p>Your message was sent. Thanks!</p>
-                                </div>
-                            ";} ?>
-                            <div id="nameAndEmail" class="formUnit">  
-                                <div id="userNameWrapper">
-                                    <label for="userName" class="labelText">
-                                        Name<span class="asterisk">*</span>
-                                        <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Name" required >
-                                            <!--value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">-->
-                                    </label>
-                                </div>
-                                <div id="returnAddressWrapper">
-                                    <label for="returnAddress" class="labelText">
-                                        Email address<span class="asterisk">*</span>
-                                        <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
-                                            <!--value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">-->
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="formUnit">
-                                <label for="messageSubject" class="labelText">
-                                    Subject
-                                    <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Subject" >
-                                        <!--value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >-->
-                                </label>
-                            </div>
-                            <div class="formUnit">
-                                <label for="body" class="labelText">
-                                    Message<span class="asterisk">*</span>
-                                    <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="Message" rows="4" cols="60" required ></textarea>
-                                </label>
-                            </div>
-                            <div id="buttonsWrapper">
-                                <button type="reset" id="clearForm">Clear the form</button>
-                                <button type="submit" id="submitEmail">Send message</button>
-                            </div>
-                            <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to you. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>
-                        </fieldset>
-                    </form>
                 </hgroup>
+                <form method="POST" action="#contactHGroup">
+                    <fieldset>
+                        <?php  if (isset ($_POST['subject']) ) {echo "
+                            <div id='messageSent'>
+                                <span>&times;</span>
+                                <p>Your message was sent. Thanks!</p>
+                            </div>
+                        ";} ?>
+                        <div id="nameAndEmail" class="formUnit">  
+                            <div id="userNameWrapper">
+                                <label for="userName" class="labelText">
+                                    Name<span class="asterisk">*</span>
+                                    <input type="text" id="userName" class="inputText holograph-menu" name="userName" data-holomenu="Name" required >
+                                        <!--value="<?php echo isset($_POST['userName']) ? $_POST['userName'] : "" ?>">-->
+                                </label>
+                            </div>
+                            <div id="returnAddressWrapper">
+                                <label for="returnAddress" class="labelText">
+                                    Email address<span class="asterisk">*</span>
+                                    <input type="email" id="returnAddress" class="inputText holograph-menu" name="userEmail" data-holomenu="Email" required >
+                                        <!--value="<?php echo isset($_POST['userEmail']) ? $_POST['userEmail'] : "" ?>">-->
+                                </label>
+                            </div>
+                        </div>
+                        <div class="formUnit">
+                            <label for="messageSubject" class="labelText">
+                                Subject
+                                <input type="text" id="messageSubject" class="inputText holograph-menu" name="subject" data-holomenu="Subject" >
+                                    <!--value = "<?php echo isset($_POST['subject']) ? $_POST['subject'] : "" ?>" >-->
+                            </label>
+                        </div>
+                        <div class="formUnit">
+                            <label for="body" class="labelText">
+                                Message<span class="asterisk">*</span>
+                                <textarea id="messageBody" class="inputText holograph-menu" name="message" data-holomenu="Message" rows="4" cols="60" required ></textarea>
+                            </label>
+                        </div>
+                        <div id="buttonsWrapper">
+                            <button type="reset" id="clearForm">Clear the form</button>
+                            <button type="submit" id="submitEmail">Send message</button>
+                        </div>
+                        <p id="disclaimer">I won't share your email address with anyone, and I won't use it for any purpose other than replying to you. By sending me a message here, you're implicitly giving me the "ok" to contact you at this email address.</p>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>
