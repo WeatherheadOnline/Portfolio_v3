@@ -60,14 +60,14 @@ a.AWIA {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    opacity: 0.7; 
+    opacity: 0.7;
     height: 85%;
 }
 
 /* Hero text elements */
 
 #hero-text {
-    margin-top: 23vh;     
+    margin-top: 23vh;
     position: relative;     /* position needs to not be set to "static" to allow this layer to stack above the absolute-positioned background layers (incl the ripples layer) */
     @media screen and (any-hover: none) and (orientation: landscape) {
         margin-top: 20vh;
@@ -75,7 +75,7 @@ a.AWIA {
     @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
         margin-top: 30vh;
     }
-    @media screen and (hover), 
+    @media screen and (hover),
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
     screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         margin: 20vh auto 0 auto;
@@ -84,7 +84,7 @@ a.AWIA {
 }
 #hero-text-primary {
     position: relative;
-    @media screen and (hover), 
+    @media screen and (hover),
     screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
     screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
         max-width: 1024px;
@@ -96,7 +96,7 @@ a.AWIA {
     @media screen and (any-hover: none) and (orientation: landscape){   
         font-size: 13vh;
         position: relative;
-    }    
+    }
     @media screen and (hover: none) and (orientation: landscape) and (max-height: 785px) {
         left: 15vw;
     }

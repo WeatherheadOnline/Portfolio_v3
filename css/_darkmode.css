@@ -29,9 +29,13 @@ a {color: var(--blue-bright);}
 a:visited {color: var(--blue-mid);}
 a:hover {
     color: var(--navy-lightest);
-    background: var(--blue-lightest);
+    background-color: var(--blue-lightest);
 }
 a:active {background: var(--blue-bright);}
+a.no-hover:hover {
+    color: unset;
+    background-color: unset;
+}
 
 /* ************************* */
 /*       Backgrounds         */
@@ -56,7 +60,7 @@ a:active {background: var(--blue-bright);}
     background: linear-gradient(
         var(--navy-lightest) 7%,
         var(--navy-dark) 60%,
-        var(--navy-darkest) 100%        
+        var(--navy-darkest) 100%
     );
 }
 .lightshaft {background-image: url(../img/lightshaft_darkmode.svg);}
@@ -70,7 +74,8 @@ a:active {background: var(--blue-bright);}
 
 .logo-accent-color {fill: var(--logo-color-accent);}
 .logo-main-color {fill: var(--logo-color-main);}
-#logo:hover {outline: 2px solid var(--logo-color-accent);}
+/* #logo:hover {outline: 2px solid var(--logo-color-accent); background-color: unset;} */
+#logo:hover, .badges a:hover {outline: 2px solid var(--logo-color-accent);}
 #hamburger svg {stroke:var(--blue-bright);}
 #menu {
     background: linear-gradient(
@@ -81,7 +86,7 @@ a:active {background: var(--blue-bright);}
         rgb(from var(--menu-bkgd) r g b / 0.85)
     );
     box-shadow: 0 0 10px var(--navy-darkest);
-}    
+}
 #menu h4 {
     padding: 1rem;
     font-size: 1.3rem;
@@ -91,7 +96,7 @@ a:active {background: var(--blue-bright);}
 #menu h4:hover, #menu span:hover {background-color: var(--navy-dark);}
 nav {background-color: rgb(from var(--logo-color-accent) r g b / 0.8);}
 #holograph-icon svg {
-    stroke: var(--blue-bright);   
+    stroke: var(--blue-bright);
     border: 3px solid var(--blue-bright);
     background-color: var(--navy-darkest);
 }
@@ -148,21 +153,12 @@ nav {background-color: rgb(from var(--logo-color-accent) r g b / 0.8);}
 /*     "About" section     */
 /* ************************* */
 
-.about-quote {
-    background-color: var(--navy-lightest);
-}
-span.linky {color: var(--blue-lightest);}
-a:hover span.linky {color: inherit;}
-
-.about-quote:hover {
-    box-shadow: 2px 4px 8px rgb(from var(--blue-mid) r g b / 0.2);
-}
-.about-quote a {
-    color: unset;
-}
-.about-quote a:hover {
-    background-color: unset;
-}
+.about-quote {background-color: var(--navy-lightest);}
+span.about-more-link {color: var(--blue-lightest);}
+a:hover span.about-more-link {color: inherit;}
+.about-quote:hover {box-shadow: 2px 4px 8px rgb(from var(--blue-mid) r g b / 0.2);}
+.about-quote a {color: unset;}
+.about-quote a:hover {background-color: unset;}
 
 /* ************************* */
 /*     "Contact" section     */

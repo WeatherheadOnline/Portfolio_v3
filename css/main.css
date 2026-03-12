@@ -54,7 +54,7 @@ section {
     }
     @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px),
       screen and (any-hover: none) and (orientation: landscape) and (min-height: 786px) {
-        width: 80vw; 
+        width: 80vw;
     }
 }
 
@@ -73,7 +73,7 @@ body {font-family: "Roboto Mono", monospace;}
 }
 h2 {
     font-family: "Cooper Black";
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     margin-bottom: 2.5vh;
     @media screen and (hover) {
         font-size: 3rem;
@@ -97,7 +97,7 @@ h3 {
     }
 }
 section:not(#Home) p, li {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     @media screen and (hover) {
         font-size: 0.9rem;
         line-height: 1.3rem;
@@ -127,7 +127,7 @@ footer {
 footer p {
     text-align: center;
     font-size: 0.8rem;
-}    
+}
 .greengeeks img {
     height: 60px;
     width: auto;
@@ -136,5 +136,5 @@ footer p {
     @media screen and (hover) {
         width: 90px;
         height: auto;
-    }    
-}    
+    }
+}

@@ -6,7 +6,17 @@ const portfolioItems = [
         imgAlt: "the website for the new form-input menu",
         thumbSrc: "img/folio_aquaearth_small.png",
         h3Text: "Small Business Site",
-        bodyText: '<p>A small business site for a client ("aquaearth"). Features: expandable menus, modal (click-to-enlarge) photos, and pages with multiple tabs.</p>',
+        bodyText: '<p>A small business site for a client. Features include: expandable menus, modal photos (click-to-enlarge), and pages containing multiple tabs.</p>',
+
+    },
+    {
+        name: "numerology",
+        articleLink: "/numerology-cards/",
+        imgSrc: "img/folio_numerology.png",
+        imgAlt: "the website for the new form-input menu",
+        thumbSrc: "img/folio_numerology_small.png",
+        h3Text: "Calculator written in React",
+        bodyText: "<p>This site was made for a friend, and written using the React.js library. It performs complex calculations, modified by user selections. Multiple color themes and hover effects enhance user engagement.</p>",
 
     },
     {
@@ -57,7 +67,7 @@ const portfolioItems = [
     },
     {
         name: "boognish",
-        articleLink: "/WhatDoesItWeen/",
+        articleLink: "/whatdoesitween/",
         imgSrc: "img/folio_boognish.png",
         imgAlt: "the website www.whatdoesitween.com",
         thumbSrc: "img/folio_boognish_small.png",
@@ -71,7 +81,7 @@ const portfolioItems = [
         imgAlt: "the previous version of this website",
         thumbSrc: "img/folio_portfolio_v2_small.png",
         h3Text: "This website (2024-2025)",
-        bodyText: "<p>Here's a previous version of this website. The front page features a shimmering-text effect. (Hint: take a look at the light/dark mode settings.)</p>",
+        bodyText: "<p>Here's a previous version of this website. The front page features a shimmering-text effect. Check out the light/dark mode settings.</p>",
     },
     {
         name: "this",
@@ -80,7 +90,7 @@ const portfolioItems = [
         imgAlt: "the website you're at right now",
         thumbSrc: "img/folio_this_small.png",
         h3Text: "WeatherheadOnline.com",
-        bodyText: "<p>This website! It's pretty great. Stop by the Special Effects section if you haven't already. Thanks for visiting!</p>",
+        bodyText: "<p>This website! It's pretty great. Stop by the <a href='#Effects'>Special Effects</a> section if you haven't already. Thanks for visiting!</p>",
     },
 ]
 

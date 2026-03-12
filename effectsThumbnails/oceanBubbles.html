@@ -13,12 +13,12 @@
             position: relative;
             height: 100%;
             width: 100%;
-        }        
+        }
         .bubbleDiv {
             position: absolute;
             height: 40px;
             width: 40px;
-            transition: all 30s linear;
+            transition: all 25s linear;  /* Bubble speed can be adjusted here */
         }
         .bubbleDiv svg {
             fill: #3083c0;     /* gets adjusted to 50% opacity in script */
@@ -38,20 +38,21 @@
         bubbles(true);
     }
 
-    let s = setInterval(bubbles, 1000);  
+    let s = setInterval(bubbles, 1000);
 
     function bubbles(pageHasFirstLoaded) {
-        const scaler = Math.floor(25 - (Math.random() * 15)) / 10;  // number between 1 and 2.5
+        // Const "scaler" controls bubble size and movement speed. (Movement speed can also be adjusted transition speed in CSS.)
+        const scaler = Math.floor(15 - (Math.random() * 10)) / 10;  // number between 0.5 and 1.5
         const bubbleDiv = document.createElement("div");
         bubbleDiv.className = "bubbleDiv";
         if(pageHasFirstLoaded) {
             bubbleDiv.style.top = `${Math.floor(Math.random() * 90)}vh`;
         } else {
-            bubbleDiv.style.bottom = `${scaler * -40}px`;  
+            bubbleDiv.style.bottom = `${scaler * -40}px`;
         }
         bubbleDiv.style.left = `${Math.floor(Math.random() * 100)}vw`;
         main.appendChild(bubbleDiv);
-        
+
         bubbleSVG(bubbleDiv, scaler);
 
         setTimeout(moveDiv, 100, bubbleDiv, scaler);  // use a timeout to make sure the bubble has had time to be created
@@ -60,7 +61,7 @@
 
     function bubbleSVG(bubbleDiv, scaler) {
         const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svgElement.setAttribute("width", "10.5mm");
+        svgElement.setAttribute("width", "10.5mm");  // Don't adjust size here; instead, adjust const "scaler".
         svgElement.setAttribute("height", "10.5mm");
         svgElement.setAttribute("viewBox", "0 0 10.5 10.5");
         svgElement.innerHTML = '<path style="fill-opacity:0.5;stroke-width:1;stroke-linecap:round; stroke-opacity: 1" d="m 3.98,2.9 c 0,0 1.15,-0.51 2.41,0.17 1.26,0.68 1.51,1.88 1.51,1.88 M 9.98,5.24 A 4.74,4.74 0 0 1 5.24,9.98 4.74,4.74 0 0 1 0.5,5.24 4.74,4.74 0 0 1 5.24,0.5 4.74,4.74 0 0 1 9.98,5.24 Z" />'
@@ -69,8 +70,8 @@
     }
 
     function moveDiv(bubble, scaler) {
-        let riseHeight = 200 * scaler;  
-                    // determines how far each particle moves. 
+        let riseHeight = 200 * scaler;
+                    // determines how far each particle moves.
                     // since animation time is constant, a higher distance causes faster movement
         bubble.style.transform = `translate(0, -${riseHeight}vh)`;
     };
