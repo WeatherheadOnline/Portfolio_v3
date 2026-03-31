@@ -22,6 +22,7 @@
 #SFX_iframe p {margin: 0;}
 #SFX_iframe span {font-weight: bold;}
 #SFX_panel {
+    isolation: isolate;
     display: flex;
     flex-direction: column;
     gap: 3vh;
@@ -36,12 +37,13 @@
     }
 }
 .SFX_thumbnails {
+    /* z-index: 2; */
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 3vw;
     margin: 0 auto;
-    @media screen and (hover) and (min-width: 600px), 
+    @media screen and (hover) and (min-width: 600px),
     screen and (any-hover: none) and (orientation: landscape) and (max-height: 785px) {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(6, 1fr);
@@ -55,6 +57,9 @@
     }
 }
 .SFX_thumbnail {
+    /* isolation: isolate; */
+    position: relative;
+    z-index: 1;
     height: 2.8rem;
     width: 2.8rem;
     @media screen and (any-hover: none) and (orientation: portrait) and (min-width: 786px) {
@@ -63,11 +68,29 @@
     }
 }
 .SFX_thumbnail svg {
+    z-index: -1;
     height: 100%;
     width: 100%;
     border-radius: 10%;
 }
+.SFX_thumbnail div.hover-text {
+    display: none;
+    /* z-index: 3; */
+}
+.SFX_thumbnail:hover div.hover-text {
+    /* isolation: isolate; */
+    z-index: 10;
+    display: block;
+    text-align: center;
+    font-size: 0.7em;
+    width: min-content;
+    /* z-index: 3; */
+    position: absolute;
+    bottom: 0;;
+    left: 0;
+}
 .arrowsWrapper {
+    /* z-index: 1; */
     display: flex;
     gap: 2rem;
 }

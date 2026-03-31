@@ -148,6 +148,7 @@ nav {background-color: rgb(from var(--logo-color-accent) r g b / 0.8);}
 .active svg {outline: 3px solid var(--green-light);}
 .arrow svg {border: 1px solid var(--green-light);}
 .arrow svg:active {border: 4px solid var(--green-light);}
+div.hover-text {background-color: var(--navy-darkest);}
 
 /* ************************* */
 /*     "About" section     */

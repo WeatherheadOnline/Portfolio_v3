@@ -13,6 +13,7 @@
     <meta property="og:url" content="http://www.weatherheadonline.com">
     <meta name="image" property="og:image" content="img/folio_this_small.png">
     <meta property="og:description" content="I create modern, responsive animated websites. My speciality is making special effects for user engagement.">
+    <link rel="canonical" href="https://weatherheadonline.com" />
     <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
